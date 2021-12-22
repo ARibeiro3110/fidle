@@ -472,14 +472,14 @@ Nb_VAE9_r1:
   notebook_id: VAE9
   notebook_dir: VAE
   notebook_src: 09-VAE-with-CelebA-192x160.ipynb
-  notebook_tag: default
+  notebook_tag: =1==done==
   overrides:
     run_dir: ./run/VAE9_r1
     scale: 1
     image_size: '(192,160)'
     enhanced_dir: '{datasets_dir}/celeba/enhanced'
-    latent_dim: 300
-    loss_weights: '[.6,.4]'
+    latent_dim: 100
+    loss_weights: '[.7,.3]'
     batch_size: 64
     epochs: 5
     progress_verbosity: 2
@@ -488,13 +488,13 @@ Nb_VAE9_r2:
   notebook_id: VAE9
   notebook_dir: VAE
   notebook_src: 09-VAE-with-CelebA-192x160.ipynb
-  notebook_tag: default
+  notebook_tag: =2==done==
   overrides:
     run_dir: ./run/VAE9_r2
     scale: 1
     image_size: '(192,160)'
     enhanced_dir: '{datasets_dir}/celeba/enhanced'
-    latent_dim: 300
+    latent_dim: 100
     loss_weights: '[.5,.5]'
     batch_size: 64
     epochs: 5
@@ -504,14 +504,14 @@ Nb_VAE9_r3:
   notebook_id: VAE9
   notebook_dir: VAE
   notebook_src: 09-VAE-with-CelebA-192x160.ipynb
-  notebook_tag: default
+  notebook_tag: =3==done==
   overrides:
     run_dir: ./run/VAE9_r3
     scale: 1
     image_size: '(192,160)'
     enhanced_dir: '{datasets_dir}/celeba/enhanced'
-    latent_dim: 300
-    loss_weights: '[.4,.6]'
+    latent_dim: 100
+    loss_weights: '[.3,.7]'
     batch_size: 64
     epochs: 5
     progress_verbosity: 2
