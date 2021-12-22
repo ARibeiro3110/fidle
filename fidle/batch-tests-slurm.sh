@@ -19,7 +19,7 @@
 #SBATCH --gres=gpu:1                                   # nombre de GPU à réserver (un unique GPU ici)
 #SBATCH --cpus-per-task=10                             # nombre de coeurs à réserver (un quart du noeud)
 #SBATCH --hint=nomultithread                           # on réserve des coeurs physiques et non logiques
-#SBATCH --time=05:00:00                                # temps exécution maximum demande (HH:MM:SS)
+#SBATCH --time=06:00:00                                # temps exécution maximum demande (HH:MM:SS)
 #SBATCH --output="Fidle_%j.out"                        # nom du fichier de sortie
 #SBATCH --error="Fidle_%j.err"                         # nom du fichier d'erreur (ici commun avec la sortie)
 #SBATCH --mail-user=Jean-Luc.Parouty@grenoble-inp.fr
@@ -32,7 +32,7 @@ NOTEBOOK_DIR="$WORK/fidle/fidle"
 
 export FIDLE_OVERRIDE_RUNCI_profile_name='./ci/smart_gpu.yml'
 export FIDLE_OVERRIDE_RUNCI_reset='False'
-export FIDLE_OVERRIDE_RUNCI_filter='Nb_GTSRB.*'
+export FIDLE_OVERRIDE_RUNCI_filter='Nb_VAE9'
 
 NOTEBOOK_SRC1="02-running-ci-tests.ipynb"
 
