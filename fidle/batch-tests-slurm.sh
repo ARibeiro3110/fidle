@@ -32,7 +32,7 @@ NOTEBOOK_DIR="$WORK/fidle/fidle"
 
 export FIDLE_OVERRIDE_RUNCI_profile_name='./ci/smart_gpu.yml'
 export FIDLE_OVERRIDE_RUNCI_reset='False'
-export FIDLE_OVERRIDE_RUNCI_filter='Nb_VAE9'
+export FIDLE_OVERRIDE_RUNCI_filter='Nb_VAE9_r.*'
 
 NOTEBOOK_SRC1="02-running-ci-tests.ipynb"
 
