@@ -515,7 +515,7 @@
     "VAE9": {
         "id": "VAE9",
         "dirname": "VAE",
-        "basename": "09-VAE-with-CelebA-post.ipynb",
+        "basename": "10-VAE-with-CelebA-post.ipynb",
         "title": "Data generation from latent space",
         "description": "Episode 5 : Exploring latent space to generate new data",
         "overrides": [

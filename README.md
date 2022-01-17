@@ -31,7 +31,7 @@ For more information, you can contact us at :
 [<img width="200px" style="vertical-align:middle" src="fidle/img/00-Mail_contact.svg"></img>](#top)
 
 Current Version : <!-- VERSION_BEGIN -->
-**2.0.30**
+**2.0.32**
 <!-- VERSION_END -->
 
 
@@ -143,7 +143,7 @@ Episode 2 : Analysis of the CelebA dataset and creation of an clustered and usab
 Episode : 3 Clustered dataset verification and testing of our datagenerator
 - **[VAE8](VAE/08-VAE-with-CelebA.ipynb)** - [Training session for our VAE](VAE/08-VAE-with-CelebA.ipynb)  
 Episode 4 : Training with our clustered datasets in notebook or batch mode
-- **[VAE9](VAE/09-VAE-with-CelebA-post.ipynb)** - [Data generation from latent space](VAE/09-VAE-with-CelebA-post.ipynb)  
+- **[VAE9](VAE/10-VAE-with-CelebA-post.ipynb)** - [Data generation from latent space](VAE/10-VAE-with-CelebA-post.ipynb)  
 Episode 5 : Exploring latent space to generate new data
 - **[VAE10](VAE/batch_slurm.sh)** - [SLURM batch script](VAE/batch_slurm.sh)  
 Bash script for SLURM batch submission of VAE8 notebooks 

@@ -403,7 +403,7 @@ Nb_VAE8:
 Nb_VAE9:
   notebook_id: VAE9
   notebook_dir: VAE
-  notebook_src: 09-VAE-with-CelebA-post.ipynb
+  notebook_src: 10-VAE-with-CelebA-post.ipynb
   notebook_tag: default
   overrides:
     run_dir: default
