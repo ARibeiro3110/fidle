@@ -31,7 +31,7 @@ For more information, you can contact us at :
 [<img width="200px" style="vertical-align:middle" src="fidle/img/00-Mail_contact.svg"></img>](#top)
 
 Current Version : <!-- VERSION_BEGIN -->
-**2.0.32**
+**2.0.33**
 <!-- VERSION_END -->
 
 
@@ -116,6 +116,12 @@ Episode 2 : RNN training session for weather prediction attempt at 3h
 - **[SYNOP3](SYNOP/SYNOP3-12h-predictions.ipynb)** - [12h predictions](SYNOP/SYNOP3-12h-predictions.ipynb)  
 Episode 3: Attempt to predict in a more longer term 
 
+### Sentiment analysis with transformers
+- **[TRANS1](Transformers/01-Distilbert.ipynb)** - [IMDB, Sentiment analysis with Transformers ](Transformers/01-Distilbert.ipynb)  
+Using a Tranformer to perform a sentiment analysis (IMDB) - Jean Zay version
+- **[TRANS2](Transformers/02-distilbert_colab.ipynb)** - [IMDB, Sentiment analysis with Transformers ](Transformers/02-distilbert_colab.ipynb)  
+Using a Tranformer to perform a sentiment analysis (IMDB) - Colab version
+
 ### Unsupervised learning with an autoencoder neural network (AE)
 - **[AE1](AE/01-Prepare-MNIST-dataset.ipynb)** - [Prepare a noisy MNIST dataset](AE/01-Prepare-MNIST-dataset.ipynb)  
 Episode 1: Preparation of a noisy MNIST dataset
@@ -149,7 +155,7 @@ Episode 5 : Exploring latent space to generate new data
 Bash script for SLURM batch submission of VAE8 notebooks 
 
 ### Generative Adversarial Networks (GANs)
-- **[DCGAN01](DCGAN/01-DCGAN-Draw-me-a-sheep.ipynb)** - [A first DCGAN to Draw a Sheep](DCGAN/01-DCGAN-Draw-me-a-sheep.ipynb)  
+- **[SHEEP1](DCGAN/01-DCGAN-Draw-me-a-sheep.ipynb)** - [A first DCGAN to Draw a Sheep](DCGAN/01-DCGAN-Draw-me-a-sheep.ipynb)  
 Episode 1 : Draw me a sheep, revisited with a DCGAN
 
 ### Miscellaneous

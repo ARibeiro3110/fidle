@@ -111,13 +111,13 @@ class DCGAN(keras.Model):
         generated_images = self.generator(random_latent_vectors)
 
         # Combine them with real images
-        combined_images = tf.concat([generated_images, real_images], axis=0)
+        combined_images = tf.concat( [generated_images, real_images], axis=0)
 
         # Creation of labels corresponding to real or fake images
-        labels = tf.concat(
-            [tf.ones((batch_size, 1)), tf.zeros((batch_size, 1))], axis=0
-        )
-        # Add random noise to the labels - important trick!
+        # 1 is generated, 0 is real
+        labels = tf.concat( [tf.ones((batch_size, 1)),  tf.zeros((batch_size, 1))], axis=0)
+
+        # Add random noise to the labels - important trick !
         labels += 0.05 * tf.random.uniform(tf.shape(labels))
 
         # ---- Train the discriminator -----------------------------
@@ -153,6 +153,8 @@ class DCGAN(keras.Model):
         # ---- Train the generator ---------------------------------
         # ----------------------------------------------------------
         # We should *not* update the weights of the discriminator!
+        # We will train our generator so that the generated images 
+        # are considered as real by the discriminator
         #
         # ---- Forward pass
         #      Run the forward pass and record operations with the GradientTape.
@@ -186,14 +188,7 @@ class DCGAN(keras.Model):
             "g_loss": self.g_loss_metric.result(),
         }
 
-    
-    # def predict(self,inputs):
-    #     '''Our predict function...'''
-    #     z_mean, z_var, z  = self.encoder.predict(inputs)
-    #     outputs           = self.decoder.predict(z)
-    #     return outputs
-
-        
+            
     def save(self,filename):
         '''Save model in 2 part'''
         save_dir             = os.path.dirname(filename)
@@ -217,7 +212,7 @@ class DCGAN(keras.Model):
     @classmethod
     def about(cls):
         '''Basic whoami method'''
-        display(Markdown('<br>**FIDLE 2021 - DCGAN**'))
+        display(Markdown('<br>**FIDLE 2022 - DCGAN**'))
         print('Version              :', cls.version)
         print('TensorFlow version   :', tf.__version__)
         print('Keras version        :', tf.keras.__version__)

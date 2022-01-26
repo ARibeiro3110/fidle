@@ -253,6 +253,16 @@ Nb_SYNOP3:
     scale: default
     train_prop: default
     sequence_len: default
+Nb_TRANS1:
+  notebook_id: TRANS1
+  notebook_dir: Transformers
+  notebook_src: 01-Distilbert.ipynb
+  notebook_tag: default
+Nb_TRANS2:
+  notebook_id: TRANS2
+  notebook_dir: Transformers
+  notebook_src: 02-distilbert_colab.ipynb
+  notebook_tag: default
 Nb_AE1:
   notebook_id: AE1
   notebook_dir: AE
@@ -414,8 +424,8 @@ Nb_VAE10:
   notebook_dir: VAE
   notebook_src: batch_slurm.sh
   notebook_tag: default
-Nb_DCGAN01:
-  notebook_id: DCGAN01
+Nb_SHEEP1:
+  notebook_id: SHEEP1
   notebook_dir: DCGAN
   notebook_src: 01-DCGAN-Draw-me-a-sheep.ipynb
   notebook_tag: default

@@ -326,6 +326,22 @@
             "sequence_len"
         ]
     },
+    "TRANS1": {
+        "id": "TRANS1",
+        "dirname": "Transformers",
+        "basename": "01-Distilbert.ipynb",
+        "title": "IMDB, Sentiment analysis with Transformers ",
+        "description": "Using a Tranformer to perform a sentiment analysis (IMDB) - Jean Zay version",
+        "overrides": []
+    },
+    "TRANS2": {
+        "id": "TRANS2",
+        "dirname": "Transformers",
+        "basename": "02-distilbert_colab.ipynb",
+        "title": "IMDB, Sentiment analysis with Transformers ",
+        "description": "Using a Tranformer to perform a sentiment analysis (IMDB) - Colab version",
+        "overrides": []
+    },
     "AE1": {
         "id": "AE1",
         "dirname": "AE",
@@ -532,8 +548,8 @@
         "description": "Bash script for SLURM batch submission of VAE8 notebooks ",
         "overrides": []
     },
-    "DCGAN01": {
-        "id": "DCGAN01",
+    "SHEEP1": {
+        "id": "SHEEP1",
         "dirname": "DCGAN",
         "basename": "01-DCGAN-Draw-me-a-sheep.ipynb",
         "title": "A first DCGAN to Draw a Sheep",
