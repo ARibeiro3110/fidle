@@ -1,0 +1,8 @@
+tensorflow_cpu
+Scikit-image
+Scikit-learn
+Matplotlib
+Pandas
+Pandoc
+pyyaml
+Jupyterlab
