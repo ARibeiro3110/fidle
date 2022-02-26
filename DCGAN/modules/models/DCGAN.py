@@ -63,6 +63,13 @@ class DCGAN(keras.Model):
                 discriminator_optimizer = keras.optimizers.Adam(), 
                 generator_optimizer     = keras.optimizers.Adam(), 
                 loss_function           = keras.losses.BinaryCrossentropy() ):
+        '''
+        Compile the model
+        args:
+            discriminator_optimizer : Discriminator optimizer (Adam)
+            generator_optimizer : Generator optimizer (Adam)
+            loss_function : Loss function
+        '''
         super(DCGAN, self).compile()
         self.d_optimizer   = discriminator_optimizer
         self.g_optimizer   = generator_optimizer
@@ -147,7 +154,7 @@ class DCGAN(keras.Model):
         # Sample random points in the latent space
         random_latent_vectors = tf.random.normal(shape=(batch_size, self.latent_dim))
 
-        # Assemble labels that say "all real images"
+        # Assemble labels that say all images are real, yes it's a lie ;-)
         misleading_labels = tf.zeros((batch_size, 1))
 
         # ---- Train the generator ---------------------------------
