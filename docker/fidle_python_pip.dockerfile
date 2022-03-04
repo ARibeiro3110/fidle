@@ -1,4 +1,10 @@
-FROM python:3.7-slim 
+#
+#
+ARG PYTHON_VERSION=3.7
+ARG docker_image_base=python:${PYTHON_VERSION}-slim
+FROM ${docker_image_base}
+
+MAINTAINER soraya.arias@inria.fr
 LABEL maintainer=soraya.arias@inria.fr
 
 # Ensure a sane environment
@@ -11,6 +17,7 @@ RUN apt update --fix-missing && \
     apt clean && \
     rm -fr /var/lib/apt/lists/*
 
+# Get Python requirement packages list
 COPY requirements.txt /root/requirements.txt
 
 # Add & Update Python tools and install requirements packages
@@ -18,27 +25,34 @@ RUN pip install --upgrade pip && \
     pip install -I --upgrade setuptools && \
     pip install -r /root/requirements.txt 
 
-# Add Jupyter configuration (no browser, listen all interfaces, ...)
-COPY jupyter_notebook_config.py /root/.jupyter/jupyter_notebook_config.py
-COPY notebook.json /root/.jupyter/nbconfig/notebook.json
+# Get Fidle datasets
+RUN mkdir /data && \
+    wget -c https://fidle.cnrs.fr/fidle-datasets.tar && tar -xf fidle-datasets.tar -C /data/ && \
+    rm fidle-datasets.tar
 
 # Notebooks as a volume
-RUN mkdir  /notebooks/; cd /notebooks && \
-   git clone https://gricad-gitlab.univ-grenoble-alpes.fr/talks/fidle.git 
+RUN mkdir /notebooks/; cd /notebooks && \
+    git clone https://gricad-gitlab.univ-grenoble-alpes.fr/talks/fidle.git
+
+# Add Jupyter configuration (no browser, listen all interfaces, ...)
+#COPY jupyter_notebook_config.py /root/.jupyter/jupyter_notebook_config.py
+COPY notebook.json /root/.jupyter/nbconfig/notebook.json
+COPY fidle_env_test.py /root/fidle_env_test.py
+
+# Jupyter notebook uses 8888 
+EXPOSE 8888
 
 VOLUME /notebooks
 WORKDIR /notebooks
 
-#COPY data/fidle-datasets /data
-
 # Set a folder in the volume as Python Path
-ENV PYTHONPATH=/notebooks/python_path:$PYTHONPATH
+ENV PYTHONPATH=/notebooks/fidle/:$PYTHONPATH
 
 # Force bash as the default shell (useful in the notebooks)
 ENV SHELL=/bin/bash
 
 # Set Fidle dataset directory variable
-ENV FIDLE_DATASETS_DIR=/data
+ENV FIDLE_DATASETS_DIR=/data/fidle-datasets
 
 # Run a notebook by default
-CMD ["jupyter", "notebook", "--port=8888", "--ip=0.0.0.0"]
+CMD ["jupyter", "notebook", "--port=8888", "--ip=*", "--allow-root", "--notebook-dir=/notebooks/fidle", "--no-browser"]

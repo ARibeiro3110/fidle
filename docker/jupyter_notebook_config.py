@@ -15,23 +15,23 @@ c.Application.log_level = 'INFO'
 c.NotebookApp.ip = '*'
 
 # Password to access the server
-c.NotebookApp.password = ''
-c.NotebookApp.allow_password_change = False
+c.Notebook.password = ''
+c.Notebook.allow_password_change = False
 
 ## The directory to use for notebooks and kernels.
-c.NotebookApp.notebook_dir = '/notebooks'
+c.NotebookApp.notebook_dir = '/notebooks/fidle'
 
 ## Whether to open in a browser after starting. The specific browser used is
 #  platform dependent and determined by the python standard library `webbrowser`
 #  module, unless it is overridden using the --browser (NotebookApp.browser)
 #  configuration option.
-c.NotebookApp.open_browser = False
+c.NotebookApp.open_browser = True
 
 ## The port the notebook server will listen on.
-c.NotebookApp.port = 8888
+c.Notebook.port = 8888
 
 ## Allow running as root
-c.NotebookApp.allow_root = True
+c.Notebook.allow_root = True
 
 ## Disable the "Quit" button on the Web UI (shuts down the server)
 c.NotebookApp.quit_button = False
