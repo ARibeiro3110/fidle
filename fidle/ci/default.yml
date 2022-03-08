@@ -437,6 +437,19 @@ Nb_SHEEP1:
     batch_size: default
     num_img: default
     fit_verbosity: default
+Nb_SHEEP2:
+  notebook_id: SHEEP2
+  notebook_dir: DCGAN
+  notebook_src: 02-WGANGP-Draw-me-a-sheep.ipynb
+  notebook_tag: default
+  overrides:
+    run_dir: default
+    scale: default
+    latent_dim: default
+    epochs: default
+    batch_size: default
+    num_img: default
+    fit_verbosity: default
 Nb_ACTF1:
   notebook_id: ACTF1
   notebook_dir: Misc

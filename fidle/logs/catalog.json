@@ -565,6 +565,23 @@
             "run_dir"
         ]
     },
+    "SHEEP2": {
+        "id": "SHEEP2",
+        "dirname": "DCGAN",
+        "basename": "02-WGANGP-Draw-me-a-sheep.ipynb",
+        "title": "A WGAN-GP to Draw a Sheep",
+        "description": "Episode 2 : Draw me a sheep, revisited with a WGAN-GP",
+        "overrides": [
+            "run_dir",
+            "scale",
+            "latent_dim",
+            "epochs",
+            "batch_size",
+            "num_img",
+            "fit_verbosity",
+            "run_dir"
+        ]
+    },
     "ACTF1": {
         "id": "ACTF1",
         "dirname": "Misc",
