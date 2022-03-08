@@ -528,8 +528,8 @@ Nb_VAE10:
 
 # ------ DCGAN -----------------------------------------------------
 #
-Nb_DCGAN01:
-  notebook_id: DCGAN01
+Nb_SHEEP1:
+  notebook_id: SHEEP1
   notebook_dir: DCGAN
   notebook_src: 01-DCGAN-Draw-me-a-sheep.ipynb
   notebook_tag: default

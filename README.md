@@ -31,7 +31,7 @@ For more information, you can contact us at :
 [<img width="200px" style="vertical-align:middle" src="fidle/img/00-Mail_contact.svg"></img>](#top)
 
 Current Version : <!-- VERSION_BEGIN -->
-**2.0.33**
+**2.0.34**
 <!-- VERSION_END -->
 
 
@@ -157,6 +157,8 @@ Bash script for SLURM batch submission of VAE8 notebooks
 ### Generative Adversarial Networks (GANs)
 - **[SHEEP1](DCGAN/01-DCGAN-Draw-me-a-sheep.ipynb)** - [A first DCGAN to Draw a Sheep](DCGAN/01-DCGAN-Draw-me-a-sheep.ipynb)  
 Episode 1 : Draw me a sheep, revisited with a DCGAN
+- **[SHEEP2](DCGAN/02-WGANGP-Draw-me-a-sheep.ipynb)** - [A WGAN-GP to Draw a Sheep](DCGAN/02-WGANGP-Draw-me-a-sheep.ipynb)  
+Episode 2 : Draw me a sheep, revisited with a WGAN-GP
 
 ### Miscellaneous
 - **[ACTF1](Misc/Activation-Functions.ipynb)** - [Activation functions](Misc/Activation-Functions.ipynb)  
