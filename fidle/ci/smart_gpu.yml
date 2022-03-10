@@ -535,12 +535,26 @@ Nb_SHEEP1:
   notebook_tag: default
   overrides:
     scale: 1
-    run_dir: default
+    run_dir: ./run/SHEEP1
     latent_dim: default
-    epochs: 5
+    epochs: 10
     batch_size: 32
     num_img: 12
     fit_verbosity: 2
+
+Nb_SHEEP2:
+  notebook_id: SHEEP2
+  notebook_dir: DCGAN
+  notebook_src: 02-WGANGP-Draw-me-a-sheep.ipynb
+  notebook_tag: default
+  overrides:
+    scale: 1
+    run_dir: ./run/SHEEP2
+    latent_dim: 80
+    epochs: 3
+    batch_size: 64
+    num_img: 12
+    fit_verbosity: 2    
 #
 # ------ Misc ------------------------------------------------------
 #
