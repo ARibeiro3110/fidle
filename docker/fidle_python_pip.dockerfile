@@ -11,8 +11,12 @@ ENV LANG=C.UTF-8 LC_ALL=C.UTF-8 DEBIAN_FRONTEND=noninteractive
 
 RUN apt update --fix-missing && \
     apt install -y apt-utils \
+    apt install -y --no-install-recommends apt-utils && \
+    apt install wget curl git \
         python3-venv python3-pip && \
     apt -y dist-upgrade && \
+    curl -fsSL https://deb.nodesource.com/setup_lts.x |  bash - && \
+    apt install -y nodejs && \
     apt clean && \
     rm -fr /var/lib/apt/lists/*
 
@@ -36,12 +40,14 @@ RUN mkdir /notebooks/ && \
     #git clone https://gricad-gitlab.univ-grenoble-alpes.fr/talks/fidle.git
 
 # Add Jupyter configuration (no browser, listen all interfaces, ...)
-#COPY jupyter_notebook_config.py /root/.jupyter/jupyter_notebook_config.py
+<<<<<<< HEAD
 COPY jupyter_lab_config.py /root/.jupyter/jupyter_lab_config.py
 COPY notebook.json /root/.jupyter/nbconfig/notebook.json
 
 # Jupyter notebook uses 8888 
 EXPOSE 8888
+# Tensor board uses 6006
+EXPOSE 6006
 
 VOLUME /notebooks
 WORKDIR /notebooks
@@ -56,5 +62,4 @@ ENV SHELL=/bin/bash
 ENV FIDLE_DATASETS_DIR=/data/datasets-fidle
 
 # Run a notebook by default
-#CMD ["jupyter", "notebook", "--port=8888", "--ip=*", "--allow-root", "--notebook-dir=/notebooks/fidle-master", "--no-browser"]
 CMD ["jupyter", "lab"]
