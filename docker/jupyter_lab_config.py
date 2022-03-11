@@ -902,6 +902,7 @@ c.ServerApp.quit_button = True
 #  Default: ''
 c.ServerApp.root_dir = '/notebooks/fidle-master'
 
+
 ## The session manager class to use.
 #  Default: 'jupyter_server.services.sessions.sessionmanager.SessionManager'
 # c.ServerApp.session_manager_class = 'jupyter_server.services.sessions.sessionmanager.SessionManager'
