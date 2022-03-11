@@ -5,4 +5,7 @@ Matplotlib
 Pandas
 Pandoc
 pyyaml
+torch
+torchvision
+torchaudio
 Jupyterlab
