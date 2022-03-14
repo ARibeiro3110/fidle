@@ -519,7 +519,7 @@ Nb_VAE9_r3:
 Nb_VAE10:
   notebook_id: VAE10
   notebook_dir: VAE
-  notebook_src: 010-VAE-with-CelebA-post.ipynb
+  notebook_src: 10-VAE-with-CelebA-post.ipynb
   notebook_tag: default
   overrides:
     run_dir: default

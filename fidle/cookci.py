@@ -49,7 +49,7 @@ def load_profile(filename):
         return profile
     
     
-def run_profile(profile_name, reset=False, filter=r'.*', top_dir='..'):
+def run_profile(profile_name, reset=False, run_if_exist=False, filter=r'.*', top_dir='..'):
     '''
     Récupère la liste des notebooks et des paramètres associés,
     décrit dans le profile, et pour chaque notebook :
@@ -128,6 +128,11 @@ def run_profile(profile_name, reset=False, filter=r'.*', top_dir='..'):
         else:
             output_name  = notebook_name + notebook_tag
  
+        # ---- Run if exist ---------------------------------------------------
+        #
+        done_html = os.path.abspath( f'{top_dir}/{output_html}/{notebook_dir}/{output_name}.html' )
+        if (os.path.isfile(done_html) is True) and (run_if_exist is False) : continue
+
         # ---- Go to the right place ------------------------------------------
         #
         os.chdir(f'{top_dir}/{notebook_dir}')
@@ -155,10 +160,6 @@ def run_profile(profile_name, reset=False, filter=r'.*', top_dir='..'):
         #
         os.chdir(f'{top_dir}/{notebook_dir}')
 
-        # ---- Read notebook
-        #
-        notebook = nbformat.read( f'{notebook_src}', nbformat.NO_CONVERT)
-
         # ---- Top chrono - Start
         #
         chrono_start('nb')
@@ -168,6 +169,7 @@ def run_profile(profile_name, reset=False, filter=r'.*', top_dir='..'):
         #
         print('    - Run notebook...',end='')
         try:
+            notebook = nbformat.read( f'{notebook_src}', nbformat.NO_CONVERT)
             ep = ExecutePreprocessor(timeout=6000, kernel_name="python3")
             ep.preprocess(notebook)
         except CellExecutionError as e:
@@ -461,7 +463,7 @@ def build_ci_report(profile_name, top_dir='..'):
         state = entry['state']
 
         cols = []
-        cols.append( f'<a href="{dir}"       target="_blank">{dir}</a>'       )
+        cols.append( f'<a href="{dir}/{out}" target="_blank">{dir}</a>'       )
         cols.append( f'<a href="{dir}/{out}" target="_blank">{id}</a>'  )
         cols.append( f'<a href="{dir}/{out}" target="_blank">{src}</a>' )
         cols.append( start )

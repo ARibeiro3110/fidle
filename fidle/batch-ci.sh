@@ -32,8 +32,11 @@ NOTEBOOK_DIR="$WORK/fidle/fidle"
 
 export FIDLE_OVERRIDE_RUNCI_profile_name='./ci/smart_gpu.yml'
 
-# Reset or not report file (./run/done/report.json)
-export FIDLE_OVERRIDE_RUNCI_reset='True'
+# Reset report file (./run/done/report.json)
+export FIDLE_OVERRIDE_RUNCI_reset='False'
+
+# Run if html output still exist
+export FIDLE_OVERRIDE_RUNCI_run_if_exist='False'
 
 # Notebooks to run (regex)
 export FIDLE_OVERRIDE_RUNCI_filter='.*'
