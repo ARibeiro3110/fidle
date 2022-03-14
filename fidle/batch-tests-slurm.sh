@@ -31,8 +31,12 @@ MODULE_ENV="tensorflow-gpu/py3/2.5.0"
 NOTEBOOK_DIR="$WORK/fidle/fidle"
 
 export FIDLE_OVERRIDE_RUNCI_profile_name='./ci/smart_gpu.yml'
-export FIDLE_OVERRIDE_RUNCI_reset='False'
-export FIDLE_OVERRIDE_RUNCI_filter='Nb_SHEEP.*'
+
+# Reset or not report file (./run/done/report.json)
+export FIDLE_OVERRIDE_RUNCI_reset='True'
+
+# Notebooks to run (regex)
+export FIDLE_OVERRIDE_RUNCI_filter='.*'
 
 NOTEBOOK_SRC1="02-running-ci-tests.ipynb"
 
