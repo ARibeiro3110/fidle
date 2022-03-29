@@ -27,7 +27,8 @@
 
 # ==== Notebook parameters =========================================
 
-MODULE_ENV="tensorflow-gpu/py3/2.5.0"
+#MODULE_ENV="tensorflow-gpu/py3/2.5.0"
+MODULE_ENV="tensorflow-gpu/py3/2.7.0"
 NOTEBOOK_DIR="$WORK/fidle/fidle"
 
 export FIDLE_OVERRIDE_RUNCI_profile_name='./ci/smart_gpu.yml'
