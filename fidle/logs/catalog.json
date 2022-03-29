@@ -531,13 +531,20 @@
     "VAE9": {
         "id": "VAE9",
         "dirname": "VAE",
-        "basename": "10-VAE-with-CelebA-post.ipynb",
-        "title": "Data generation from latent space",
-        "description": "Episode 5 : Exploring latent space to generate new data",
+        "basename": "09-VAE-with-CelebA-192x160.ipynb",
+        "title": "Training session for our VAE with 192x160 images",
+        "description": "Episode 4 : Training with our clustered datasets in notebook or batch mode",
         "overrides": [
             "run_dir",
+            "scale",
             "image_size",
-            "enhanced_dir"
+            "enhanced_dir",
+            "latent_dim",
+            "loss_weights",
+            "batch_size",
+            "epochs",
+            "fit_verbosity",
+            "run_dir"
         ]
     },
     "VAE10": {
@@ -581,6 +588,22 @@
             "fit_verbosity",
             "run_dir"
         ]
+    },
+    "DRL1": {
+        "id": "DRL1",
+        "dirname": "DRL",
+        "basename": "FIDLE_DQNfromScratch.ipynb",
+        "title": "Solving CartPole with DQN",
+        "description": "Using a a Deep Q-Network to play CartPole - an inverted pendulum problem (PyTorch)",
+        "overrides": []
+    },
+    "DRL2": {
+        "id": "DRL2",
+        "dirname": "DRL",
+        "basename": "FIDLE_rl_baselines_zoo.ipynb",
+        "title": "RL Baselines3 Zoo: Training in Colab",
+        "description": "Demo of Stable baseline3 with Colab",
+        "overrides": []
     },
     "ACTF1": {
         "id": "ACTF1",

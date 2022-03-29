@@ -413,12 +413,18 @@ Nb_VAE8:
 Nb_VAE9:
   notebook_id: VAE9
   notebook_dir: VAE
-  notebook_src: 10-VAE-with-CelebA-post.ipynb
+  notebook_src: 09-VAE-with-CelebA-192x160.ipynb
   notebook_tag: default
   overrides:
     run_dir: default
+    scale: default
     image_size: default
     enhanced_dir: default
+    latent_dim: default
+    loss_weights: default
+    batch_size: default
+    epochs: default
+    fit_verbosity: default
 Nb_VAE10:
   notebook_id: VAE10
   notebook_dir: VAE
@@ -450,6 +456,16 @@ Nb_SHEEP2:
     batch_size: default
     num_img: default
     fit_verbosity: default
+Nb_DRL1:
+  notebook_id: DRL1
+  notebook_dir: DRL
+  notebook_src: FIDLE_DQNfromScratch.ipynb
+  notebook_tag: default
+Nb_DRL2:
+  notebook_id: DRL2
+  notebook_dir: DRL
+  notebook_src: FIDLE_rl_baselines_zoo.ipynb
+  notebook_tag: default
 Nb_ACTF1:
   notebook_id: ACTF1
   notebook_dir: Misc
