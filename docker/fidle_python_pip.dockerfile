@@ -11,9 +11,12 @@ LABEL maintainer=soraya.arias@inria.fr
 ENV LANG=C.UTF-8 LC_ALL=C.UTF-8 DEBIAN_FRONTEND=noninteractive
 
 RUN apt update --fix-missing && \
-    apt install -y apt-utils wget git \
+    apt install -y --no-install-recommends apt-utils && \
+    apt install wget curl git \
         python3-venv python3-pip && \
     apt -y dist-upgrade && \
+    curl -fsSL https://deb.nodesource.com/setup_lts.x |  bash - && \
+    apt install -y nodejs && \
     apt clean && \
     rm -fr /var/lib/apt/lists/*
 
@@ -35,8 +38,7 @@ RUN mkdir /notebooks/; cd /notebooks && \
     git clone https://gricad-gitlab.univ-grenoble-alpes.fr/talks/fidle.git
 
 # Add Jupyter configuration (no browser, listen all interfaces, ...)
-#COPY jupyter_notebook_config.py /root/.jupyter/jupyter_notebook_config.py
-COPY notebook.json /root/.jupyter/nbconfig/notebook.json
+COPY jupyter_lab_config.py /root/.jupyter/jupyter_lab_config.py
 COPY fidle_env_test.py /root/fidle_env_test.py
 
 # Jupyter notebook uses 8888 
@@ -55,4 +57,4 @@ ENV SHELL=/bin/bash
 ENV FIDLE_DATASETS_DIR=/data/fidle-datasets
 
 # Run a notebook by default
-CMD ["jupyter", "notebook", "--port=8888", "--ip=*", "--allow-root", "--notebook-dir=/notebooks/fidle", "--no-browser"]
+CMD ["jupyter", "lab"]
