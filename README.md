@@ -10,8 +10,9 @@
 ## About Fidle
 
 This repository contains all the documents and links of the **Fidle Training** .   
-Fidle (for Formation Introduction au Deep Learning) is a 2-day training session  
-co-organized by the Formation Permanente CNRS and the Resinfo/SARI and DevLOG CNRS networks.  
+Fidle (for Formation Introduction au Deep Learning) is a 3-day training session co-organized  
+by the 3IA MIAI institute, the CNRS, via the Mission for Transversal and Interdisciplinary  
+Initiatives (MITI) and the University of Grenoble Alpes (UGA).  
 
 The objectives of this training are :
  - Understanding the **bases of Deep Learning** neural networks
@@ -30,9 +31,7 @@ For more information, see **https://fidle.cnrs.fr** :
 For more information, you can contact us at :  
 [<img width="200px" style="vertical-align:middle" src="fidle/img/00-Mail_contact.svg"></img>](#top)
 
-Current Version : <!-- VERSION_BEGIN -->
-**2.0.35**
-<!-- VERSION_END -->
+Current Version : <!-- VERSION_BEGIN -->2.02b2<!-- VERSION_END -->
 
 
 ## Course materials

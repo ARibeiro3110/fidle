@@ -20,17 +20,15 @@ import matplotlib
 import matplotlib.pyplot as plt
 from IPython.display import display,Markdown,HTML
 
-sys.path.append('..')
-import fidle.pwk as pwk
 
 class RegressionCooker():
     
-    pwk     = None
+    fidle   = None
     version = '0.1'
     
-    def __init__(self, pwk):
-        self.pwk = pwk
-        pwk.subtitle('FIDLE 2020 - Regression Cooker')
+    def __init__(self, fidle):
+        self.fidle = fidle
+        fidle.utils.subtitle('FIDLE 2020 - Regression Cooker')
         print('Version      :', self.version)
         print('Run time     : {}'.format(time.strftime("%A %d %B %Y, %H:%M:%S")))
         
@@ -101,7 +99,7 @@ class RegressionCooker():
         print(f"X shape : {X.shape}  Y shape : {Y.shape}  plot : {nb_viz} points")
         plt.figure(figsize=(width, height))
         plt.plot(X[:nb_viz], Y[:nb_viz], '.')
-        self.pwk.save_fig('01-dataset')
+        self.fidle.scrawler.save_fig('01-dataset')
         plt.show()
         self.vector_infos('X',X)
         self.vector_infos('Y',Y)
@@ -189,13 +187,13 @@ class RegressionCooker():
 
         # ---- Visualization
 
-        pwk.subtitle('Visualization :')
-        self.pwk.save_fig('02-basic_descent')
+        self.fidle.utils.subtitle('Visualization :')
+        self.fidle.scrawler.save_fig('02-basic_descent')
         plt.show()
 
-        pwk.subtitle('Loss :')
+        self.fidle.utils.subtitle('Loss :')
         self.__plot_loss(loss)
-        self.pwk.save_fig('03-basic_descent_loss')
+        self.fidle.scrawler.save_fig('03-basic_descent_loss')
         plt.show()
         
         return theta
@@ -268,13 +266,13 @@ class RegressionCooker():
         
         # ---- Visualization
 
-        pwk.subtitle('Visualization :')
-        self.pwk.save_fig('04-minibatch_descent')
+        self.fidle.utils.subtitle('Visualization :')
+        self.fidle.scrawler.save_fig('04-minibatch_descent')
         plt.show()
 
-        pwk.subtitle('Loss :')
+        self.fidle.utils.subtitle('Loss :')
         self.__plot_loss(loss)
-        self.pwk.save_fig('05-minibatch_descent_loss')
+        self.fidle.scrawler.save_fig('05-minibatch_descent_loss')
         plt.show()
         
         
