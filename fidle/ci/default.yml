@@ -1,6 +1,6 @@
 campain:
   version: '1.0'
-  description: Automatically generated ci profile (10/10/22 13:07:38)
+  description: Automatically generated ci profile (10/10/22 22:30:24)
   directory: ./campains/default
   existing_notebook: 'remove    # remove|skip'
   report_template: 'fidle     # fidle|default'
@@ -129,12 +129,14 @@ IMDB3:
   overrides:
     vocab_size: default
     review_len: default
+    saved_models: default
     dictionaries_dir: default
 IMDB4:
   notebook: IMDB/04-Show-vectors.ipynb
   overrides:
     vocab_size: default
     review_len: default
+    saved_models: default
     dictionaries_dir: default
 IMDB5:
   notebook: IMDB/05-LSTM-Keras.ipynb
@@ -208,6 +210,7 @@ AE2:
     train_prop: default
     batch_size: default
     epochs: default
+    fit_verbosity: default
 AE3:
   notebook: AE/03-AE-with-MNIST-post.ipynb
   overrides:
@@ -225,6 +228,7 @@ AE4:
     train_prop: default
     batch_size: default
     epochs: default
+    fit_verbosity: default
 AE5:
   notebook: AE/05-ExtAE-with-MNIST.ipynb
   overrides:
@@ -235,6 +239,7 @@ AE5:
     train_prop: default
     batch_size: default
     epochs: default
+    fit_verbosity: default
 
 #
 # ------------ VAE

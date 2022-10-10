@@ -31,7 +31,7 @@ For more information, see **https://fidle.cnrs.fr** :
 For more information, you can contact us at :  
 [<img width="200px" style="vertical-align:middle" src="fidle/img/00-Mail_contact.svg"></img>](#top)
 
-Current Version : <!-- VERSION_BEGIN -->2.02b3<!-- VERSION_END -->
+Current Version : <!-- VERSION_BEGIN -->2.02b5<!-- VERSION_END -->
 
 
 ## Course materials
