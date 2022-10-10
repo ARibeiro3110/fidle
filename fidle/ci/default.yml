@@ -1,6 +1,6 @@
 campain:
   version: '1.0'
-  description: Automatically generated ci profile (07/10/22 16:36:10)
+  description: Automatically generated ci profile (10/10/22 13:07:38)
   directory: ./campains/default
   existing_notebook: 'remove    # remove|skip'
   report_template: 'fidle     # fidle|default'
