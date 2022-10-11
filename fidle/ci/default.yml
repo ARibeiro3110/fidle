@@ -1,6 +1,6 @@
 campain:
   version: '1.0'
-  description: Automatically generated ci profile (10/10/22 22:30:24)
+  description: Automatically generated ci profile (11/10/22 17:59:49)
   directory: ./campains/default
   existing_notebook: 'remove    # remove|skip'
   report_template: 'fidle     # fidle|default'
@@ -269,6 +269,7 @@ VAE3:
   overrides:
     scale: default
     seed: default
+    models_dir: default
 VAE5:
   notebook: VAE/05-About-CelebA.ipynb
   overrides:
@@ -290,7 +291,7 @@ VAE7:
     enhanced_dir: default
     progress_verbosity: default
 VAE8:
-  notebook: VAE/08-VAE-with-CelebA.ipynb
+  notebook: VAE/08-VAE-with-CelebA-128x128.ipynb
   overrides:
     scale: default
     image_size: default
@@ -316,6 +317,7 @@ VAE10:
   overrides:
     image_size: default
     enhanced_dir: default
+    models_dir: default
 
 #
 # ------------ DCGAN
