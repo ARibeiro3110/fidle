@@ -1,7 +1,7 @@
 campain:
   version:           1.0
-  description:       Full validation on CPU (fast)
-  directory:         ./campains/cpu_small
+  description:       Complete validation of notebooks with default settings
+  directory:         ./campains/default_settings
   existing_notebook: skip
   report_template:   fidle
   timeout:           6000
@@ -199,7 +199,7 @@ SYNOP2:
     sequence_len:          default
     batch_size:            default
     epochs:                default
-    fit_verbosity:         default
+    fit_verbosity:         2
 
 SYNOP3:
   notebook:      SYNOP/SYNOP3-12h-predictions.ipynb
