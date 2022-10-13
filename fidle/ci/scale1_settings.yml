@@ -1,7 +1,7 @@
 campain:
   version:           1.0
   description:       Full validation of notebooks with scale parameters set to 1
-  directory:         ./campains/cpu_small
+  directory:         ./campains/scale1_settings
   existing_notebook: skip
   report_template:   fidle
   timeout:           6000
