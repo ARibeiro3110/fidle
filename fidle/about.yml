@@ -1,0 +1,39 @@
+#--------------------------------------------------------------------
+#  ______ _     _ _         _____            _             _       
+# |  ____(_)   | | |       / ____|          | |           | |      
+# | |__   _  __| | | ___  | |     ___  _ __ | |_ ___ _ __ | |_ ___ 
+# |  __| | |/ _` | |/ _ \ | |    / _ \| '_ \| __/ _ \ '_ \| __/ __|
+# | |    | | (_| | |  __/ | |___| (_) | | | | ||  __/ | | | |_\__ \
+# |_|    |_|\__,_|_|\___|  \_____\___/|_| |_|\__\___|_| |_|\__|___/
+#
+#                      Formation Introduction au Deep Learning - 2022
+#--------------------------------------------------------------------
+# Formation Introduction au Deep Learning       https://fidle.cnrs.fr
+# By MIAI/CNRS/UGA 2022
+#
+# This file describes the notebooks used by the Fidle training.
+
+version:          2.2.0
+content:          notebooks
+name:             Notebooks Fidle
+description:      All notebooks used by the Fidle training
+
+
+readme_md:        README.md
+readme_ipynb:     README.ipynb
+default_ci:       fidle/ci/default.yml
+
+toc:
+  LinearReg:      Linear and logistic regression
+  IRIS:           Perceptron Model 1957
+  BHPD:           Basic regression using DN
+  MNIST:          Basic classification using a DN
+  GTSRB:          Images classification with Convolutional Neural Networks (CNN
+  IMDB:           Sentiment analysis with word embeddin
+  SYNOP:          Time series with Recurrent Neural Network (RNN
+  Transformers:   Sentiment analysis with transformer
+  AE:             Unsupervised learning with an autoencoder neural network (AE
+  VAE:            Generative network with Variational Autoencoder (VAE
+  DCGAN:          Generative Adversarial Networks (GANs
+  DRL:            Deep Reinforcement Learning (DRL
+  Misc:           Miscellaneous
