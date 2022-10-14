@@ -94,7 +94,7 @@ Bash script for an OAR batch submission of an ipython code
 - **[GTSRB11](GTSRB/batch_slurm.sh)** - [SLURM batch script](GTSRB/batch_slurm.sh)  
 Bash script for a Slurm batch submission of an ipython code
 
-### Sentiment analysis with word embeddin
+### Sentiment analysis with word embedding
 - **[IMDB1](IMDB/01-One-hot-encoding.ipynb)** - [Sentiment analysis with hot-one encoding](IMDB/01-One-hot-encoding.ipynb)  
 A basic example of sentiment analysis with sparse encoding, using a dataset from Internet Movie Database (IMDB)
 - **[IMDB2](IMDB/02-Keras-embedding.ipynb)** - [Sentiment analysis with text embedding](IMDB/02-Keras-embedding.ipynb)  
