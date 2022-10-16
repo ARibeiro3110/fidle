@@ -1,6 +1,6 @@
 campain:
   version: '1.0'
-  description: Automatically generated ci profile (13/10/22 18:40:08)
+  description: Automatically generated ci profile (16/10/22 21:33:51)
   directory: ./campains/default
   existing_notebook: 'remove    # remove|skip'
   report_template: 'fidle     # fidle|default'
@@ -35,6 +35,11 @@ BHPD2:
   notebook: BHPD/02-DNN-Regression-Premium.ipynb
   overrides:
     fit_verbosity: default
+WINE1:
+  notebook: BHPD/03-DNN-Wine-Regression.ipynb
+  overrides:
+    fit_verbosity: default
+    dataset_name: default
 
 #
 # ------------ MNIST
@@ -361,3 +366,5 @@ SCRATCH1:
 TSB1:
   notebook: Misc/Using-Tensorboard.ipynb
   overrides: ??
+PANDAS1:
+  notebook: Misc/Using-pandas.ipynb

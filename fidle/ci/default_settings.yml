@@ -15,10 +15,13 @@ campain:
 #
 LINR1:
   notebook: LinearReg/01-Linear-Regression.ipynb
+
 GRAD1:
   notebook: LinearReg/02-Gradient-descent.ipynb
+
 POLR1:
   notebook: LinearReg/03-Polynomial-Regression.ipynb
+
 LOGR1:
   notebook: LinearReg/04-Logistic-Regression.ipynb
 
@@ -35,11 +38,17 @@ BHPD1:
   notebook: BHPD/01-DNN-Regression.ipynb
   overrides:
     fit_verbosity: 2
+
 BHPD2:
   notebook: BHPD/02-DNN-Regression-Premium.ipynb
   overrides:
     fit_verbosity: 2
 
+WINE1:
+  notebook: BHPD/03-DNN-Wine-Regression.ipynb
+  overrides:
+    fit_verbosity: 2
+    dataset_name: default
 #
 # ------------ MNIST
 #

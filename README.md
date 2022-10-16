@@ -31,7 +31,7 @@ For more information, see **https://fidle.cnrs.fr** :
 For more information, you can contact us at :  
 [<img width="200px" style="vertical-align:middle" src="fidle/img/00-Mail_contact.svg"></img>](#top)
 
-Current Version : <!-- VERSION_BEGIN -->2.2.0<!-- VERSION_END -->
+Current Version : <!-- VERSION_BEGIN -->2.2.1<!-- VERSION_END -->
 
 
 ## Course materials
@@ -46,7 +46,7 @@ Have a look about **[How to get and install](https://fidle.cnrs.fr/installation)
 ## Jupyter notebooks
 
 <!-- TOC_BEGIN -->
-<!-- Automatically generated on : 13/10/22 18:40:08 -->
+<!-- Automatically generated on : 16/10/22 21:33:51 -->
 
 ### Linear and logistic regression
 - **[LINR1](LinearReg/01-Linear-Regression.ipynb)** - [Linear regression with direct resolution](LinearReg/01-Linear-Regression.ipynb)  
@@ -67,6 +67,8 @@ Example of use of a Perceptron, with sklearn and IRIS dataset of 1936 !
 Simple example of a regression with the dataset Boston Housing Prices Dataset (BHPD)
 - **[BHPD2](BHPD/02-DNN-Regression-Premium.ipynb)** - [Regression with a Dense Network (DNN) - Advanced code](BHPD/02-DNN-Regression-Premium.ipynb)  
 A more advanced implementation of the precedent example
+- **[WINE1](BHPD/03-DNN-Wine-Regression.ipynb)** - [Wine quality prediction with a Dense Network (DNN)](BHPD/03-DNN-Wine-Regression.ipynb)  
+Another example of regression, with a wine quality prediction!
 
 ### Basic classification using a DN
 - **[MNIST1](MNIST/01-DNN-MNIST.ipynb)** - [Simple classification with DNN](MNIST/01-DNN-MNIST.ipynb)  
@@ -177,6 +179,8 @@ Numpy is an essential tool for the Scientific Python.
 A scratchbook for small examples
 - **[TSB1](Misc/Using-Tensorboard.ipynb)** - [Tensorboard with/from Jupyter ](Misc/Using-Tensorboard.ipynb)  
 4 ways to use Tensorboard from the Jupyter environment
+- **[PANDAS1](Misc/Using-pandas.ipynb)** - [Quelques exemples avec Pandas](Misc/Using-pandas.ipynb)  
+pandas is another essential tool for the Scientific Python.
 <!-- TOC_END -->
 
 
