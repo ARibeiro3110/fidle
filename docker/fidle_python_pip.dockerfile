@@ -10,11 +10,10 @@ LABEL maintainer=soraya.arias@inria.fr
 ENV LANG=C.UTF-8 LC_ALL=C.UTF-8 DEBIAN_FRONTEND=noninteractive
 
 RUN apt update --fix-missing && \
-    apt install -y --no-install-recommends apt-utils && \
-        python3-venv python3-pip && \
+    apt install -y --no-install-recommends apt-utils \
+        python3-venv  \
+        python3-pip && \
     apt -y dist-upgrade && \
-    curl -fsSL https://deb.nodesource.com/setup_lts.x |  bash - && \
-    apt install -y nodejs && \
     apt clean && \
     rm -fr /var/lib/apt/lists/*
 
