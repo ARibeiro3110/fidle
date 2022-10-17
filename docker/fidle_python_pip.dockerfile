@@ -7,9 +7,10 @@ FROM ${docker_image_base}
 LABEL maintainer=soraya.arias@inria.fr
 
 # Ensure a sane environment
-ENV LANG=C.UTF-8 LC_ALL=C.UTF-8 DEBIAN_FRONTEND=noninteractive
+ENV TZ=Europe/Paris LANG=C.UTF-8 LC_ALL=C.UTF-8 DEBIAN_FRONTEND=noninteractive
 
-RUN apt update --fix-missing && \
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone && \
+    apt update --fix-missing && \
     apt install -y --no-install-recommends apt-utils \
     apt install wget curl git \
         python3-venv python3-pip && \
