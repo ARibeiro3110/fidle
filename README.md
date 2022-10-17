@@ -23,7 +23,7 @@ The objectives of this training are :
 For more information, see **https://fidle.cnrs.fr** :
 - **[Fidle site](https://fidle.cnrs.fr)**
 - **[Presentation of the training](https://fidle.cnrs.fr/presentation)**
-- **[Program 2021/2022](https://fidle.cnrs.fr/programme)**
+- **[Program 2022/2023](https://fidle.cnrs.fr/programme)**
 - [Subscribe to the list](https://fidle.cnrs.fr/listeinfo), to stay informed !
 - [Find us on youtube](https://fidle.cnrs.fr/youtube)
 - [Corrected notebooks](https://fidle.cnrs.fr/done)
@@ -31,7 +31,7 @@ For more information, see **https://fidle.cnrs.fr** :
 For more information, you can contact us at :  
 [<img width="200px" style="vertical-align:middle" src="fidle/img/00-Mail_contact.svg"></img>](#top)
 
-Current Version : <!-- VERSION_BEGIN -->2.2.1<!-- VERSION_END -->
+Current Version : <!-- VERSION_BEGIN -->2.2.2<!-- VERSION_END -->
 
 
 ## Course materials
@@ -46,7 +46,7 @@ Have a look about **[How to get and install](https://fidle.cnrs.fr/installation)
 ## Jupyter notebooks
 
 <!-- TOC_BEGIN -->
-<!-- Automatically generated on : 16/10/22 21:33:51 -->
+<!-- Automatically generated on : 17/10/22 19:16:06 -->
 
 ### Linear and logistic regression
 - **[LINR1](LinearReg/01-Linear-Regression.ipynb)** - [Linear regression with direct resolution](LinearReg/01-Linear-Regression.ipynb)  
