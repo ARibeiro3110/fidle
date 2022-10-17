@@ -900,7 +900,7 @@ c.ServerApp.quit_button = True
 
 ## The directory to use for notebooks and kernels.
 #  Default: ''
-c.ServerApp.root_dir = '/notebooks/fidle'
+c.ServerApp.root_dir = '/notebooks/fidle-master'
 
 ## The session manager class to use.
 #  Default: 'jupyter_server.services.sessions.sessionmanager.SessionManager'
