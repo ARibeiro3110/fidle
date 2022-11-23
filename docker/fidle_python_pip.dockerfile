@@ -15,6 +15,8 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone &
     apt install wget curl git \
         python3-venv python3-pip && \
     apt -y dist-upgrade && \
+    curl -fsSL https://deb.nodesource.com/setup_lts.x |  bash - && \
+    apt install -y nodejs && \
     apt clean && \
     rm -fr /var/lib/apt/lists/*
 
