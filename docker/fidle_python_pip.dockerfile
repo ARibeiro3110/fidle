@@ -1,19 +1,22 @@
 #
 #
-ARG PYTHON_VERSION=3.8
+ARG PYTHON_VERSION=3.7
 ARG docker_image_base=python:${PYTHON_VERSION}-slim
 FROM ${docker_image_base}
 
 LABEL maintainer=soraya.arias@inria.fr
 
 # Ensure a sane environment
-ENV LANG=C.UTF-8 LC_ALL=C.UTF-8 DEBIAN_FRONTEND=noninteractive
+ENV TZ=Europe/Paris LANG=C.UTF-8 LC_ALL=C.UTF-8 DEBIAN_FRONTEND=noninteractive
 
-RUN apt update --fix-missing && \
-    apt install -y --no-install-recommends apt-utils \
-        python3-venv  \
-        python3-pip && \
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone && \
+    apt update --fix-missing && \
+    apt install -y --no-install-recommends apt-utils &&\
+    apt install -y wget curl git \
+        python3-venv python3-pip && \
     apt -y dist-upgrade && \
+    curl -fsSL https://deb.nodesource.com/setup_lts.x |  bash - && \
+    apt install -y nodejs && \
     apt clean && \
     rm -fr /var/lib/apt/lists/*
 
@@ -39,6 +42,8 @@ COPY notebook.json /root/.jupyter/nbconfig/notebook.json
 
 # Jupyter notebook uses 8888 
 EXPOSE 8888
+# Tensor board uses 6006
+EXPOSE 6006
 
 VOLUME /notebooks
 WORKDIR /notebooks
