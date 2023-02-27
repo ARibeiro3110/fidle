@@ -157,6 +157,7 @@ class GAN(LightningModule):
         #
         if(self.current_epoch==1):
             sampleImg=torch.rand((1,28,28,1))
+            sampleImg=sampleImg.type_as(self.generator.model[0].weight)
             self.logger.experiment.add_graph(self.discriminator,sampleImg)
 
         # ---- Log d_loss/epoch
