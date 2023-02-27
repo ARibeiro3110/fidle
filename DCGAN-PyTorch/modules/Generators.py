@@ -22,7 +22,7 @@ class Generator_1(nn.Module):
         super().__init__()
         self.latent_dim = latent_dim
         self.img_shape  = data_shape
-        print('init generator           : ',latent_dim,' to ',data_shape)
+        print('init generator 1         : ',latent_dim,' to ',data_shape)
 
         self.model = nn.Sequential(
             
@@ -51,3 +51,37 @@ class Generator_1(nn.Module):
         img = self.model(z)
         img = img.view(img.size(0), *self.img_shape)
         return img
+
+
+
+class Generator_2(nn.Module):
+
+    def __init__(self, latent_dim=None, data_shape=None):
+        super().__init__()
+        self.latent_dim = latent_dim
+        self.img_shape  = data_shape
+        print('init generator 2         : ',latent_dim,' to ',data_shape)
+
+        self.model = nn.Sequential(
+            
+            nn.Linear(latent_dim, 7*7*64),
+            nn.Unflatten(1, (64,7,7)),
+            
+            nn.UpsamplingBilinear2d( scale_factor=2 ),
+            nn.Conv2d( 64,128, (3,3), stride=(1,1), padding=(1,1) ),
+            nn.ReLU(),
+
+            nn.UpsamplingBilinear2d( scale_factor=2 ),
+            nn.Conv2d( 128,256, (3,3), stride=(1,1), padding=(1,1)),
+            nn.ReLU(),
+
+            nn.Conv2d( 256,1, (5,5), stride=(1,1), padding=(2,2)),
+            nn.Sigmoid()
+
+        )
+
+    def forward(self, z):
+        img = self.model(z)
+        img = img.view(img.size(0), *self.img_shape)
+        return img
+
