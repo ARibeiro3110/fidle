@@ -67,12 +67,16 @@ class Generator_2(nn.Module):
             nn.Linear(latent_dim, 7*7*64),
             nn.Unflatten(1, (64,7,7)),
             
-            nn.UpsamplingBilinear2d( scale_factor=2 ),
+            nn.UpsamplingNearest2d( scale_factor=2 ),
+            # nn.UpsamplingBilinear2d( scale_factor=2 ),
             nn.Conv2d( 64,128, (3,3), stride=(1,1), padding=(1,1) ),
+            nn.BatchNorm2d(128),
             nn.ReLU(),
 
-            nn.UpsamplingBilinear2d( scale_factor=2 ),
+            nn.UpsamplingNearest2d( scale_factor=2 ),
+            # nn.UpsamplingBilinear2d( scale_factor=2 ),
             nn.Conv2d( 128,256, (3,3), stride=(1,1), padding=(1,1)),
+            nn.BatchNorm2d(256),
             nn.ReLU(),
 
             nn.Conv2d( 256,1, (5,5), stride=(1,1), padding=(2,2)),
@@ -82,6 +86,8 @@ class Generator_2(nn.Module):
 
     def forward(self, z):
         img = self.model(z)
-        img = img.view(img.size(0), *self.img_shape)
+        img = img.view(img.size(0), *self.img_shape) # batch_size x 1 x W x H => batch_size x W x H x 1
         return img
+
+
 

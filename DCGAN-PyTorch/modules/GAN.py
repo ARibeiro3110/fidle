@@ -116,6 +116,8 @@ class GAN(LightningModule):
             
             # These images are reals
             real_labels = torch.ones(batch_size, 1)
+            # Add random noise to the labels
+            # real_labels += 0.05 * torch.rand(batch_size,1)
             real_labels = real_labels.type_as(imgs)
             pred_labels = self.discriminator.forward(imgs)
 
@@ -124,6 +126,8 @@ class GAN(LightningModule):
             # These images are fake
             fake_imgs   = self.generator.forward(z)
             fake_labels = torch.zeros(batch_size, 1)
+            # Add random noise to the labels
+            # fake_labels += 0.05 * torch.rand(batch_size,1)
             fake_labels = fake_labels.type_as(imgs)
 
             fake_loss   = self.adversarial_loss(self.discriminator(fake_imgs.detach()), fake_labels)
@@ -143,8 +147,10 @@ class GAN(LightningModule):
         # With a GAN, we need 2 separate optimizer.
         # opt_g to optimize the generator      #0
         # opt_d to optimize the discriminator  #1
-        opt_g = torch.optim.Adam(self.generator.parameters(),     lr=lr, betas=(b1, b2))
-        opt_d = torch.optim.Adam(self.discriminator.parameters(), lr=lr, betas=(b1, b2))
+        # opt_g = torch.optim.Adam(self.generator.parameters(),     lr=lr, betas=(b1, b2))
+        # opt_d = torch.optim.Adam(self.discriminator.parameters(), lr=lr, betas=(b1, b2),)
+        opt_g = torch.optim.Adam(self.generator.parameters(),     lr=lr)
+        opt_d = torch.optim.Adam(self.discriminator.parameters(), lr=lr)
         return [opt_g, opt_d], []
 
 
