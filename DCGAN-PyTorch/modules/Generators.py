@@ -70,14 +70,14 @@ class Generator_2(nn.Module):
             nn.UpsamplingNearest2d( scale_factor=2 ),
             # nn.UpsamplingBilinear2d( scale_factor=2 ),
             nn.Conv2d( 64,128, (3,3), stride=(1,1), padding=(1,1) ),
-            nn.BatchNorm2d(128),
             nn.ReLU(),
+            nn.BatchNorm2d(128),
 
             nn.UpsamplingNearest2d( scale_factor=2 ),
             # nn.UpsamplingBilinear2d( scale_factor=2 ),
             nn.Conv2d( 128,256, (3,3), stride=(1,1), padding=(1,1)),
-            nn.BatchNorm2d(256),
             nn.ReLU(),
+            nn.BatchNorm2d(256),
 
             nn.Conv2d( 256,1, (5,5), stride=(1,1), padding=(2,2)),
             nn.Sigmoid()
