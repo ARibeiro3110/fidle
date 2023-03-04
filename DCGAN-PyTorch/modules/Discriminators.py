@@ -35,7 +35,6 @@ class Discriminator_1(nn.Module):
         )
 
     def forward(self, img):
-        # img_flat = img.view(img.size(0), -1)
         validity = self.model(img)
 
         return validity
@@ -79,7 +78,7 @@ class Discriminator_2(nn.Module):
         )
 
     def forward(self, img):
-        img_nchw = img.permute(0, 3, 1, 2) # from NHWC to NCHW
+        img_nchw = img.permute(0, 3, 1, 2) # reformat from NHWC to NCHW
         validity = self.model(img_nchw)
 
         return validity
