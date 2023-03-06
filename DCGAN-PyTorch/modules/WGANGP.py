@@ -20,7 +20,7 @@ import torchvision
 from lightning import LightningModule
 
 
-class GAN(LightningModule):
+class WGANGP(LightningModule):
 
     # -------------------------------------------------------------------------
     # Init
@@ -34,13 +34,14 @@ class GAN(LightningModule):
         b1                  = 0.5,
         b2                  = 0.999,
         batch_size          = 64,
+        lambda_gp           = 10,
         generator_class     = None,
         discriminator_class = None,
         **kwargs,
     ):
         super().__init__()
 
-        print('\n---- GAN initialization --------------------------------------------')
+        print('\n---- WGANGP initialization -----------------------------------------')
 
         # ---- Hyperparameters
         #
@@ -79,33 +80,83 @@ class GAN(LightningModule):
         return F.binary_cross_entropy(y_hat, y)
 
 
-    def training_step(self, batch, batch_idx, optimizer_idx):
-        imgs       = batch
-        batch_size = batch.size(0)
 
-        # ---- Get some latent space vectors
+# ------------------------------------------------------------------------------------ TO DO -------------------
+
+    # see : # from : https://github.com/rosshemsley/gander/blob/main/gander/models/gan.py
+
+    def gradient_penalty(self, real_images, fake_images):
+
+        batch_size = real_images.size(0)
+
+        # ---- Create interpolate images
+        #
+        # Get a random vector : size=([batch_size])
+        epsilon = torch.distributions.uniform.Uniform(0, 1).sample([batch_size])
+        # Add dimensions to match images batch : size=([batch_size,1,1,1])
+        epsilon = epsilon[:, None, None, None]
+        # Put epsilon a the right place
+        epsilon = epsilon.type_as(real_images)
+        # Do interpolation
+        interpolates = epsilon * fake_images + ((1 - epsilon) * real_images)
+
+        # ---- Use autograd to compute gradient
+        #
+        # The key to making this work is including `create_graph`, this means that the computations
+        # in this penalty will be added to the computation graph for the loss function, so that the
+        # second partial derivatives will be correctly computed.
+        #
+        interpolates.requires_grad = True
+
+        pred_labels = self.discriminator.forward(interpolates)
+
+        gradients = torch.autograd.grad(  inputs       = interpolates,
+                                          outputs      = pred_labels, 
+                                          grad_outputs = torch.ones_like(pred_labels),
+                                          create_graph = True, 
+                                          only_inputs  = True )[0]
+
+        grad_flat   = gradients.view(batch_size, -1)
+        grad_norm   = torch.linalg.norm(grad_flat, dim=1)
+
+        grad_penalty = (grad_norm - 1) ** 2 
+
+        return grad_penalty
+
+
+
+# ------------------------------------------------------------------------------------------------------------------
+
+
+    def training_step(self, batch, batch_idx, optimizer_idx):
+
+        real_imgs  = batch
+        batch_size = batch.size(0)
+        lambda_gp  = self.hparams.lambda_gp
+
+        # ---- Get some latent space vectors and fake images
         #      We use type_as() to make sure we initialize z on the right device (GPU/CPU).
         #
         z = torch.randn(batch_size, self.hparams.latent_dim)
-        z = z.type_as(imgs)
+        z = z.type_as(real_imgs)
+        
+        fake_imgs = self.generator.forward(z)
 
         # ---- Train generator
         #      Generator use optimizer #0
-        #      We try to generate false images that could mislead the discriminator
+        #      We try to generate false images that could have nive critics
         #
         if optimizer_idx == 0:
 
-            # Generate fake images
-            self.fake_imgs = self.generator.forward(z)
+            # Get critics
+            critics = self.discriminator.forward(fake_imgs)
 
-            # Assemble labels that say all images are real, yes it's a lie ;-)
-            # put on GPU because we created this tensor inside training_loop
-            misleading_labels = torch.ones(batch_size, 1)
-            misleading_labels = misleading_labels.type_as(imgs)
+            # Loss
+            g_loss = -critics.mean()
 
-            # Adversarial loss is binary cross-entropy
-            g_loss = self.adversarial_loss(self.discriminator.forward(self.fake_imgs), misleading_labels)
+            # Log
             self.log("g_loss", g_loss, prog_bar=True)
+
             return g_loss
 
         # ---- Train discriminator
@@ -114,23 +165,19 @@ class GAN(LightningModule):
         #
         if optimizer_idx == 1:
             
-            # These images are reals
-            real_labels = torch.ones(batch_size, 1)
-            real_labels = real_labels.type_as(imgs)
-            pred_labels = self.discriminator.forward(imgs)
+            # Get critics
+            critics_real = self.discriminator.forward(real_imgs)
+            critics_fake = self.discriminator.forward(fake_imgs)
 
-            real_loss   = self.adversarial_loss(pred_labels, real_labels)
+            # Get gradient penalty
+            grad_penalty = self.gradient_penalty(real_imgs, fake_imgs)
 
-            # These images are fake
-            fake_imgs   = self.generator.forward(z)
-            fake_labels = torch.zeros(batch_size, 1)
-            fake_labels = fake_labels.type_as(imgs)
+            # Loss
+            d_loss = critics_fake.mean() - critics_real.mean() + lambda_gp*grad_penalty.mean()
 
-            fake_loss   = self.adversarial_loss(self.discriminator(fake_imgs.detach()), fake_labels)
-
-            # Discriminator loss is the average
-            d_loss = (real_loss + fake_loss) / 2
+            # Log loss
             self.log("d_loss", d_loss, prog_bar=True)
+
             return d_loss
 
 
