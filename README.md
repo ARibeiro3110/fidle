@@ -31,7 +31,7 @@ For more information, see **https://fidle.cnrs.fr** :
 For more information, you can contact us at :  
 [<img width="200px" style="vertical-align:middle" src="fidle/img/00-Mail_contact.svg"></img>](#top)
 
-Current Version : <!-- VERSION_BEGIN -->2.2.3<!-- VERSION_END -->
+Current Version : <!-- VERSION_BEGIN -->2.2.4<!-- VERSION_END -->
 
 
 ## Course materials
@@ -46,7 +46,7 @@ Have a look about **[How to get and install](https://fidle.cnrs.fr/installation)
 ## Jupyter notebooks
 
 <!-- TOC_BEGIN -->
-<!-- Automatically generated on : 19/12/22 10:48:06 -->
+<!-- Automatically generated on : 12/04/23 09:28:57 -->
 
 ### Linear and logistic regression
 - **[LINR1](LinearReg/01-Linear-Regression.ipynb)** - [Linear regression with direct resolution](LinearReg/01-Linear-Regression.ipynb)  
@@ -76,7 +76,7 @@ An example of classification using a dense neural network for the famous MNIST d
 - **[MNIST2](MNIST/02-CNN-MNIST.ipynb)** - [Simple classification with CNN](MNIST/02-CNN-MNIST.ipynb)  
 An example of classification using a convolutional neural network for the famous MNIST dataset
 
-### Images classification with Convolutional Neural Networks (CNN
+### Images classification with Convolutional Neural Networks (CNN)
 - **[GTSRB1](GTSRB/01-Preparation-of-data.ipynb)** - [Dataset analysis and preparation](GTSRB/01-Preparation-of-data.ipynb)  
 Episode 1 : Analysis of the GTSRB dataset and creation of an enhanced dataset
 - **[GTSRB2](GTSRB/02-First-convolutions.ipynb)** - [First convolutions](GTSRB/02-First-convolutions.ipynb)  
@@ -96,7 +96,7 @@ Bash script for an OAR batch submission of an ipython code
 - **[GTSRB11](GTSRB/batch_slurm.sh)** - [SLURM batch script](GTSRB/batch_slurm.sh)  
 Bash script for a Slurm batch submission of an ipython code
 
-### Sentiment analysis with word embedding
+### Sentiment analysis with word embeddin
 - **[IMDB1](IMDB/01-One-hot-encoding.ipynb)** - [Sentiment analysis with hot-one encoding](IMDB/01-One-hot-encoding.ipynb)  
 A basic example of sentiment analysis with sparse encoding, using a dataset from Internet Movie Database (IMDB)
 - **[IMDB2](IMDB/02-Keras-embedding.ipynb)** - [Sentiment analysis with text embedding](IMDB/02-Keras-embedding.ipynb)  
@@ -108,7 +108,7 @@ Retrieving embedded vectors from our trained model
 - **[IMDB5](IMDB/05-LSTM-Keras.ipynb)** - [Sentiment analysis with a RNN network](IMDB/05-LSTM-Keras.ipynb)  
 Still the same problem, but with a network combining embedding and RNN
 
-### Time series with Recurrent Neural Network (RNN
+### Time series with Recurrent Neural Network (RNN)
 - **[LADYB1](SYNOP/LADYB1-Ladybug.ipynb)** - [Prediction of a 2D trajectory via RNN](SYNOP/LADYB1-Ladybug.ipynb)  
 Artificial dataset generation and prediction attempt via a recurrent network
 - **[SYNOP1](SYNOP/SYNOP1-Preparation-of-data.ipynb)** - [Preparation of data](SYNOP/SYNOP1-Preparation-of-data.ipynb)  
@@ -124,7 +124,7 @@ Using a Tranformer to perform a sentiment analysis (IMDB) - Jean Zay version
 - **[TRANS2](Transformers/02-distilbert_colab.ipynb)** - [IMDB, Sentiment analysis with Transformers ](Transformers/02-distilbert_colab.ipynb)  
 Using a Tranformer to perform a sentiment analysis (IMDB) - Colab version
 
-### Unsupervised learning with an autoencoder neural network (AE
+### Unsupervised learning with an autoencoder neural network (AE)
 - **[AE1](AE/01-Prepare-MNIST-dataset.ipynb)** - [Prepare a noisy MNIST dataset](AE/01-Prepare-MNIST-dataset.ipynb)  
 Episode 1: Preparation of a noisy MNIST dataset
 - **[AE2](AE/02-AE-with-MNIST.ipynb)** - [Building and training an AE denoiser model](AE/02-AE-with-MNIST.ipynb)  
@@ -136,35 +136,31 @@ Episode 4 : Construction of a denoiser and classifier model
 - **[AE5](AE/05-ExtAE-with-MNIST.ipynb)** - [Advanced denoiser and classifier model](AE/05-ExtAE-with-MNIST.ipynb)  
 Episode 5 : Construction of an advanced denoiser and classifier model
 
-### Generative network with Variational Autoencoder (VAE
+### Generative network with Variational Autoencoder (VAE)
 - **[VAE1](VAE/01-VAE-with-MNIST.ipynb)** - [First VAE, using functional API (MNIST dataset)](VAE/01-VAE-with-MNIST.ipynb)  
 Construction and training of a VAE, using functional APPI, with a latent space of small dimension.
 - **[VAE2](VAE/02-VAE-with-MNIST.ipynb)** - [VAE, using a custom model class  (MNIST dataset)](VAE/02-VAE-with-MNIST.ipynb)  
 Construction and training of a VAE, using model subclass, with a latent space of small dimension.
 - **[VAE3](VAE/03-VAE-with-MNIST-post.ipynb)** - [Analysis of the VAE's latent space of MNIST dataset](VAE/03-VAE-with-MNIST-post.ipynb)  
 Visualization and analysis of the VAE's latent space of the dataset MNIST
-- **[VAE5](VAE/05-About-CelebA.ipynb)** - [Another game play : About the CelebA dataset](VAE/05-About-CelebA.ipynb)  
-Episode 1 : Presentation of the CelebA dataset and problems related to its size
-- **[VAE6](VAE/06-Prepare-CelebA-datasets.ipynb)** - [Generation of a clustered dataset](VAE/06-Prepare-CelebA-datasets.ipynb)  
-Episode 2 : Analysis of the CelebA dataset and creation of an clustered and usable dataset
-- **[VAE7](VAE/07-Check-CelebA.ipynb)** - [Checking the clustered dataset](VAE/07-Check-CelebA.ipynb)  
-Episode : 3 Clustered dataset verification and testing of our datagenerator
-- **[VAE8](VAE/08-VAE-with-CelebA-128x128.ipynb)** - [Training session for our VAE with 128x128 images](VAE/08-VAE-with-CelebA-128x128.ipynb)  
-Episode 4 : Training with our clustered datasets in notebook or batch mode
-- **[VAE9](VAE/09-VAE-with-CelebA-192x160.ipynb)** - [Training session for our VAE with 192x160 images](VAE/09-VAE-with-CelebA-192x160.ipynb)  
-Episode 4 : Training with our clustered datasets in notebook or batch mode
-- **[VAE10](VAE/10-VAE-with-CelebA-post.ipynb)** - [Data generation from latent space](VAE/10-VAE-with-CelebA-post.ipynb)  
-Episode 5 : Exploring latent space to generate new data
-- **[VAE10](VAE/batch_slurm.sh)** - [SLURM batch script](VAE/batch_slurm.sh)  
-Bash script for SLURM batch submission of VAE8 notebooks 
 
-### Generative Adversarial Networks (GANs
+### Generative Adversarial Networks (GANs)
 - **[SHEEP1](DCGAN/01-DCGAN-Draw-me-a-sheep.ipynb)** - [A first DCGAN to Draw a Sheep](DCGAN/01-DCGAN-Draw-me-a-sheep.ipynb)  
 Episode 1 : Draw me a sheep, revisited with a DCGAN
 - **[SHEEP2](DCGAN/02-WGANGP-Draw-me-a-sheep.ipynb)** - [A WGAN-GP to Draw a Sheep](DCGAN/02-WGANGP-Draw-me-a-sheep.ipynb)  
 Episode 2 : Draw me a sheep, revisited with a WGAN-GP
 
-### Deep Reinforcement Learning (DRL
+### Diffusion Model (DDPM)
+- **[DDPM1](DDPM/01-ddpm.ipynb)** - [Fashion MNIST Generation with DDPM](DDPM/01-ddpm.ipynb)  
+Diffusion Model example, to generate Fashion MNIST images.
+- **[DDPM2](DDPM/model.py)** - [DDPM Python classes](DDPM/model.py)  
+Python classes used by DDMP Example
+
+### Training optimization
+- **[OPT1](Optimization/01-Apprentissages-rapides-et-Optimisations.ipynb)** - [Training setup optimization](Optimization/01-Apprentissages-rapides-et-Optimisations.ipynb)  
+The goal of this notebook is to go through a typical deep learning model training
+
+### Deep Reinforcement Learning (DRL)
 - **[DRL1](DRL/FIDLE_DQNfromScratch.ipynb)** - [Solving CartPole with DQN](DRL/FIDLE_DQNfromScratch.ipynb)  
 Using a a Deep Q-Network to play CartPole - an inverted pendulum problem (PyTorch)
 - **[DRL2](DRL/FIDLE_rl_baselines_zoo.ipynb)** - [RL Baselines3 Zoo: Training in Colab](DRL/FIDLE_rl_baselines_zoo.ipynb)  

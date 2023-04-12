@@ -1,6 +1,6 @@
 campain:
   version: '1.0'
-  description: Automatically generated ci profile (19/12/22 10:48:06)
+  description: Automatically generated ci profile (12/04/23 09:28:57)
   directory: ./campains/default
   existing_notebook: 'remove    # remove|skip'
   report_template: 'fidle     # fidle|default'
@@ -275,54 +275,6 @@ VAE3:
     scale: default
     seed: default
     models_dir: default
-VAE5:
-  notebook: VAE/05-About-CelebA.ipynb
-  overrides:
-    progress_verbosity: default
-VAE6:
-  notebook: VAE/06-Prepare-CelebA-datasets.ipynb
-  overrides:
-    progress_verbosity: default
-    scale: default
-    seed: default
-    cluster_size: default
-    image_size: default
-    output_dir: default
-    exit_if_exist: default
-VAE7:
-  notebook: VAE/07-Check-CelebA.ipynb
-  overrides:
-    image_size: default
-    enhanced_dir: default
-    progress_verbosity: default
-VAE8:
-  notebook: VAE/08-VAE-with-CelebA-128x128.ipynb
-  overrides:
-    scale: default
-    image_size: default
-    enhanced_dir: default
-    latent_dim: default
-    loss_weights: default
-    batch_size: default
-    epochs: default
-    fit_verbosity: default
-VAE9:
-  notebook: VAE/09-VAE-with-CelebA-192x160.ipynb
-  overrides:
-    scale: default
-    image_size: default
-    enhanced_dir: default
-    latent_dim: default
-    loss_weights: default
-    batch_size: default
-    epochs: default
-    fit_verbosity: default
-VAE10:
-  notebook: VAE/10-VAE-with-CelebA-post.ipynb
-  overrides:
-    image_size: default
-    enhanced_dir: default
-    models_dir: default
 
 #
 # ------------ DCGAN
@@ -345,6 +297,18 @@ SHEEP2:
     batch_size: default
     num_img: default
     fit_verbosity: default
+
+#
+# ------------ DDPM
+#
+DDPM1:
+  notebook: DDPM/01-ddpm.ipynb
+
+#
+# ------------ Optimization
+#
+OPT1:
+  notebook: Optimization/01-Apprentissages-rapides-et-Optimisations.ipynb
 
 #
 # ------------ DRL
