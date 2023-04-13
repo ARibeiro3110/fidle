@@ -1,0 +1,29 @@
+# ----------------------------------------------------
+#    ______ _     _ _       __      __             
+#   |  ____(_)   | | |      \ \    / /             
+#   | |__   _  __| | | ___   \ \  / /__ _ ____   __
+#   |  __| | |/ _` | |/ _ \   \ \/ / _ \ '_ \ \ / /
+#   | |    | | (_| | |  __/    \  /  __/ | | \ V / 
+#   |_|    |_|\__,_|_|\___|     \/ \___|_| |_|\_/  
+#                               Fidle pip virtual env
+# ----------------------------------------------------
+#
+# To install your Fidle env, see https://fidle.cnrs.fr/installation
+
+torch
+torchvision
+torch-geometric
+lightning
+-f https://download.pytorch.org/whl/cpu
+tensorflow_cpu>=2.7
+keras
+numpy
+pandas
+jupyterlab
+scikit-image
+scikit-learn
+matplotlib
+plotly
+barviz
+opencv-python
+fidle
