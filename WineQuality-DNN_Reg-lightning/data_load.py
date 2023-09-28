@@ -1,3 +1,16 @@
+
+# ------------------------------------------------------------------
+#     _____ _     _ _
+#    |  ___(_) __| | | ___
+#    | |_  | |/ _` | |/ _ \
+#    |  _| | | (_| | |  __/
+#    |_|   |_|\__,_|_|\___|
+# ------------------------------------------------------------------
+# Formation Introduction au Deep Learning  (FIDLE)
+# CNRS/SARI/DEVLOG 2023 
+# ------------------------------------------------------------------
+# 2.0 version by Achille Mbogol Touye (EFELIA-MIAI/SIMAP¨), sep 2023
+
 import torch
 import pandas as pd
 import lightning.pytorch as pl
