@@ -1,6 +1,6 @@
 <a name="top"></a>
 
-[<img width="600px" src="fidle/img/00-Fidle-titre-01.svg"></img>](#top)
+[<img width="600px" src="fidle/img/title.svg"></img>](#top)
 
 <!-- --------------------------------------------------- -->
 <!-- To correctly view this README under Jupyter Lab     -->
@@ -23,7 +23,7 @@ The objectives of this training are :
 For more information, see **https://fidle.cnrs.fr** :
 - **[Fidle site](https://fidle.cnrs.fr)**
 - **[Presentation of the training](https://fidle.cnrs.fr/presentation)**
-- **[Program 2022/2023](https://fidle.cnrs.fr/programme)**
+- **[Detailed program](https://fidle.cnrs.fr/programme)**
 - [Subscribe to the list](https://fidle.cnrs.fr/listeinfo), to stay informed !
 - [Find us on youtube](https://fidle.cnrs.fr/youtube)
 - [Corrected notebooks](https://fidle.cnrs.fr/done)
@@ -31,14 +31,14 @@ For more information, see **https://fidle.cnrs.fr** :
 For more information, you can contact us at :  
 [<img width="200px" style="vertical-align:middle" src="fidle/img/00-Mail_contact.svg"></img>](#top)
 
-Current Version : <!-- VERSION_BEGIN -->2.2.4<!-- VERSION_END -->
+Current Version : <!-- VERSION_BEGIN -->2.4.0<!-- VERSION_END -->
 
 
 ## Course materials
 
 | | | | |
 |:--:|:--:|:--:|:--:|
-| **[<img width="50px" src="fidle/img/00-Fidle-pdf.svg"></img><br>Course slides](https://fidle.cnrs.fr/supports)**<br>The course in pdf format<br>(12 Mo)| **[<img width="50px" src="fidle/img/00-Notebooks.svg"></img><br>Notebooks](https://fidle.cnrs.fr/notebooks)**<br> &nbsp;&nbsp;&nbsp;&nbsp;Get a Zip or clone this repository &nbsp;&nbsp;&nbsp;&nbsp;<br>(40 Mo)| **[<img width="50px" src="fidle/img/00-Datasets-tar.svg"></img><br>Datasets](https://fidle.cnrs.fr/datasets-fidle.tar)**<br>All the needed datasets<br>(1.2 Go)|**[<img width="50px" src="fidle/img/00-Videos.svg"></img><br>Videos](https://fidle.cnrs.fr/youtube)**<br>&nbsp;&nbsp;&nbsp;&nbsp;Our Youtube channel&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;|
+| **[<img width="50px" src="fidle/img/00-Fidle-pdf.svg"></img><br>Course slides](https://fidle.cnrs.fr/supports)**<br>The course in pdf format<br>| **[<img width="50px" src="fidle/img/00-Notebooks.svg"></img><br>Notebooks](https://fidle.cnrs.fr/notebooks)**<br> &nbsp;&nbsp;&nbsp;&nbsp;Get a Zip or clone this repository &nbsp;&nbsp;&nbsp;&nbsp;<br>| **[<img width="50px" src="fidle/img/00-Datasets-tar.svg"></img><br>Datasets](https://fidle.cnrs.fr/datasets-fidle.tar)**<br>All the needed datasets<br>|**[<img width="50px" src="fidle/img/00-Videos.svg"></img><br>Videos](https://fidle.cnrs.fr/youtube)**<br>&nbsp;&nbsp;&nbsp;&nbsp;Our Youtube channel&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;|
 
 Have a look about **[How to get and install](https://fidle.cnrs.fr/installation)** these notebooks and datasets.
 
@@ -46,7 +46,7 @@ Have a look about **[How to get and install](https://fidle.cnrs.fr/installation)
 ## Jupyter notebooks
 
 <!-- TOC_BEGIN -->
-<!-- Automatically generated on : 12/04/23 09:28:57 -->
+<!-- Automatically generated on : 31/10/23 18:24:11 -->
 
 ### Linear and logistic regression
 - **[LINR1](LinearReg/01-Linear-Regression.ipynb)** - [Linear regression with direct resolution](LinearReg/01-Linear-Regression.ipynb)  
@@ -59,21 +59,41 @@ Illustration of the problem of complexity with the polynomial regression
 Simple example of logistic regression with a sklearn solution
 
 ### Perceptron Model 1957
-- **[PER57](IRIS/01-Simple-Perceptron.ipynb)** - [Perceptron Model 1957](IRIS/01-Simple-Perceptron.ipynb)  
+- **[PER57](Perceptron/01-Simple-Perceptron.ipynb)** - [Perceptron Model 1957](Perceptron/01-Simple-Perceptron.ipynb)  
 Example of use of a Perceptron, with sklearn and IRIS dataset of 1936 !
 
-### Basic regression using DN
-- **[BHPD1](BHPD/01-DNN-Regression.ipynb)** - [Regression with a Dense Network (DNN)](BHPD/01-DNN-Regression.ipynb)  
+### BHPD regression (DNN), using Keras
+- **[KBHPD1](BHPD.Keras/01-DNN-Regression.ipynb)** - [Regression with a Dense Network (DNN)](BHPD.Keras/01-DNN-Regression.ipynb)  
 Simple example of a regression with the dataset Boston Housing Prices Dataset (BHPD)
-- **[BHPD2](BHPD/02-DNN-Regression-Premium.ipynb)** - [Regression with a Dense Network (DNN) - Advanced code](BHPD/02-DNN-Regression-Premium.ipynb)  
+- **[KBHPD2](BHPD.Keras/02-DNN-Regression-Premium.ipynb)** - [Regression with a Dense Network (DNN) - Advanced code](BHPD.Keras/02-DNN-Regression-Premium.ipynb)  
 A more advanced implementation of the precedent example
-- **[WINE1](BHPD/03-DNN-Wine-Regression.ipynb)** - [Wine quality prediction with a Dense Network (DNN)](BHPD/03-DNN-Wine-Regression.ipynb)  
+
+### BHPD regression (DNN), using PyTorch
+- **[PBHPD1](BHPD.PyTorch/01-DNN-Regression_PyTorch.ipynb)** - [Regression with a Dense Network (DNN)](BHPD.PyTorch/01-DNN-Regression_PyTorch.ipynb)  
+A Simple regression with a Dense Neural Network (DNN) using Pytorch - BHPD dataset
+
+### Wine Quality prediction (DNN), using Keras
+- **[KWINE1](Wine.Keras/01-DNN-Wine-Regression.ipynb)** - [Wine quality prediction with a Dense Network (DNN)](Wine.Keras/01-DNN-Wine-Regression.ipynb)  
 Another example of regression, with a wine quality prediction!
 
-### Basic classification using a DN
-- **[MNIST1](MNIST/01-DNN-MNIST.ipynb)** - [Simple classification with DNN](MNIST/01-DNN-MNIST.ipynb)  
+### Wine Quality prediction (DNN), using PyTorch
+- **[LWINE1](Wine.Lightning/01-DNN-Wine-Regression-lightning.ipynb)** - [Wine quality prediction with a Dense Network (DNN) using Lightning](Wine.Lightning/01-DNN-Wine-Regression-lightning.ipynb)  
+Another example of regression, with a wine quality prediction!
+
+### MNIST classification (DNN,CNN), using Keras
+- **[KMNIST1](MNIST.Keras/01-DNN-MNIST.ipynb)** - [Simple classification with DNN](MNIST.Keras/01-DNN-MNIST.ipynb)  
 An example of classification using a dense neural network for the famous MNIST dataset
-- **[MNIST2](MNIST/02-CNN-MNIST.ipynb)** - [Simple classification with CNN](MNIST/02-CNN-MNIST.ipynb)  
+- **[KMNIST2](MNIST.Keras/02-CNN-MNIST.ipynb)** - [Simple classification with CNN](MNIST.Keras/02-CNN-MNIST.ipynb)  
+An example of classification using a convolutional neural network for the famous MNIST dataset
+
+### MNIST classification (DNN,CNN), using PyTorch
+- **[PMNIST1](MNIST.PyTorch/01-DNN-MNIST_PyTorch.ipynb)** - [Simple classification with DNN](MNIST.PyTorch/01-DNN-MNIST_PyTorch.ipynb)  
+Example of classification with a fully connected neural network, using Pytorch
+
+### MNIST classification (DNN,CNN), using Lightning
+- **[LMNIST1](MNIST.Lightning/01-DNN-MNIST_Lightning.ipynb)** - [Simple classification with DNN using Pytorch Lightning](MNIST.Lightning/01-DNN-MNIST_Lightning.ipynb)  
+An example of classification using a dense neural network for the famous MNIST dataset
+- **[LMNIST2](MNIST.Lightning/02-CNN-MNIST_Lightning.ipynb)** - [Simple classification with CNN using Pytorch Lightning](MNIST.Lightning/02-CNN-MNIST_Lightning.ipynb)  
 An example of classification using a convolutional neural network for the famous MNIST dataset
 
 ### Images classification with Convolutional Neural Networks (CNN)
@@ -96,7 +116,7 @@ Bash script for an OAR batch submission of an ipython code
 - **[GTSRB11](GTSRB/batch_slurm.sh)** - [SLURM batch script](GTSRB/batch_slurm.sh)  
 Bash script for a Slurm batch submission of an ipython code
 
-### Sentiment analysis with word embeddin
+### Sentiment analysis with word embedding
 - **[IMDB1](IMDB/01-One-hot-encoding.ipynb)** - [Sentiment analysis with hot-one encoding](IMDB/01-One-hot-encoding.ipynb)  
 A basic example of sentiment analysis with sparse encoding, using a dataset from Internet Movie Database (IMDB)
 - **[IMDB2](IMDB/02-Keras-embedding.ipynb)** - [Sentiment analysis with text embedding](IMDB/02-Keras-embedding.ipynb)  
@@ -166,17 +186,19 @@ Using a a Deep Q-Network to play CartPole - an inverted pendulum problem (PyTorc
 - **[DRL2](DRL/FIDLE_rl_baselines_zoo.ipynb)** - [RL Baselines3 Zoo: Training in Colab](DRL/FIDLE_rl_baselines_zoo.ipynb)  
 Demo of Stable baseline3 with Colab
 
-### Miscellaneous
-- **[ACTF1](Misc/Activation-Functions.ipynb)** - [Activation functions](Misc/Activation-Functions.ipynb)  
-Some activation functions, with their derivatives.
-- **[NP1](Misc/Numpy.ipynb)** - [A short introduction to Numpy](Misc/Numpy.ipynb)  
+### Miscellaneous things, but very important!
+- **[NP1](Misc/00-Numpy.ipynb)** - [A short introduction to Numpy](Misc/00-Numpy.ipynb)  
 Numpy is an essential tool for the Scientific Python.
-- **[SCRATCH1](Misc/Scratchbook.ipynb)** - [Scratchbook](Misc/Scratchbook.ipynb)  
-A scratchbook for small examples
-- **[TSB1](Misc/Using-Tensorboard.ipynb)** - [Tensorboard with/from Jupyter ](Misc/Using-Tensorboard.ipynb)  
-4 ways to use Tensorboard from the Jupyter environment
-- **[PANDAS1](Misc/Using-pandas.ipynb)** - [Quelques exemples avec Pandas](Misc/Using-pandas.ipynb)  
+- **[ACTF1](Misc/01-Activation-Functions.ipynb)** - [Activation functions](Misc/01-Activation-Functions.ipynb)  
+Some activation functions, with their derivatives.
+- **[PANDAS1](Misc/02-Using-pandas.ipynb)** - [Quelques exemples avec Pandas](Misc/02-Using-pandas.ipynb)  
 pandas is another essential tool for the Scientific Python.
+- **[PYTORCH1](Misc/03-Using-Pytorch.ipynb)** - [Practical Lab : PyTorch](Misc/03-Using-Pytorch.ipynb)  
+PyTorch est l'un des principaux framework utilisé dans le Deep Learning
+- **[TSB1](Misc/04-Using-Tensorboard.ipynb)** - [Tensorboard with/from Jupyter ](Misc/04-Using-Tensorboard.ipynb)  
+4 ways to use Tensorboard from the Jupyter environment
+- **[SCRATCH1](Misc/99-Scratchbook.ipynb)** - [Scratchbook](Misc/99-Scratchbook.ipynb)  
+A scratchbook for small examples
 <!-- TOC_END -->
 
 
@@ -194,4 +216,4 @@ See [Disclaimer](https://creativecommons.org/licenses/by-nc-sa/4.0/#).
 
 
 ----
-[<img width="80px" src="fidle/img/00-Fidle-logo-01.svg"></img>](#top)
+[<img width="80px" src="fidle/img/logo-paysage.svg"></img>](#top)
