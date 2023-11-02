@@ -9,11 +9,11 @@
 #                      Formation Introduction au Deep Learning - 2022
 #--------------------------------------------------------------------
 # Formation Introduction au Deep Learning       https://fidle.cnrs.fr
-# By MIAI/CNRS/UGA 2022
+# By MIAI/CNRS/UGA 2023/24
 #
-# This file describes the notebooks used by the nice Fidle training.
+# This file describes the notebooks used by the Fidle training.
 
-version:          2.2.4
+version:          2.4.0
 content:          notebooks
 name:             Notebooks Fidle
 description:      All notebooks used by the Fidle training
@@ -24,18 +24,23 @@ readme_ipynb:     README.ipynb
 default_ci:       fidle/ci/default.yml
 
 toc:
-  LinearReg:      Linear and logistic regression
-  IRIS:           Perceptron Model 1957
-  BHPD:           Basic regression using DN
-  MNIST:          Basic classification using a DN
-  GTSRB:          Images classification with Convolutional Neural Networks (CNN)
-  IMDB:           Sentiment analysis with word embeddin
-  SYNOP:          Time series with Recurrent Neural Network (RNN)
-  Transformers:   Sentiment analysis with transformer
-  AE:             Unsupervised learning with an autoencoder neural network (AE)
-  VAE:            Generative network with Variational Autoencoder (VAE)
-  DCGAN:          Generative Adversarial Networks (GANs)
-  DDPM:           Diffusion Model (DDPM)
-  Optimization:   Training optimization
-  DRL:            Deep Reinforcement Learning (DRL)
-  Misc:           Miscellaneous
+  LinearReg:       Linear and logistic regression
+  Perceptron:      Perceptron Model 1957
+  BHPD.Keras:      BHPD regression (DNN), using Keras
+  BHPD.PyTorch:    BHPD regression (DNN), using PyTorch
+  Wine.Keras:      Wine Quality prediction (DNN), using Keras
+  Wine.Lightning:  Wine Quality prediction (DNN), using PyTorch
+  MNIST.Keras:     MNIST classification (DNN,CNN), using Keras
+  MNIST.PyTorch:   MNIST classification (DNN,CNN), using PyTorch
+  MNIST.Lightning: MNIST classification (DNN,CNN), using Lightning 
+  GTSRB:           Images classification with Convolutional Neural Networks (CNN)
+  IMDB:            Sentiment analysis with word embedding
+  SYNOP:           Time series with Recurrent Neural Network (RNN)
+  Transformers:    Sentiment analysis with transformer
+  AE:              Unsupervised learning with an autoencoder neural network (AE)
+  VAE:             Generative network with Variational Autoencoder (VAE)
+  DCGAN:           Generative Adversarial Networks (GANs)
+  DDPM:            Diffusion Model (DDPM)
+  Optimization:    Training optimization
+  DRL:             Deep Reinforcement Learning (DRL)
+  Misc:            Miscellaneous things, but very important!

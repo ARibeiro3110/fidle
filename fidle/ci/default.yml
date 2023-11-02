@@ -1,6 +1,6 @@
 campain:
   version: '1.0'
-  description: Automatically generated ci profile (12/04/23 09:28:57)
+  description: Automatically generated ci profile (31/10/23 18:24:11)
   directory: ./campains/default
   existing_notebook: 'remove    # remove|skip'
   report_template: 'fidle     # fidle|default'
@@ -19,39 +19,72 @@ LOGR1:
   notebook: LinearReg/04-Logistic-Regression.ipynb
 
 #
-# ------------ IRIS
+# ------------ Perceptron
 #
 PER57:
-  notebook: IRIS/01-Simple-Perceptron.ipynb
+  notebook: Perceptron/01-Simple-Perceptron.ipynb
 
 #
-# ------------ BHPD
+# ------------ BHPD.Keras
 #
-BHPD1:
-  notebook: BHPD/01-DNN-Regression.ipynb
+KBHPD1:
+  notebook: BHPD.Keras/01-DNN-Regression.ipynb
   overrides:
     fit_verbosity: default
-BHPD2:
-  notebook: BHPD/02-DNN-Regression-Premium.ipynb
+KBHPD2:
+  notebook: BHPD.Keras/02-DNN-Regression-Premium.ipynb
   overrides:
     fit_verbosity: default
-WINE1:
-  notebook: BHPD/03-DNN-Wine-Regression.ipynb
+
+#
+# ------------ BHPD.PyTorch
+#
+PBHPD1:
+  notebook: BHPD.PyTorch/01-DNN-Regression_PyTorch.ipynb
+
+#
+# ------------ Wine.Keras
+#
+KWINE1:
+  notebook: Wine.Keras/01-DNN-Wine-Regression.ipynb
   overrides:
     fit_verbosity: default
     dataset_name: default
 
 #
-# ------------ MNIST
+# ------------ Wine.Lightning
 #
-MNIST1:
-  notebook: MNIST/01-DNN-MNIST.ipynb
+LWINE1:
+  notebook: Wine.Lightning/01-DNN-Wine-Regression-lightning.ipynb
   overrides:
     fit_verbosity: default
-MNIST2:
-  notebook: MNIST/02-CNN-MNIST.ipynb
+    dataset_name: default
+
+#
+# ------------ MNIST.Keras
+#
+KMNIST1:
+  notebook: MNIST.Keras/01-DNN-MNIST.ipynb
   overrides:
     fit_verbosity: default
+KMNIST2:
+  notebook: MNIST.Keras/02-CNN-MNIST.ipynb
+  overrides:
+    fit_verbosity: default
+
+#
+# ------------ MNIST.PyTorch
+#
+PMNIST1:
+  notebook: MNIST.PyTorch/01-DNN-MNIST_PyTorch.ipynb
+
+#
+# ------------ MNIST.Lightning
+#
+LMNIST1:
+  notebook: MNIST.Lightning/01-DNN-MNIST_Lightning.ipynb
+LMNIST2:
+  notebook: MNIST.Lightning/02-CNN-MNIST_Lightning.ipynb
 
 #
 # ------------ GTSRB
@@ -321,14 +354,16 @@ DRL2:
 #
 # ------------ Misc
 #
-ACTF1:
-  notebook: Misc/Activation-Functions.ipynb
 NP1:
-  notebook: Misc/Numpy.ipynb
-SCRATCH1:
-  notebook: Misc/Scratchbook.ipynb
-TSB1:
-  notebook: Misc/Using-Tensorboard.ipynb
-  overrides: ??
+  notebook: Misc/00-Numpy.ipynb
+ACTF1:
+  notebook: Misc/01-Activation-Functions.ipynb
 PANDAS1:
-  notebook: Misc/Using-pandas.ipynb
+  notebook: Misc/02-Using-pandas.ipynb
+PYTORCH1:
+  notebook: Misc/03-Using-Pytorch.ipynb
+TSB1:
+  notebook: Misc/04-Using-Tensorboard.ipynb
+  overrides: ??
+SCRATCH1:
+  notebook: Misc/99-Scratchbook.ipynb
