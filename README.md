@@ -31,7 +31,7 @@ For more information, see **https://fidle.cnrs.fr** :
 For more information, you can contact us at :  
 [<img width="200px" style="vertical-align:middle" src="fidle/img/00-Mail_contact.svg"></img>](#top)
 
-Current Version : <!-- VERSION_BEGIN -->2.4.0<!-- VERSION_END -->
+Current Version : <!-- VERSION_BEGIN -->2.4.1<!-- VERSION_END -->
 
 
 ## Course materials
@@ -46,7 +46,7 @@ Have a look about **[How to get and install](https://fidle.cnrs.fr/installation)
 ## Jupyter notebooks
 
 <!-- TOC_BEGIN -->
-<!-- Automatically generated on : 31/10/23 18:24:11 -->
+<!-- Automatically generated on : 06/11/23 15:13:53 -->
 
 ### Linear and logistic regression
 - **[LINR1](LinearReg/01-Linear-Regression.ipynb)** - [Linear regression with direct resolution](LinearReg/01-Linear-Regression.ipynb)  
@@ -77,7 +77,7 @@ A Simple regression with a Dense Neural Network (DNN) using Pytorch - BHPD datas
 Another example of regression, with a wine quality prediction!
 
 ### Wine Quality prediction (DNN), using PyTorch
-- **[LWINE1](Wine.Lightning/01-DNN-Wine-Regression-lightning.ipynb)** - [Wine quality prediction with a Dense Network (DNN) using Lightning](Wine.Lightning/01-DNN-Wine-Regression-lightning.ipynb)  
+- **[WINE1](Wine.Lightning/01-DNN-Wine-Regression-lightning.ipynb)** - [Wine quality prediction with a Dense Network (DNN) using Lightning](Wine.Lightning/01-DNN-Wine-Regression-lightning.ipynb)  
 Another example of regression, with a wine quality prediction!
 
 ### MNIST classification (DNN,CNN), using Keras
@@ -91,9 +91,9 @@ An example of classification using a convolutional neural network for the famous
 Example of classification with a fully connected neural network, using Pytorch
 
 ### MNIST classification (DNN,CNN), using Lightning
-- **[LMNIST1](MNIST.Lightning/01-DNN-MNIST_Lightning.ipynb)** - [Simple classification with DNN using Pytorch Lightning](MNIST.Lightning/01-DNN-MNIST_Lightning.ipynb)  
+- **[MNIST2](MNIST.Lightning/01-DNN-MNIST_Lightning.ipynb)** - [Simple classification with DNN using pytorch lightning](MNIST.Lightning/01-DNN-MNIST_Lightning.ipynb)  
 An example of classification using a dense neural network for the famous MNIST dataset
-- **[LMNIST2](MNIST.Lightning/02-CNN-MNIST_Lightning.ipynb)** - [Simple classification with CNN using Pytorch Lightning](MNIST.Lightning/02-CNN-MNIST_Lightning.ipynb)  
+- **[MNIST2](MNIST.Lightning/02-CNN-MNIST_Lightning.ipynb)** - [Simple classification with CNN using lightning](MNIST.Lightning/02-CNN-MNIST_Lightning.ipynb)  
 An example of classification using a convolutional neural network for the famous MNIST dataset
 
 ### Images classification with Convolutional Neural Networks (CNN)
@@ -164,11 +164,15 @@ Construction and training of a VAE, using model subclass, with a latent space of
 - **[VAE3](VAE/03-VAE-with-MNIST-post.ipynb)** - [Analysis of the VAE's latent space of MNIST dataset](VAE/03-VAE-with-MNIST-post.ipynb)  
 Visualization and analysis of the VAE's latent space of the dataset MNIST
 
-### Generative Adversarial Networks (GANs)
-- **[SHEEP1](DCGAN/01-DCGAN-Draw-me-a-sheep.ipynb)** - [A first DCGAN to Draw a Sheep](DCGAN/01-DCGAN-Draw-me-a-sheep.ipynb)  
-Episode 1 : Draw me a sheep, revisited with a DCGAN
-- **[SHEEP2](DCGAN/02-WGANGP-Draw-me-a-sheep.ipynb)** - [A WGAN-GP to Draw a Sheep](DCGAN/02-WGANGP-Draw-me-a-sheep.ipynb)  
-Episode 2 : Draw me a sheep, revisited with a WGAN-GP
+### Generative Adversarial Networks (GANs), using Keras
+- **[SHEEP1](DCGAN.Keras/01-DCGAN-Draw-me-a-sheep.ipynb)** - [A first DCGAN to Draw a Sheep](DCGAN.Keras/01-DCGAN-Draw-me-a-sheep.ipynb)  
+"Draw me a sheep", revisited with a DCGAN
+- **[SHEEP2](DCGAN.Keras/02-WGANGP-Draw-me-a-sheep.ipynb)** - [A WGAN-GP to Draw a Sheep](DCGAN.Keras/02-WGANGP-Draw-me-a-sheep.ipynb)  
+"Draw me a sheep", revisited with a WGAN-GP
+
+### Generative Adversarial Networks (GANs), using Lightning
+- **[SHEEP3](DCGAN.Lightning/01-DCGAN-PL.ipynb)** - [A DCGAN to Draw a Sheep, using Pytorch Lightning](DCGAN.Lightning/01-DCGAN-PL.ipynb)  
+"Draw me a sheep", revisited with a DCGAN, using Pytorch Lightning
 
 ### Diffusion Model (DDPM)
 - **[DDPM1](DDPM/01-ddpm.ipynb)** - [Fashion MNIST Generation with DDPM](DDPM/01-ddpm.ipynb)  
