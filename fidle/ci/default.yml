@@ -1,6 +1,6 @@
 campain:
   version: '1.0'
-  description: Automatically generated ci profile (31/10/23 18:24:11)
+  description: Automatically generated ci profile (06/11/23 15:13:53)
   directory: ./campains/default
   existing_notebook: 'remove    # remove|skip'
   report_template: 'fidle     # fidle|default'
@@ -54,7 +54,7 @@ KWINE1:
 #
 # ------------ Wine.Lightning
 #
-LWINE1:
+WINE1:
   notebook: Wine.Lightning/01-DNN-Wine-Regression-lightning.ipynb
   overrides:
     fit_verbosity: default
@@ -81,9 +81,7 @@ PMNIST1:
 #
 # ------------ MNIST.Lightning
 #
-LMNIST1:
-  notebook: MNIST.Lightning/01-DNN-MNIST_Lightning.ipynb
-LMNIST2:
+MNIST2:
   notebook: MNIST.Lightning/02-CNN-MNIST_Lightning.ipynb
 
 #
@@ -310,10 +308,10 @@ VAE3:
     models_dir: default
 
 #
-# ------------ DCGAN
+# ------------ DCGAN.Keras
 #
 SHEEP1:
-  notebook: DCGAN/01-DCGAN-Draw-me-a-sheep.ipynb
+  notebook: DCGAN.Keras/01-DCGAN-Draw-me-a-sheep.ipynb
   overrides:
     scale: default
     latent_dim: default
@@ -322,7 +320,7 @@ SHEEP1:
     num_img: default
     fit_verbosity: default
 SHEEP2:
-  notebook: DCGAN/02-WGANGP-Draw-me-a-sheep.ipynb
+  notebook: DCGAN.Keras/02-WGANGP-Draw-me-a-sheep.ipynb
   overrides:
     scale: default
     latent_dim: default
@@ -330,6 +328,12 @@ SHEEP2:
     batch_size: default
     num_img: default
     fit_verbosity: default
+
+#
+# ------------ DCGAN.Lightning
+#
+SHEEP3:
+  notebook: DCGAN.Lightning/01-DCGAN-PL.ipynb
 
 #
 # ------------ DDPM

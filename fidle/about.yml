@@ -13,7 +13,7 @@
 #
 # This file describes the notebooks used by the Fidle training.
 
-version:          2.4.0
+version:          2.4.1
 content:          notebooks
 name:             Notebooks Fidle
 description:      All notebooks used by the Fidle training
@@ -39,7 +39,8 @@ toc:
   Transformers:    Sentiment analysis with transformer
   AE:              Unsupervised learning with an autoencoder neural network (AE)
   VAE:             Generative network with Variational Autoencoder (VAE)
-  DCGAN:           Generative Adversarial Networks (GANs)
+  DCGAN.Keras:     Generative Adversarial Networks (GANs), using Keras
+  DCGAN.Lightning: Generative Adversarial Networks (GANs), using Lightning
   DDPM:            Diffusion Model (DDPM)
   Optimization:    Training optimization
   DRL:             Deep Reinforcement Learning (DRL)
