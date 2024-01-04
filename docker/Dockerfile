@@ -1,5 +1,5 @@
 # base image
-ARG PYTHON_VERSION=3.7
+ARG PYTHON_VERSION=3.8
 ARG docker_image_base=python:${PYTHON_VERSION}-slim
 FROM ${docker_image_base}
 
@@ -22,9 +22,13 @@ COPY requirements_packages.txt /root/requirements_packages.txt
 
 # Update Python tools and install requirements packages
 RUN python3 -m pip install --upgrade pip && \
-    pip install --no-cache-dir -r /root/requirements_packages.txt
+    pip install --no-cache-dir --upgrade -r /root/requirements_packages.txt 
 
- 
+
+# install tensorboard & update jypyter
+RUN pip install --no-cache-dir --upgrade tensorboard tensorboardX jupyter ipywidgets
+
+# move default logo python
 RUN bin/rm /usr/local/share/jupyter/kernels/python3/logo*      
     
 # Change default logo and name kernels
@@ -34,7 +38,7 @@ COPY images/env-fidle.svg /usr/local/share/jupyter/kernels/python3/logo-svg.svg
 
 # Get Fidle datasets
 RUN mkdir /data && \
-    fid  install_datasets --datasets datasets-fidle-v2.0 --install_dir /data
+    fid  install_datasets --quiet --install_dir /data
 
 # Get Fidle notebooks
 RUN mkdir /notebooks/ && \
@@ -47,11 +51,14 @@ COPY notebook.json /root/.jupyter/nbconfig/notebook.json
 # Jupyter notebook uses 8888 
 EXPOSE 8888
 
+# tensorboard uses 6006 
+EXPOSE 6006
+
 VOLUME /notebooks
 WORKDIR /notebooks
 
 # Set a folder in the volume as Python Path
-ENV PYTHONPATH=/notebooks/fidle-master/:$PYTHONPATH
+ENV PYTHONPATH=/notebooks/fidle-master-2.4.1/:$PYTHONPATH
 
 # Force bash as the default shell (useful in the notebooks)
 ENV SHELL=/bin/bash
