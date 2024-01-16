@@ -13,26 +13,27 @@
 #
 # This file describes the notebooks used by the Fidle training.
 
-version:          2.5.0
-content:          notebooks
-name:             Notebooks Fidle
-description:      All notebooks used by the Fidle training
+version:                  2.5.1
+content:                  notebooks
+name:                     Notebooks Fidle
+description:              All notebooks used by the Fidle training
 
 
-readme_md:        README.md
-readme_ipynb:     README.ipynb
-default_ci:       fidle/ci/default.yml
+readme_md:                README.md
+readme_ipynb:             README.ipynb
+default_ci:               fidle/ci/default.yml
 
 toc:
   LinearReg:              Linear and logistic regression
   Perceptron:             Perceptron Model 1957
-  BHPD.Keras3:            BHPD regression (DNN), using Keras3
+  BHPD.Keras3:            BHPD regression (DNN), using Keras3/PyTorch
   BHPD.PyTorch:           BHPD regression (DNN), using PyTorch
-  Wine.Lightning:         Wine Quality prediction (DNN), using PyTorch Lightning
-  MNIST.Keras3:           MNIST classification (DNN,CNN), using Keras3 
+  Wine.Keras3:            Wine Quality prediction (DNN), using Keras3/PyTorch
+  Wine.Lightning:         Wine Quality prediction (DNN), using PyTorch/Lightning
+  MNIST.Keras3:           MNIST classification (DNN,CNN), using Keras3/PyTorch
   MNIST.PyTorch:          MNIST classification (DNN,CNN), using PyTorch
   MNIST.Lightning:        MNIST classification (DNN,CNN), using Lightning 
-  GTSRB.Keras3:           Images classification with Convolutional Neural Networks (CNN), using Keras3
+  GTSRB.Keras3:           Images classification GTSRB with Convolutional Neural Networks (CNN), using Keras3/PyTorch
   Embedding.Keras2:       Sentiment analysis with word embedding, using Keras2 (obsolete)
   RNN.Keras2:             Time series with Recurrent Neural Network (RNN), using Keras2 (obsolete)
   Transformers.PyTorch:   Sentiment analysis with transformer, using PyTorch

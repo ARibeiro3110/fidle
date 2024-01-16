@@ -1,6 +1,6 @@
 campain:
   version: '1.0'
-  description: Automatically generated ci profile (16/01/24 20:18:59)
+  description: Automatically generated ci profile (16/01/24 22:04:25)
   directory: ./campains/default
   existing_notebook: 'remove    # remove|skip'
   report_template: 'fidle     # fidle|default'
@@ -41,6 +41,15 @@ K3BHPD2:
 #
 PBHPD1:
   notebook: BHPD.PyTorch/01-DNN-Regression_PyTorch.ipynb
+
+#
+# ------------ Wine.Keras3
+#
+K3WINE1:
+  notebook: Wine.Keras3/01-DNN-Wine-Regression.ipynb
+  overrides:
+    fit_verbosity: default
+    dataset_name: default
 
 #
 # ------------ Wine.Lightning

@@ -31,7 +31,7 @@ For more information, see **https://fidle.cnrs.fr** :
 For more information, you can contact us at :  
 [<img width="200px" style="vertical-align:middle" src="fidle/img/00-Mail_contact.svg"></img>](#top)
 
-Current Version : <!-- VERSION_BEGIN -->2.5.0<!-- VERSION_END -->
+Current Version : <!-- VERSION_BEGIN -->2.5.1<!-- VERSION_END -->
 
 
 ## Course materials
@@ -52,7 +52,7 @@ For these reason, they are kept as examples, while we develop the Keras3/PyTorch
 The world of Deep Learning is changing very fast !
 
 <!-- TOC_BEGIN -->
-<!-- Automatically generated on : 16/01/24 20:18:59 -->
+<!-- Automatically generated on : 16/01/24 22:04:25 -->
 
 ### Linear and logistic regression
 - **[LINR1](LinearReg/01-Linear-Regression.ipynb)** - [Linear regression with direct resolution](LinearReg/01-Linear-Regression.ipynb)  
@@ -68,21 +68,25 @@ Simple example of logistic regression with a sklearn solution
 - **[PER57](Perceptron/01-Simple-Perceptron.ipynb)** - [Perceptron Model 1957](Perceptron/01-Simple-Perceptron.ipynb)  
 Example of use of a Perceptron, with sklearn and IRIS dataset of 1936 !
 
-### BHPD regression (DNN), using Keras3
+### BHPD regression (DNN), using Keras3/PyTorch
 - **[K3BHPD1](BHPD.Keras3/01-DNN-Regression.ipynb)** - [Regression with a Dense Network (DNN)](BHPD.Keras3/01-DNN-Regression.ipynb)  
 Simple example of a regression with the dataset Boston Housing Prices Dataset (BHPD)
 - **[K3BHPD2](BHPD.Keras3/02-DNN-Regression-Premium.ipynb)** - [Regression with a Dense Network (DNN) - Advanced code](BHPD.Keras3/02-DNN-Regression-Premium.ipynb)  
-A more advanced implementation of the precedent example
+A more advanced implementation of the precedent example, using Keras3
 
 ### BHPD regression (DNN), using PyTorch
 - **[PBHPD1](BHPD.PyTorch/01-DNN-Regression_PyTorch.ipynb)** - [Regression with a Dense Network (DNN)](BHPD.PyTorch/01-DNN-Regression_PyTorch.ipynb)  
 A Simple regression with a Dense Neural Network (DNN) using Pytorch - BHPD dataset
 
-### Wine Quality prediction (DNN), using PyTorch Lightning
+### Wine Quality prediction (DNN), using Keras3/PyTorch
+- **[K3WINE1](Wine.Keras3/01-DNN-Wine-Regression.ipynb)** - [Wine quality prediction with a Dense Network (DNN)](Wine.Keras3/01-DNN-Wine-Regression.ipynb)  
+Another example of regression, with a wine quality prediction, using Keras 3 and PyTorch
+
+### Wine Quality prediction (DNN), using PyTorch/Lightning
 - **[LWINE1](Wine.Lightning/01-DNN-Wine-Regression-lightning.ipynb)** - [Wine quality prediction with a Dense Network (DNN)](Wine.Lightning/01-DNN-Wine-Regression-lightning.ipynb)  
 Another example of regression, with a wine quality prediction, using PyTorch Lightning
 
-### MNIST classification (DNN,CNN), using Keras3
+### MNIST classification (DNN,CNN), using Keras3/PyTorch
 - **[K3MNIST1](MNIST.Keras3/01-DNN-MNIST.ipynb)** - [Simple classification with DNN](MNIST.Keras3/01-DNN-MNIST.ipynb)  
 An example of classification using a dense neural network for the famous MNIST dataset
 - **[K3MNIST2](MNIST.Keras3/02-CNN-MNIST.ipynb)** - [Simple classification with CNN](MNIST.Keras3/02-CNN-MNIST.ipynb)  
@@ -98,7 +102,7 @@ An example of classification using a dense neural network for the famous MNIST d
 - **[LMNIST2](MNIST.Lightning/02-CNN-MNIST_Lightning.ipynb)** - [Simple classification with CNN](MNIST.Lightning/02-CNN-MNIST_Lightning.ipynb)  
 An example of classification using a convolutional neural network for the famous MNIST dataset, using PyTorch Lightning
 
-### Images classification with Convolutional Neural Networks (CNN), using Keras3
+### Images classification GTSRB with Convolutional Neural Networks (CNN), using Keras3/PyTorch
 - **[K3GTSRB1](GTSRB.Keras3/01-Preparation-of-data.ipynb)** - [Dataset analysis and preparation](GTSRB.Keras3/01-Preparation-of-data.ipynb)  
 Episode 1 : Analysis of the GTSRB dataset and creation of an enhanced dataset
 - **[K3GTSRB2](GTSRB.Keras3/02-First-convolutions.ipynb)** - [First convolutions](GTSRB.Keras3/02-First-convolutions.ipynb)  
