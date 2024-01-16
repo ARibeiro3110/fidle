@@ -13,6 +13,9 @@
 torch
 torchvision
 torch-geometric
+torchtext
+torchdata
+portalocker
 lightning
 -f https://download.pytorch.org/whl/cpu
 tensorflow_cpu>=2.7

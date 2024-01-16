@@ -1,0 +1,6 @@
+names:
+- car
+- license plate
+nc: 2
+train: ./run/Object-Dection1/datasets/train/images
+val:  ./run/Object-Dection1//datasets/valid/images
