@@ -1,6 +1,6 @@
 campain:
   version: '1.0'
-  description: Automatically generated ci profile (16/01/24 22:04:25)
+  description: Automatically generated ci profile (21/01/24 17:21:08)
   directory: ./campains/default
   existing_notebook: 'remove    # remove|skip'
   report_template: 'fidle     # fidle|default'
@@ -116,18 +116,18 @@ K3GTSRB4:
   notebook: GTSRB.Keras3/04-Keras-cv.ipynb
 
 #
-# ------------ Embedding.Keras2
+# ------------ Embedding.Keras3
 #
-K2IMDB1:
-  notebook: Embedding.Keras2/01-One-hot-encoding.ipynb
+K3IMDB1:
+  notebook: Embedding.Keras3/01-One-hot-encoding.ipynb
   overrides:
     vocab_size: default
     hide_most_frequently: default
     batch_size: default
     epochs: default
     fit_verbosity: default
-K2IMDB2:
-  notebook: Embedding.Keras2/02-Keras-embedding.ipynb
+K3IMDB2:
+  notebook: Embedding.Keras3/02-Keras-embedding.ipynb
   overrides:
     vocab_size: default
     hide_most_frequently: default
@@ -137,22 +137,22 @@ K2IMDB2:
     epochs: default
     output_dir: default
     fit_verbosity: default
-K2IMDB3:
-  notebook: Embedding.Keras2/03-Prediction.ipynb
+K3IMDB3:
+  notebook: Embedding.Keras3/03-Prediction.ipynb
   overrides:
     vocab_size: default
     review_len: default
     saved_models: default
     dictionaries_dir: default
-K2IMDB4:
-  notebook: Embedding.Keras2/04-Show-vectors.ipynb
+K3IMDB4:
+  notebook: Embedding.Keras3/04-Show-vectors.ipynb
   overrides:
     vocab_size: default
     review_len: default
     saved_models: default
     dictionaries_dir: default
-K2IMDB5:
-  notebook: Embedding.Keras2/05-LSTM-Keras.ipynb
+K3IMDB5:
+  notebook: Embedding.Keras3/05-LSTM-Keras.ipynb
   overrides:
     vocab_size: default
     hide_most_frequently: default
@@ -164,10 +164,10 @@ K2IMDB5:
     scale: default
 
 #
-# ------------ RNN.Keras2
+# ------------ RNN.Keras3
 #
-K2LADYB1:
-  notebook: RNN.Keras2/LADYB1-Ladybug.ipynb
+K3LADYB1:
+  notebook: RNN.Keras3/01-Ladybug.ipynb
   overrides:
     scale: default
     train_prop: default

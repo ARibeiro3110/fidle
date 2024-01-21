@@ -31,7 +31,7 @@ For more information, see **https://fidle.cnrs.fr** :
 For more information, you can contact us at :  
 [<img width="200px" style="vertical-align:middle" src="fidle/img/00-Mail_contact.svg"></img>](#top)
 
-Current Version : <!-- VERSION_BEGIN -->2.5.1<!-- VERSION_END -->
+Current Version : <!-- VERSION_BEGIN -->2.5.4<!-- VERSION_END -->
 
 
 ## Course materials
@@ -52,7 +52,7 @@ For these reason, they are kept as examples, while we develop the Keras3/PyTorch
 The world of Deep Learning is changing very fast !
 
 <!-- TOC_BEGIN -->
-<!-- Automatically generated on : 16/01/24 22:04:25 -->
+<!-- Automatically generated on : 21/01/24 17:21:08 -->
 
 ### Linear and logistic regression
 - **[LINR1](LinearReg/01-Linear-Regression.ipynb)** - [Linear regression with direct resolution](LinearReg/01-Linear-Regression.ipynb)  
@@ -96,7 +96,7 @@ An example of classification using a convolutional neural network for the famous
 - **[PMNIST1](MNIST.PyTorch/01-DNN-MNIST_PyTorch.ipynb)** - [Simple classification with DNN](MNIST.PyTorch/01-DNN-MNIST_PyTorch.ipynb)  
 Example of classification with a fully connected neural network, using Pytorch
 
-### MNIST classification (DNN,CNN), using Lightning
+### MNIST classification (DNN,CNN), using PyTorch/Lightning
 - **[LMNIST2](MNIST.Lightning/01-DNN-MNIST_Lightning.ipynb)** - [Simple classification with DNN](MNIST.Lightning/01-DNN-MNIST_Lightning.ipynb)  
 An example of classification using a dense neural network for the famous MNIST dataset, using PyTorch Lightning
 - **[LMNIST2](MNIST.Lightning/02-CNN-MNIST_Lightning.ipynb)** - [Simple classification with CNN](MNIST.Lightning/02-CNN-MNIST_Lightning.ipynb)  
@@ -109,28 +109,28 @@ Episode 1 : Analysis of the GTSRB dataset and creation of an enhanced dataset
 Episode 2 : First convolutions and first classification of our traffic signs, using Keras3
 - **[K3GTSRB3](GTSRB.Keras3/03-Better-convolutions.ipynb)** - [Training monitoring](GTSRB.Keras3/03-Better-convolutions.ipynb)  
 Episode 3 : Monitoring, analysis and check points during a training session, using Keras3
-- **[K3GTSRB4](GTSRB.Keras3/04-Keras-cv.ipynb)** - [Hight level example](GTSRB.Keras3/04-Keras-cv.ipynb)  
-Episode 4 : An example of using a pre-trained model (Keras-cv)
+- **[K3GTSRB4](GTSRB.Keras3/04-Keras-cv.ipynb)** - [Hight level example (Keras-cv)](GTSRB.Keras3/04-Keras-cv.ipynb)  
+An example of using a pre-trained model with Keras-cv
 - **[K3GTSRB10](GTSRB.Keras3/batch_oar.sh)** - [OAR batch script submission](GTSRB.Keras3/batch_oar.sh)  
 Bash script for an OAR batch submission of an ipython code
 - **[K3GTSRB11](GTSRB.Keras3/batch_slurm.sh)** - [SLURM batch script](GTSRB.Keras3/batch_slurm.sh)  
 Bash script for a Slurm batch submission of an ipython code
 
-### Sentiment analysis with word embedding, using Keras2 (obsolete)
-- **[K2IMDB1](Embedding.Keras2/01-One-hot-encoding.ipynb)** - [Sentiment analysis with hot-one encoding](Embedding.Keras2/01-One-hot-encoding.ipynb)  
-A basic example of sentiment analysis with sparse encoding, using a dataset from Internet Movie Database (IMDB), using Keras 2 and Tensorflow (obsolete)
-- **[K2IMDB2](Embedding.Keras2/02-Keras-embedding.ipynb)** - [Sentiment analysis with text embedding](Embedding.Keras2/02-Keras-embedding.ipynb)  
-A very classical example of word embedding with a dataset from Internet Movie Database (IMDB), using Keras 2 and Tensorflow (obsolete)
-- **[K2IMDB3](Embedding.Keras2/03-Prediction.ipynb)** - [Reload and reuse a saved model](Embedding.Keras2/03-Prediction.ipynb)  
-Retrieving a saved model to perform a sentiment analysis (movie review), using Keras 2 and Tensorflow (obsolete)
-- **[K2IMDB4](Embedding.Keras2/04-Show-vectors.ipynb)** - [Reload embedded vectors](Embedding.Keras2/04-Show-vectors.ipynb)  
-Retrieving embedded vectors from our trained model, using Keras 2 and Tensorflow (obsolete)
-- **[K2IMDB5](Embedding.Keras2/05-LSTM-Keras.ipynb)** - [Sentiment analysis with a RNN network](Embedding.Keras2/05-LSTM-Keras.ipynb)  
-Still the same problem, but with a network combining embedding and RNN, using Keras 2 and Tensorflow (obsolete)
+### Sentiment analysis with word embedding, using Keras3/PyTorch
+- **[K3IMDB1](Embedding.Keras3/01-One-hot-encoding.ipynb)** - [Sentiment analysis with hot-one encoding](Embedding.Keras3/01-One-hot-encoding.ipynb)  
+A basic example of sentiment analysis with sparse encoding, using a dataset from Internet Movie Database (IMDB), using Keras 3 on PyTorch
+- **[K3IMDB2](Embedding.Keras3/02-Keras-embedding.ipynb)** - [Sentiment analysis with text embedding](Embedding.Keras3/02-Keras-embedding.ipynb)  
+A very classical example of word embedding with a dataset from Internet Movie Database (IMDB), using Keras 3 on PyTorch
+- **[K3IMDB3](Embedding.Keras3/03-Prediction.ipynb)** - [Reload and reuse a saved model](Embedding.Keras3/03-Prediction.ipynb)  
+Retrieving a saved model to perform a sentiment analysis (movie review), using Keras 3 and PyTorch
+- **[K3IMDB4](Embedding.Keras3/04-Show-vectors.ipynb)** - [Reload embedded vectors](Embedding.Keras3/04-Show-vectors.ipynb)  
+Retrieving embedded vectors from our trained model, using Keras 3 and PyTorch
+- **[K3IMDB5](Embedding.Keras3/05-LSTM-Keras.ipynb)** - [Sentiment analysis with a RNN network](Embedding.Keras3/05-LSTM-Keras.ipynb)  
+Still the same problem, but with a network combining embedding and RNN, using Keras 3 and PyTorch
 
-### Time series with Recurrent Neural Network (RNN), using Keras2 (obsolete)
-- **[K2LADYB1](RNN.Keras2/LADYB1-Ladybug.ipynb)** - [Prediction of a 2D trajectory via RNN](RNN.Keras2/LADYB1-Ladybug.ipynb)  
-Artificial dataset generation and prediction attempt via a recurrent network, using Keras 2 and Tensorflow (obsolete)
+### Time series with Recurrent Neural Network (RNN), using Keras3/PyTorch
+- **[K3LADYB1](RNN.Keras3/01-Ladybug.ipynb)** - [Prediction of a 2D trajectory via RNN](RNN.Keras3/01-Ladybug.ipynb)  
+Artificial dataset generation and prediction attempt via a recurrent network, using Keras 3 and PyTorch
 
 ### Sentiment analysis with transformer, using PyTorch
 - **[TRANS1](Transformers.PyTorch/01-Distilbert.ipynb)** - [IMDB, Sentiment analysis with Transformers ](Transformers.PyTorch/01-Distilbert.ipynb)  

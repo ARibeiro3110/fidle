@@ -13,7 +13,7 @@
 #
 # This file describes the notebooks used by the Fidle training.
 
-version:                  2.5.1
+version:                  2.5.4
 content:                  notebooks
 name:                     Notebooks Fidle
 description:              All notebooks used by the Fidle training
@@ -32,10 +32,10 @@ toc:
   Wine.Lightning:         Wine Quality prediction (DNN), using PyTorch/Lightning
   MNIST.Keras3:           MNIST classification (DNN,CNN), using Keras3/PyTorch
   MNIST.PyTorch:          MNIST classification (DNN,CNN), using PyTorch
-  MNIST.Lightning:        MNIST classification (DNN,CNN), using Lightning 
+  MNIST.Lightning:        MNIST classification (DNN,CNN), using PyTorch/Lightning
   GTSRB.Keras3:           Images classification GTSRB with Convolutional Neural Networks (CNN), using Keras3/PyTorch
-  Embedding.Keras2:       Sentiment analysis with word embedding, using Keras2 (obsolete)
-  RNN.Keras2:             Time series with Recurrent Neural Network (RNN), using Keras2 (obsolete)
+  Embedding.Keras3:       Sentiment analysis with word embedding, using Keras3/PyTorch
+  RNN.Keras3:             Time series with Recurrent Neural Network (RNN), using Keras3/PyTorch
   Transformers.PyTorch:   Sentiment analysis with transformer, using PyTorch
   AE.Keras2:              Unsupervised learning with an autoencoder neural network (AE), using Keras2 (obsolete)
   VAE.Keras2:             Generative network with Variational Autoencoder (VAE), using Keras2 (obsolete)
