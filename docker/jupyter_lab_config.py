@@ -903,11 +903,11 @@ c.ServerApp.quit_button = True
 
 import os
 
-os.environ['FIDLE_MASTER_VERSION'] = '2.4.1'
+#os.environ['FIDLE_MASTER_VERSION'] = '2.4.1'
 
-fidle_master_version = os.environ.get('FIDLE_MASTER_VERSION')
+#fidle_master_version = os.environ.get('FIDLE_MASTER_VERSION')
 
-c.ServerApp.root_dir = f'/notebooks/fidle-master-{fidle_master_version}'
+c.ServerApp.root_dir = f'/notebooks/fidle-master'
 
 ## The session manager class to use.
 #  Default: 'jupyter_server.services.sessions.sessionmanager.SessionManager'
