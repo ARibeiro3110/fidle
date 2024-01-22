@@ -6,14 +6,14 @@
 # | |    | | (_| | |  __/ | |___| (_) | | | | ||  __/ | | | |_\__ \
 # |_|    |_|\__,_|_|\___|  \_____\___/|_| |_|\__\___|_| |_|\__|___/
 #
-#                      Formation Introduction au Deep Learning - 2022
+#                      Formation Introduction au Deep Learning - 2024
 #--------------------------------------------------------------------
 # Formation Introduction au Deep Learning       https://fidle.cnrs.fr
 # By MIAI/CNRS/UGA 2023/24
 #
 # This file describes the notebooks used by the Fidle training.
 
-version:                  2.5.4
+version:                  3.0.0
 content:                  notebooks
 name:                     Notebooks Fidle
 description:              All notebooks used by the Fidle training
