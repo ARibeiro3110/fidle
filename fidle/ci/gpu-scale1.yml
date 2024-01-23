@@ -1,10 +1,10 @@
 campain:
   version:            '1.0'
-  description:         Notebook test on CPU, default settings.
-  directory:          ./campains/cpu-default
-  existing_notebook:  'remove'    # remove|skip
-  report_template:    'fidle'     # fidle|default
-  timeout: 6000
+  description:         Notebook test on GPU with scale=1.
+  directory:          ./campains/gpu-scale1
+  existing_notebook:  'remove'         # remove|skip
+  report_template:    'fidle'          # fidle|default
+  timeout:            6000
 
   environment_vars:
     FIDLE_SAVE_FIGS:         true
@@ -99,31 +99,43 @@ LMNIST2:
 K3GTSRB1:
   notebook: GTSRB.Keras3/01-Preparation-of-data.ipynb
   overrides:
-    scale: default
-    output_dir: default
+    scale: 1
+    output_dir: {datasets_dir}/GTSRB/enhanced
     progress_verbosity: default
 
 K3GTSRB2:
   notebook: GTSRB.Keras3/02-First-convolutions.ipynb
   after:    K3GTSRB1
   overrides:
-    enhanced_dir: default
-    dataset_name: default
-    batch_size: default
-    epochs: default
-    scale: default
+    enhanced_dir: {datasets_dir}/GTSRB/enhanced
+    dataset_name: set-24x24-L
+    batch_size: 64
+    epochs: 5
+    scale: 1
     fit_verbosity: 2
 
-K3GTSRB3:
+K3GTSRB3_1:
   notebook: GTSRB.Keras3/03-Better-convolutions.ipynb
   after:    K3GTSRB1
   overrides:
-    enhanced_dir: default
-    model_name: default
-    dataset_name: default
-    batch_size: default
-    epochs: default
-    scale: default
+    enhanced_dir: {datasets_dir}/GTSRB/enhanced
+    model_name: model-01
+    dataset_name: set-48x48-RGB
+    batch_size: 64
+    epochs: 5
+    scale: 1
+    fit_verbosity: 2
+
+K3GTSRB3_2:
+  notebook: GTSRB.Keras3/03-Better-convolutions.ipynb
+  after:    K3GTSRB1
+  overrides:
+    enhanced_dir: {datasets_dir}/GTSRB/enhanced
+    model_name: model-02
+    dataset_name: set-48x48-RGB
+    batch_size: 64
+    epochs: 5
+    scale: 1
     fit_verbosity: 2
 
 #
@@ -178,7 +190,7 @@ K3IMDB5:
     batch_size: default
     epochs: default
     fit_verbosity: 2
-    scale: default
+    scale: 1
 
 #
 # ------------ RNN.Keras3
@@ -186,12 +198,12 @@ K3IMDB5:
 K3LADYB1:
   notebook: RNN.Keras3/01-Ladybug.ipynb
   overrides:
-    scale: default
-    train_prop: default
-    sequence_len: default
-    predict_len: default
-    batch_size: default
-    epochs: default
+    scale: 1
+    train_prop: 0.8
+    sequence_len: 20
+    predict_len: 5
+    batch_size: 32
+    epochs: 10
 
 #
 # ------------ Misc
