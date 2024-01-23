@@ -32,7 +32,7 @@ For more information, see **https://fidle.cnrs.fr** :
 For more information, you can contact us at :  
 [<img width="200px" style="vertical-align:middle" src="fidle/img/00-Mail_contact.svg"></img>](#top)
 
-Current Version : <!-- VERSION_BEGIN -->3.0.1<!-- VERSION_END -->
+Current Version : <!-- VERSION_BEGIN -->3.0.3<!-- VERSION_END -->
 
 
 ## Course materials
@@ -47,7 +47,7 @@ Have a look about **[How to get and install](https://fidle.cnrs.fr/installation)
 ## Jupyter notebooks
 
 <!-- TOC_BEGIN -->
-<!-- Automatically generated on : 23/01/24 10:53:30 -->
+<!-- Automatically generated on : 23/01/24 12:51:56 -->
 
 ### Linear and logistic regression
 - **[LINR1](LinearReg/01-Linear-Regression.ipynb)** - [Linear regression with direct resolution](LinearReg/01-Linear-Regression.ipynb)  
@@ -92,7 +92,7 @@ An example of classification using a convolutional neural network for the famous
 Example of classification with a fully connected neural network, using Pytorch
 
 ### MNIST classification (DNN,CNN), using PyTorch/Lightning
-- **[LMNIST2](MNIST.Lightning/01-DNN-MNIST_Lightning.ipynb)** - [Simple classification with DNN](MNIST.Lightning/01-DNN-MNIST_Lightning.ipynb)  
+- **[LMNIST1](MNIST.Lightning/01-DNN-MNIST_Lightning.ipynb)** - [Simple classification with DNN](MNIST.Lightning/01-DNN-MNIST_Lightning.ipynb)  
 An example of classification using a dense neural network for the famous MNIST dataset, using PyTorch Lightning
 - **[LMNIST2](MNIST.Lightning/02-CNN-MNIST_Lightning.ipynb)** - [Simple classification with CNN](MNIST.Lightning/02-CNN-MNIST_Lightning.ipynb)  
 An example of classification using a convolutional neural network for the famous MNIST dataset, using PyTorch Lightning

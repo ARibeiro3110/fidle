@@ -1,9 +1,9 @@
 campain:
   version: '1.0'
-  description: Automatically generated ci profile (23/01/24 12:51:56)
-  directory: ./campains/default
-  existing_notebook: 'remove    # remove|skip'
-  report_template: 'fidle     # fidle|default'
+  description: Notebook test on CPU, default settings.
+  directory: ./campains/cpu-default
+  existing_notebook: 'remove'    # remove|skip
+  report_template:   'fidle'     # fidle|default
   timeout: 6000
 
 #
@@ -11,10 +11,13 @@ campain:
 #
 LINR1:
   notebook: LinearReg/01-Linear-Regression.ipynb
+
 GRAD1:
   notebook: LinearReg/02-Gradient-descent.ipynb
+
 POLR1:
   notebook: LinearReg/03-Polynomial-Regression.ipynb
+
 LOGR1:
   notebook: LinearReg/04-Logistic-Regression.ipynb
 
@@ -30,11 +33,12 @@ PER57:
 K3BHPD1:
   notebook: BHPD.Keras3/01-DNN-Regression.ipynb
   overrides:
-    fit_verbosity: default
+    fit_verbosity: 2
+
 K3BHPD2:
   notebook: BHPD.Keras3/02-DNN-Regression-Premium.ipynb
   overrides:
-    fit_verbosity: default
+    fit_verbosity: 2
 
 #
 # ------------ BHPD.PyTorch
@@ -48,7 +52,7 @@ PBHPD1:
 K3WINE1:
   notebook: Wine.Keras3/01-DNN-Wine-Regression.ipynb
   overrides:
-    fit_verbosity: default
+    fit_verbosity: 2
     dataset_name: default
 
 #
@@ -57,7 +61,7 @@ K3WINE1:
 LWINE1:
   notebook: Wine.Lightning/01-DNN-Wine-Regression-lightning.ipynb
   overrides:
-    fit_verbosity: default
+    fit_verbosity: 2
     dataset_name: default
 
 #
@@ -66,11 +70,12 @@ LWINE1:
 K3MNIST1:
   notebook: MNIST.Keras3/01-DNN-MNIST.ipynb
   overrides:
-    fit_verbosity: default
+    fit_verbosity: 2
+
 K3MNIST2:
   notebook: MNIST.Keras3/02-CNN-MNIST.ipynb
   overrides:
-    fit_verbosity: default
+    fit_verbosity: 2
 
 #
 # ------------ MNIST.PyTorch
@@ -81,8 +86,6 @@ PMNIST1:
 #
 # ------------ MNIST.Lightning
 #
-LMNIST1:
-  notebook: MNIST.Lightning/01-DNN-MNIST_Lightning.ipynb
 LMNIST2:
   notebook: MNIST.Lightning/02-CNN-MNIST_Lightning.ipynb
 
@@ -95,17 +98,21 @@ K3GTSRB1:
     scale: default
     output_dir: default
     progress_verbosity: default
+
 K3GTSRB2:
   notebook: GTSRB.Keras3/02-First-convolutions.ipynb
+  after:    K3GTSRB1
   overrides:
     enhanced_dir: default
     dataset_name: default
     batch_size: default
     epochs: default
     scale: default
-    fit_verbosity: default
+    fit_verbosity: 2
+
 K3GTSRB3:
   notebook: GTSRB.Keras3/03-Better-convolutions.ipynb
+  after:    K3GTSRB1
   overrides:
     enhanced_dir: default
     model_name: default
@@ -113,9 +120,7 @@ K3GTSRB3:
     batch_size: default
     epochs: default
     scale: default
-    fit_verbosity: default
-K3GTSRB4:
-  notebook: GTSRB.Keras3/04-Keras-cv.ipynb
+    fit_verbosity: 2
 
 #
 # ------------ Embedding.Keras3
@@ -127,7 +132,8 @@ K3IMDB1:
     hide_most_frequently: default
     batch_size: default
     epochs: default
-    fit_verbosity: default
+    fit_verbosity: 2
+
 K3IMDB2:
   notebook: Embedding.Keras3/02-Keras-embedding.ipynb
   overrides:
@@ -138,21 +144,26 @@ K3IMDB2:
     batch_size: default
     epochs: default
     output_dir: default
-    fit_verbosity: default
+    fit_verbosity: 2
+
 K3IMDB3:
   notebook: Embedding.Keras3/03-Prediction.ipynb
+  after:    K3IMDB2
   overrides:
     vocab_size: default
     review_len: default
     saved_models: default
     dictionaries_dir: default
+
 K3IMDB4:
   notebook: Embedding.Keras3/04-Show-vectors.ipynb
+  after:    K3IMDB2
   overrides:
     vocab_size: default
     review_len: default
     saved_models: default
     dictionaries_dir: default
+
 K3IMDB5:
   notebook: Embedding.Keras3/05-LSTM-Keras.ipynb
   overrides:
@@ -162,7 +173,7 @@ K3IMDB5:
     dense_vector_size: default
     batch_size: default
     epochs: default
-    fit_verbosity: default
+    fit_verbosity: 2
     scale: default
 
 #
@@ -179,46 +190,16 @@ K3LADYB1:
     epochs: default
 
 #
-# ------------ Transformers.PyTorch
-#
-TRANS1:
-  notebook: Transformers.PyTorch/01-Distilbert.ipynb
-TRANS2:
-  notebook: Transformers.PyTorch/02-distilbert_colab.ipynb
-
-#
-# ------------ DDPM.PyTorch
-#
-DDPM1:
-  notebook: DDPM.PyTorch/01-ddpm.ipynb
-
-#
-# ------------ Optimization.PyTorch
-#
-OPT1:
-  notebook: Optimization.PyTorch/01-Apprentissages-rapides-et-Optimisations.ipynb
-
-#
-# ------------ DRL.PyTorch
-#
-DRL1:
-  notebook: DRL.PyTorch/FIDLE_DQNfromScratch.ipynb
-DRL2:
-  notebook: DRL.PyTorch/FIDLE_rl_baselines_zoo.ipynb
-
-#
 # ------------ Misc
 #
 NP1:
   notebook: Misc/00-Numpy.ipynb
+
 ACTF1:
   notebook: Misc/01-Activation-Functions.ipynb
+
 PANDAS1:
   notebook: Misc/02-Using-pandas.ipynb
+
 PYTORCH1:
   notebook: Misc/03-Using-Pytorch.ipynb
-TSB1:
-  notebook: Misc/04-Using-Tensorboard.ipynb
-  overrides: ??
-SCRATCH1:
-  notebook: Misc/99-Scratchbook.ipynb
