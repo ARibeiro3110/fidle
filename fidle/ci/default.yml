@@ -1,6 +1,6 @@
 campain:
   version: '1.0'
-  description: Automatically generated ci profile (21/01/24 17:21:08)
+  description: Automatically generated ci profile (23/01/24 10:53:30)
   directory: ./campains/default
   existing_notebook: 'remove    # remove|skip'
   report_template: 'fidle     # fidle|default'
@@ -183,122 +183,6 @@ TRANS1:
   notebook: Transformers.PyTorch/01-Distilbert.ipynb
 TRANS2:
   notebook: Transformers.PyTorch/02-distilbert_colab.ipynb
-
-#
-# ------------ AE.Keras2
-#
-K2AE1:
-  notebook: AE.Keras2/01-Prepare-MNIST-dataset.ipynb
-  overrides:
-    prepared_dataset: default
-    scale: default
-    progress_verbosity: default
-K2AE2:
-  notebook: AE.Keras2/02-AE-with-MNIST.ipynb
-  overrides:
-    prepared_dataset: default
-    dataset_seed: default
-    scale: default
-    latent_dim: default
-    train_prop: default
-    batch_size: default
-    epochs: default
-    fit_verbosity: default
-K2AE3:
-  notebook: AE.Keras2/03-AE-with-MNIST-post.ipynb
-  overrides:
-    prepared_dataset: default
-    dataset_seed: default
-    scale: default
-    train_prop: default
-K2AE4:
-  notebook: AE.Keras2/04-ExtAE-with-MNIST.ipynb
-  overrides:
-    prepared_dataset: default
-    dataset_seed: default
-    scale: default
-    latent_dim: default
-    train_prop: default
-    batch_size: default
-    epochs: default
-    fit_verbosity: default
-K2AE5:
-  notebook: AE.Keras2/05-ExtAE-with-MNIST.ipynb
-  overrides:
-    prepared_dataset: default
-    dataset_seed: default
-    scale: default
-    latent_dim: default
-    train_prop: default
-    batch_size: default
-    epochs: default
-    fit_verbosity: default
-
-#
-# ------------ VAE.Keras2
-#
-K2VAE1:
-  notebook: VAE.Keras2/01-VAE-with-MNIST.ipynb
-  overrides:
-    latent_dim: default
-    loss_weights: default
-    scale: default
-    seed: default
-    batch_size: default
-    epochs: default
-    fit_verbosity: default
-K2VAE2:
-  notebook: VAE.Keras2/02-VAE-with-MNIST.ipynb
-  overrides:
-    latent_dim: default
-    loss_weights: default
-    scale: default
-    seed: default
-    batch_size: default
-    epochs: default
-    fit_verbosity: default
-K2VAE3:
-  notebook: VAE.Keras2/03-VAE-with-MNIST-post.ipynb
-  overrides:
-    scale: default
-    seed: default
-    models_dir: default
-
-#
-# ------------ VAE.Lightning
-#
-LVAE1:
-  notebook: VAE.Lightning/01-VAE-lightning-with-MNIST.ipynb
-  overrides:
-    latent_dim: default
-    loss_weights: default
-    scale: default
-    seed: default
-    batch_size: default
-    epochs: default
-    fit_verbosity: default
-LVAE2:
-  notebook: VAE.Lightning/02-VAE-with-Lightning-MNIST.ipynb
-  overrides:
-    latent_dim: default
-    loss_weights: default
-    scale: default
-    seed: default
-    batch_size: default
-    epochs: default
-    fit_verbosity: default
-LVAE3:
-  notebook: VAE.Lightning/03-VAE-Lightning-with-MNIST-post.ipynb
-  overrides:
-    scale: default
-    seed: default
-    models_dir: default
-
-#
-# ------------ DCGAN.Lightning
-#
-LSHEEP3:
-  notebook: DCGAN.Lightning/01-DCGAN-PL.ipynb
 
 #
 # ------------ DDPM.PyTorch

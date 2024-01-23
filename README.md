@@ -24,35 +24,30 @@ For more information, see **https://fidle.cnrs.fr** :
 - **[Fidle site](https://fidle.cnrs.fr)**
 - **[Presentation of the training](https://fidle.cnrs.fr/presentation)**
 - **[Detailed program](https://fidle.cnrs.fr/programme)**
-- [Subscribe to the list](https://fidle.cnrs.fr/listeinfo), to stay informed !
-- [Find us on youtube](https://fidle.cnrs.fr/youtube)
-- [Corrected notebooks](https://fidle.cnrs.fr/done)
+- **[Subscribe to the list](https://fidle.cnrs.fr/listeinfo), to stay informed !**
+- **[Corrected notebooks](https://fidle.cnrs.fr/done)**
+- **[Follow us on our channel :](https://fidle.cnrs.fr/youtube)**\
+[<img width="120px" style="vertical-align:middle" src="fidle/img/logo-YouTube.png"></img>](https://fidle.cnrs.fr/youtube)
 
 For more information, you can contact us at :  
 [<img width="200px" style="vertical-align:middle" src="fidle/img/00-Mail_contact.svg"></img>](#top)
 
-Current Version : <!-- VERSION_BEGIN -->2.5.4<!-- VERSION_END -->
+Current Version : <!-- VERSION_BEGIN -->3.0.1<!-- VERSION_END -->
 
 
 ## Course materials
 
 | | | | |
 |:--:|:--:|:--:|:--:|
-| **[<img width="50px" src="fidle/img/00-Fidle-pdf.svg"></img><br>Course slides](https://fidle.cnrs.fr/supports)**<br>The course in pdf format<br>| **[<img width="50px" src="fidle/img/00-Notebooks.svg"></img><br>Notebooks](https://fidle.cnrs.fr/notebooks)**<br> &nbsp;&nbsp;&nbsp;&nbsp;Get a Zip or clone this repository &nbsp;&nbsp;&nbsp;&nbsp;<br>| **[<img width="50px" src="fidle/img/00-Datasets-tar.svg"></img><br>Datasets](https://fidle.cnrs.fr/datasets-fidle.tar)**<br>All the needed datasets<br>|**[<img width="50px" src="fidle/img/00-Videos.svg"></img><br>Videos](https://fidle.cnrs.fr/youtube)**<br>&nbsp;&nbsp;&nbsp;&nbsp;Our Youtube channel&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;|
+| **[<img width="50px" src="fidle/img/00-Fidle-pdf.svg"></img><br>Course slides](https://fidle.cnrs.fr/supports)**<br>The course in pdf format<br>| **[<img width="50px" src="fidle/img/00-Notebooks.svg"></img><br>Notebooks](https://fidle.cnrs.fr/notebooks)**<br> &nbsp;&nbsp;&nbsp;&nbsp;Get a Zip or clone this repository &nbsp;&nbsp;&nbsp;&nbsp;<br>| **[<img width="50px" src="fidle/img/00-Datasets-tar.svg"></img><br>Datasets](https://fidle.cnrs.fr/datasets-fidle.tar)**<br>All the needed datasets<br>|**[<img width="50px" src="fidle/img/00-Videos.svg"></img><br>Videos](https://fidle.cnrs.fr/youtube)**<br>&nbsp;&nbsp;&nbsp;&nbsp;Our Youtube channel&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
 
 Have a look about **[How to get and install](https://fidle.cnrs.fr/installation)** these notebooks and datasets.
 
 
 ## Jupyter notebooks
 
-**NOTE :** The examples marked **"obsolete"** are still functional under Keras2/Tensorflow, 
-but cannot be run in the proposed environment, now based on Keras3, PyTorch and Lightning.  
-We have decided to consider Keras2/Tensorflow as pedagogically obsolete, although Keras2 and Tensorflow are still perfectly usable (January 2024).  
-For these reason, they are kept as examples, while we develop the Keras3/PyTorch versions.  
-The world of Deep Learning is changing very fast !
-
 <!-- TOC_BEGIN -->
-<!-- Automatically generated on : 21/01/24 17:21:08 -->
+<!-- Automatically generated on : 23/01/24 10:53:30 -->
 
 ### Linear and logistic regression
 - **[LINR1](LinearReg/01-Linear-Regression.ipynb)** - [Linear regression with direct resolution](LinearReg/01-Linear-Regression.ipynb)  
@@ -138,38 +133,6 @@ Using a Tranformer to perform a sentiment analysis (IMDB) - Jean Zay version
 - **[TRANS2](Transformers.PyTorch/02-distilbert_colab.ipynb)** - [IMDB, Sentiment analysis with Transformers ](Transformers.PyTorch/02-distilbert_colab.ipynb)  
 Using a Tranformer to perform a sentiment analysis (IMDB) - Colab version
 
-### Unsupervised learning with an autoencoder neural network (AE), using Keras2 (obsolete)
-- **[K2AE1](AE.Keras2/01-Prepare-MNIST-dataset.ipynb)** - [Prepare a noisy MNIST dataset](AE.Keras2/01-Prepare-MNIST-dataset.ipynb)  
-Episode 1: Preparation of a noisy MNIST dataset, using Keras 2 and Tensorflow (obsolete)
-- **[K2AE2](AE.Keras2/02-AE-with-MNIST.ipynb)** - [Building and training an AE denoiser model](AE.Keras2/02-AE-with-MNIST.ipynb)  
-Episode 1 : Construction of a denoising autoencoder and training of it with a noisy MNIST dataset, using Keras 2 and Tensorflow (obsolete)
-- **[K2AE3](AE.Keras2/03-AE-with-MNIST-post.ipynb)** - [Playing with our denoiser model](AE.Keras2/03-AE-with-MNIST-post.ipynb)  
-Episode 2 : Using the previously trained autoencoder to denoise data, using Keras 2 and Tensorflow (obsolete)
-- **[K2AE4](AE.Keras2/04-ExtAE-with-MNIST.ipynb)** - [Denoiser and classifier model](AE.Keras2/04-ExtAE-with-MNIST.ipynb)  
-Episode 4 : Construction of a denoiser and classifier model, using Keras 2 and Tensorflow (obsolete)
-- **[K2AE5](AE.Keras2/05-ExtAE-with-MNIST.ipynb)** - [Advanced denoiser and classifier model](AE.Keras2/05-ExtAE-with-MNIST.ipynb)  
-Episode 5 : Construction of an advanced denoiser and classifier model, using Keras 2 and Tensorflow (obsolete)
-
-### Generative network with Variational Autoencoder (VAE), using Keras2 (obsolete)
-- **[K2VAE1](VAE.Keras2/01-VAE-with-MNIST.ipynb)** - [First VAE, using functional API (MNIST dataset)](VAE.Keras2/01-VAE-with-MNIST.ipynb)  
-Construction and training of a VAE, using functional APPI, with a latent space of small dimension, using Keras 2 and Tensorflow (obsolete)
-- **[K2VAE2](VAE.Keras2/02-VAE-with-MNIST.ipynb)** - [VAE, using a custom model class  (MNIST dataset)](VAE.Keras2/02-VAE-with-MNIST.ipynb)  
-Construction and training of a VAE, using model subclass, with a latent space of small dimension, using Keras 2 and Tensorflow (obsolete)
-- **[K2VAE3](VAE.Keras2/03-VAE-with-MNIST-post.ipynb)** - [Analysis of the VAE's latent space of MNIST dataset](VAE.Keras2/03-VAE-with-MNIST-post.ipynb)  
-Visualization and analysis of the VAE's latent space of the dataset MNIST, using Keras 2 and Tensorflow (obsolete)
-
-### Generative network with Variational Autoencoder (VAE), using PyTorch Lightning
-- **[LVAE1](VAE.Lightning/01-VAE-lightning-with-MNIST.ipynb)** - [First VAE, using Lightning API (MNIST dataset)](VAE.Lightning/01-VAE-lightning-with-MNIST.ipynb)  
-Construction and training of a VAE, using Lightning API, with a latent space of small dimension, using PyTorch Lightning
-- **[LVAE2](VAE.Lightning/02-VAE-with-Lightning-MNIST.ipynb)** - [VAE, using a custom model class  (MNIST dataset)](VAE.Lightning/02-VAE-with-Lightning-MNIST.ipynb)  
-Construction and training of a VAE, using model subclass, with a latent space of small dimension, using PyTorch Lightninh
-- **[LVAE3](VAE.Lightning/03-VAE-Lightning-with-MNIST-post.ipynb)** - [Analysis of the VAE's latent space of MNIST dataset](VAE.Lightning/03-VAE-Lightning-with-MNIST-post.ipynb)  
-Visualization and analysis of the VAE's latent space of the dataset MNIST, using PyTorch Lightning
-
-### Generative Adversarial Networks (GANs), using Lightning
-- **[LSHEEP3](DCGAN.Lightning/01-DCGAN-PL.ipynb)** - [A DCGAN to Draw a Sheep, using Pytorch Lightning](DCGAN.Lightning/01-DCGAN-PL.ipynb)  
-"Draw me a sheep", revisited with a DCGAN, using Pytorch Lightning
-
 ### Diffusion Model (DDPM) using PyTorch
 - **[DDPM1](DDPM.PyTorch/01-ddpm.ipynb)** - [Fashion MNIST Generation with DDPM](DDPM.PyTorch/01-ddpm.ipynb)  
 Diffusion Model example, to generate Fashion MNIST images.
@@ -200,12 +163,6 @@ PyTorch est l'un des principaux framework utilisé dans le Deep Learning
 - **[SCRATCH1](Misc/99-Scratchbook.ipynb)** - [Scratchbook](Misc/99-Scratchbook.ipynb)  
 A scratchbook for small examples
 <!-- TOC_END -->
-
-**NOTE :** The examples marked **"obsolete"** are still functional under Keras2/Tensorflow, 
-but cannot be run in the proposed environment, now based on Keras3, PyTorch and Lightning.  
-We have decided to consider Keras2/Tensorflow as pedagogically obsolete, although Keras2 and Tensorflow are still perfectly usable (January 2024).  
-For these resaon, they are kept as examples, while we develop the Keras3/PyTorch versions.  
-The world of Deep Learning is changing very fast !
 
 ## Installation
 

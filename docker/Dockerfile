@@ -37,8 +37,8 @@ RUN pip3 install --no-cache-dir --upgrade tensorboard tensorboardX jupyter ipywi
 RUN bin/rm /usr/local/share/jupyter/kernels/python3/logo*      
     
 # Change default logo and name kernels
-COPY images/env-fidle.png /usr/local/share/jupyter/kernels/python3/logo-64x64.png
-COPY images/env-fidle.svg /usr/local/share/jupyter/kernels/python3/logo-svg.svg
+COPY images/env-keras3.png /usr/local/share/jupyter/kernels/python3/logo-64x64.png
+COPY images/env-keras3.svg /usr/local/share/jupyter/kernels/python3/logo-svg.svg
 
 # Get Fidle datasets
 RUN mkdir /data && \
