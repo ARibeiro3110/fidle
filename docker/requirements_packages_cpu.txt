@@ -11,17 +11,15 @@
 # To install your Fidle env, see https://fidle.cnrs.fr/installation
 #
 # Keras 3 / PyTorch version (Python 3.9.2)
-# keras
-# keras_cv
-
 
  --extra-index-url https://download.pytorch.org/whl/cpu
- keras
  torch
  torchvision
- torchaudio
+ torch-geometric
+ torchtext
+ torchdata
  lightning
- tensorboard
+ keras
  numpy
  Scikit-image
  Scikit-learn

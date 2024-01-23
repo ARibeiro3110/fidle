@@ -7,12 +7,14 @@ FROM ${docker_image_base}
 LABEL maintainer1=soraya.arias@inria.fr maintainer2=jean-luc.parouty@simap.grenoble-inp.fr
 
 ARG ARCH_VERSION=cpu
+ARG FIDLE_VERSION=3.0.3
 
 # Ensure a sane environment
 ENV TZ=Europe/Paris LANG=C.UTF-8 LC_ALL=C.UTF-8 DEBIAN_FRONTEND=noninteractive
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone && \
     apt update --fix-missing && \
     apt install -y --no-install-recommends apt-utils  \
+        procps \
         python3-venv  \
         python3-pip && \
     apt -y dist-upgrade && \
@@ -22,13 +24,9 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone &
 # copy Python requirement packages list in docker image
 COPY requirements_packages_${ARCH_VERSION}.txt /root/requirements_packages_${ARCH_VERSION}.txt
 
-# Update Python tools and install requirements packages
+# Update Python tools and install requirements packages for Fidle
 RUN python3 -m pip install --upgrade pip && \
     pip3 install --no-cache-dir --upgrade -r /root/requirements_packages_${ARCH_VERSION}.txt 
-
-# Special case to deal with keras_cv and keras3 !
-RUN pip3 install --no-cache-dir --upgrade keras-cv tensorflow && \
-    pip3 install --no-cache-dir --upgrade keras
 
 # Install tensorboard & update jupyter
 RUN pip3 install --no-cache-dir --upgrade tensorboard tensorboardX jupyter ipywidgets
@@ -47,7 +45,7 @@ RUN mkdir /data && \
 # Get Fidle notebooks and create link
 RUN mkdir /notebooks/ && \
     fid install_notebooks --notebooks fidle-pre-master --quiet --install_dir /notebooks && \
-    ln -s /notebooks/fidle-pre-master-3.0.0 /notebooks/fidle-master
+    ln -s /notebooks/fidle-pre-master-${FIDLE_VERSION} /notebooks/fidle-master
 
 # Add Jupyter configuration (no browser, listen all interfaces, ...)
 COPY jupyter_lab_config.py /root/.jupyter/jupyter_lab_config.py
@@ -62,11 +60,12 @@ EXPOSE 6006
 VOLUME /notebooks
 WORKDIR /notebooks
 
-# Set a folder in the volume as Python Path
+# Set Keras backend
 ENV KERAS_BACKEND torch
+# Set Python path to add fidle path
 ENV PYTHONPATH=/notebooks/fidle-master/:$PYTHONPATH
 
-# Force bash as the default shell (useful in the notebooks)
+# Set default shell (useful in the notebooks)
 ENV SHELL=/bin/bash
 
 # Set Fidle dataset directory variable
