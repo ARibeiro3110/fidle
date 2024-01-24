@@ -18,6 +18,7 @@
  torchtext
  torchdata
  lightning
+ tensorboard
  keras
  transformers
  numpy
