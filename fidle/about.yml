@@ -13,7 +13,7 @@
 #
 # This file describes the notebooks used by the Fidle training.
 
-version:                  3.0.4
+version:                  3.0.5
 content:                  notebooks
 name:                     Notebooks Fidle
 description:              All notebooks used by the Fidle training
