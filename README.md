@@ -47,7 +47,7 @@ Have a look about **[How to get and install](https://fidle.cnrs.fr/installation)
 ## Jupyter notebooks
 
 <!-- TOC_BEGIN -->
-<!-- Automatically generated on : 23/01/24 12:51:56 -->
+<!-- Automatically generated on : 24/01/24 09:27:27 -->
 
 ### Linear and logistic regression
 - **[LINR1](LinearReg/01-Linear-Regression.ipynb)** - [Linear regression with direct resolution](LinearReg/01-Linear-Regression.ipynb)  
@@ -160,8 +160,6 @@ pandas is another essential tool for the Scientific Python.
 PyTorch est l'un des principaux framework utilisé dans le Deep Learning
 - **[TSB1](Misc/04-Using-Tensorboard.ipynb)** - [Tensorboard with/from Jupyter ](Misc/04-Using-Tensorboard.ipynb)  
 4 ways to use Tensorboard from the Jupyter environment
-- **[SCRATCH1](Misc/99-Scratchbook.ipynb)** - [Scratchbook](Misc/99-Scratchbook.ipynb)  
-A scratchbook for small examples
 <!-- TOC_END -->
 
 ## Installation

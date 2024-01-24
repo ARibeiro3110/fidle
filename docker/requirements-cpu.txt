@@ -20,11 +20,13 @@
  torchdata
  lightning
  keras
+ transformers
  numpy
  Scikit-image
  Scikit-learn
  Matplotlib
  plotly
+ seaborn
  barviz
  pyarrow
  Pandas

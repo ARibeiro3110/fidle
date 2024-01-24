@@ -10,25 +10,26 @@
 #
 # To install your Fidle env, see https://fidle.cnrs.fr/installation
 #
-# OLD version (Keras 2) - To be considered obsolete 
+# Keras 3 / PyTorch version (Python 3.9.2)
 
-torch
-torchvision
-torch-geometric
-torchtext
-torchdata
-portalocker
-lightning
--f https://download.pytorch.org/whl/cpu
-tensorflow_cpu>=2.7
-keras
-numpy
-pandas
-jupyterlab
-scikit-image
-scikit-learn
-matplotlib
-plotly
-barviz
-opencv-python
-fidle
+ torch
+ torchvision
+ torch-geometric
+ torchtext
+ torchdata
+ lightning
+ keras
+ transformers
+ numpy
+ Scikit-image
+ Scikit-learn
+ Matplotlib
+ plotly
+ seaborn
+ barviz
+ pyarrow
+ Pandas
+ Pandoc
+ pyyaml
+ Jupyterlab
+ fidle

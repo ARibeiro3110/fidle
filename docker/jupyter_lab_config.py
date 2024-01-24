@@ -907,7 +907,7 @@ import os
 
 #fidle_master_version = os.environ.get('FIDLE_MASTER_VERSION')
 
-c.ServerApp.root_dir = f'/notebooks/fidle-master'
+c.ServerApp.root_dir = f'/notebooks/last'
 
 ## The session manager class to use.
 #  Default: 'jupyter_server.services.sessions.sessionmanager.SessionManager'

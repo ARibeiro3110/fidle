@@ -1,6 +1,6 @@
 campain:
   version: '1.0'
-  description: Automatically generated ci profile (23/01/24 12:51:56)
+  description: Automatically generated ci profile (24/01/24 09:27:27)
   directory: ./campains/default
   existing_notebook: 'remove    # remove|skip'
   report_template: 'fidle     # fidle|default'
@@ -220,5 +220,3 @@ PYTORCH1:
 TSB1:
   notebook: Misc/04-Using-Tensorboard.ipynb
   overrides: ??
-SCRATCH1:
-  notebook: Misc/99-Scratchbook.ipynb

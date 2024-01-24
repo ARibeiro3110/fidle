@@ -7,7 +7,7 @@ FROM ${docker_image_base}
 LABEL maintainer1=soraya.arias@inria.fr maintainer2=jean-luc.parouty@simap.grenoble-inp.fr
 
 ARG ARCH_VERSION=cpu
-ARG FIDLE_VERSION=3.0.3
+ARG BRANCH=pre-master
 
 # Ensure a sane environment
 ENV TZ=Europe/Paris LANG=C.UTF-8 LC_ALL=C.UTF-8 DEBIAN_FRONTEND=noninteractive
@@ -22,11 +22,11 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone &
     rm -fr /var/lib/apt/lists/*  
    
 # copy Python requirement packages list in docker image
-COPY requirements_packages_${ARCH_VERSION}.txt /root/requirements_packages_${ARCH_VERSION}.txt
+COPY requirements-${ARCH_VERSION}.txt /root/requirements-${ARCH_VERSION}.txt
 
 # Update Python tools and install requirements packages for Fidle
 RUN python3 -m pip install --upgrade pip && \
-    pip3 install --no-cache-dir --upgrade -r /root/requirements_packages_${ARCH_VERSION}.txt 
+    pip3 install --no-cache-dir --upgrade -r /root/requirements-${ARCH_VERSION}.txt 
 
 # Install tensorboard & update jupyter
 RUN pip3 install --no-cache-dir --upgrade tensorboard tensorboardX jupyter ipywidgets
@@ -44,8 +44,8 @@ RUN mkdir /data && \
 
 # Get Fidle notebooks and create link
 RUN mkdir /notebooks/ && \
-    fid install_notebooks --notebooks fidle-pre-master --quiet --install_dir /notebooks && \
-    ln -s /notebooks/fidle-pre-master-${FIDLE_VERSION} /notebooks/fidle-master
+    fid install_notebooks --notebooks fidle-${BRANCH} --quiet --install_dir /notebooks && \
+    ln -s $(ls -1td /notebooks/* | head -1) /notebooks/last
 
 # Add Jupyter configuration (no browser, listen all interfaces, ...)
 COPY jupyter_lab_config.py /root/.jupyter/jupyter_lab_config.py
