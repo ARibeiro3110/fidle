@@ -371,7 +371,7 @@ c.Application.log_level = 'INFO'
 
 ## The default URL to redirect to from `/`
 #  Default: '/lab'
-# c.LabApp.default_url = '/lab'
+c.LabApp.default_url = '/lab/tree/README.ipynb'
 
 ## Whether to start the app in dev mode. Uses the unpublished local
 #          JavaScript packages in the `dev_mode` folder.  In this case JupyterLab will
@@ -679,7 +679,7 @@ c.ServerApp.allow_root = True
 
 ## The default URL to redirect to from `/`
 #  Default: '/'
-# c.ServerApp.default_url = '/'
+c.ServerApp.default_url = '/lab/tree/README.ipynb'
 
 ## Disable cross-site-request-forgery protection
 #  
@@ -900,7 +900,14 @@ c.ServerApp.quit_button = True
 
 ## The directory to use for notebooks and kernels.
 #  Default: ''
-c.ServerApp.root_dir = '/notebooks/fidle-master'
+
+import os
+
+#os.environ['FIDLE_MASTER_VERSION'] = '2.4.1'
+
+#fidle_master_version = os.environ.get('FIDLE_MASTER_VERSION')
+
+c.ServerApp.root_dir = f'/notebooks/last'
 
 ## The session manager class to use.
 #  Default: 'jupyter_server.services.sessions.sessionmanager.SessionManager'
