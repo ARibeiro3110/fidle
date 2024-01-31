@@ -1,10 +1,10 @@
 campain:
   version:            '1.0'
-  description:         Notebook test on GPU with scale=1.
-  directory:          ./campains/gpu-scale1
-  existing_notebook:  'remove'         # remove|skip
-  report_template:    'fidle'          # fidle|default
-  timeout:            6000
+  description:         Notebook test on CPU, default settings.
+  directory:          ./campains/cpu-foobar
+  existing_notebook:  'remove'    # remove|skip
+  report_template:    'fidle'     # fidle|default
+  timeout: 6000
 
   environment_vars:
     FIDLE_SAVE_FIGS:         true
@@ -100,14 +100,14 @@ K3GTSRB1:
   notebook: GTSRB.Keras3/01-Preparation-of-data.ipynb
   overrides:
     scale: 1
-    output_dir: {datasets_dir}/GTSRB/enhanced
+    output_dir: "{datasets_dir}/GTSRB/enhanced"
     progress_verbosity: default
 
 K3GTSRB2:
   notebook: GTSRB.Keras3/02-First-convolutions.ipynb
-  after:    K3GTSRB1
+  after: K3GTSRB1
   overrides:
-    enhanced_dir: {datasets_dir}/GTSRB/enhanced
+    enhanced_dir: "{datasets_dir}/GTSRB/enhanced"
     dataset_name: set-24x24-L
     batch_size: 64
     epochs: 5
@@ -118,7 +118,7 @@ K3GTSRB3_1:
   notebook: GTSRB.Keras3/03-Better-convolutions.ipynb
   after:    K3GTSRB1
   overrides:
-    enhanced_dir: {datasets_dir}/GTSRB/enhanced
+    enhanced_dir: "{datasets_dir}/GTSRB/enhanced"
     model_name: model-01
     dataset_name: set-48x48-RGB
     batch_size: 64
@@ -130,7 +130,7 @@ K3GTSRB3_2:
   notebook: GTSRB.Keras3/03-Better-convolutions.ipynb
   after:    K3GTSRB1
   overrides:
-    enhanced_dir: {datasets_dir}/GTSRB/enhanced
+    enhanced_dir: "{datasets_dir}/GTSRB/enhanced"
     model_name: model-02
     dataset_name: set-48x48-RGB
     batch_size: 64
