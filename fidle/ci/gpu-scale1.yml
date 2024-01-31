@@ -84,14 +84,14 @@ K3MNIST2:
 #
 # ------------ MNIST.PyTorch
 #
-PMNIST1:
-  notebook: MNIST.PyTorch/01-DNN-MNIST_PyTorch.ipynb
+#PMNIST1:
+#  notebook: MNIST.PyTorch/01-DNN-MNIST_PyTorch.ipynb
 
 #
 # ------------ MNIST.Lightning
 #
-LMNIST2:
-  notebook: MNIST.Lightning/02-CNN-MNIST_Lightning.ipynb
+#LMNIST2:
+#  notebook: MNIST.Lightning/02-CNN-MNIST_Lightning.ipynb
 
 #
 # ------------ GTSRB.Keras3
@@ -119,7 +119,7 @@ K3GTSRB3_1:
   after:    K3GTSRB1
   overrides:
     enhanced_dir: "{datasets_dir}/GTSRB/enhanced"
-    model_name: model-01
+    model_name: model_01
     dataset_name: set-48x48-RGB
     batch_size: 64
     epochs: 5
@@ -131,7 +131,7 @@ K3GTSRB3_2:
   after:    K3GTSRB1
   overrides:
     enhanced_dir: "{datasets_dir}/GTSRB/enhanced"
-    model_name: model-02
+    model_name: model_02
     dataset_name: set-48x48-RGB
     batch_size: 64
     epochs: 5
