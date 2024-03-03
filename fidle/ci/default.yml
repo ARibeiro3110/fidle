@@ -1,6 +1,6 @@
 campain:
   version: '1.0'
-  description: Automatically generated ci profile (03/03/24 14:46:51)
+  description: Automatically generated ci profile (03/03/24 20:38:37)
   directory: ./campains/default
   existing_notebook: 'remove    # remove|skip'
   report_template: 'fidle     # fidle|default'
@@ -189,13 +189,13 @@ TRANS2:
 #
 # ------------ AE.Keras3
 #
-AE1:
+K3AE1:
   notebook: AE.Keras3/01-Prepare-MNIST-dataset.ipynb
   overrides:
     prepared_dataset: default
     scale: default
     progress_verbosity: default
-AE2:
+K3AE2:
   notebook: AE.Keras3/02-AE-with-MNIST.ipynb
   overrides:
     prepared_dataset: default
@@ -206,14 +206,14 @@ AE2:
     batch_size: default
     epochs: default
     fit_verbosity: default
-AE3:
+K3AE3:
   notebook: AE.Keras3/03-AE-with-MNIST-post.ipynb
   overrides:
     prepared_dataset: default
     dataset_seed: default
     scale: default
     train_prop: default
-AE4:
+K3AE4:
   notebook: AE.Keras3/04-ExtAE-with-MNIST.ipynb
   overrides:
     prepared_dataset: default
@@ -223,7 +223,7 @@ AE4:
     batch_size: default
     epochs: default
     fit_verbosity: default
-AE5:
+K3AE5:
   notebook: AE.Keras3/05-ExtAE-with-MNIST.ipynb
   overrides:
     prepared_dataset: default
@@ -237,7 +237,7 @@ AE5:
 #
 # ------------ VAE.Keras3
 #
-VAE1:
+K3VAE1:
   notebook: VAE.Keras3/01-VAE-with-MNIST-LossLayer.ipynb
   overrides:
     latent_dim: default
@@ -247,7 +247,7 @@ VAE1:
     batch_size: default
     epochs: default
     fit_verbosity: default
-VAE2:
+K3VAE2:
   notebook: VAE.Keras3/02-VAE-with-MNIST.ipynb
   overrides:
     latent_dim: default
@@ -257,7 +257,7 @@ VAE2:
     batch_size: default
     epochs: default
     fit_verbosity: default
-VAE3:
+K3VAE3:
   notebook: VAE.Keras3/03-VAE-with-MNIST-post.ipynb
   overrides:
     scale: default
@@ -267,7 +267,7 @@ VAE3:
 #
 # ------------ DCGAN.Lightning
 #
-SHEEP3:
+PLSHEEP3:
   notebook: DCGAN.Lightning/01-DCGAN-PL.ipynb
   overrides:
     latent_dim: default
@@ -284,6 +284,7 @@ SHEEP3:
     dataset_file: default
     data_shape: default
     scale: default
+    num_workers: default
 
 #
 # ------------ DDPM.PyTorch

@@ -32,7 +32,7 @@ For more information, see **https://fidle.cnrs.fr** :
 For more information, you can contact us at :  
 [<img width="200px" style="vertical-align:middle" src="fidle/img/00-Mail_contact.svg"></img>](#top)
 
-Current Version : <!-- VERSION_BEGIN -->3.0.8<!-- VERSION_END -->
+Current Version : <!-- VERSION_BEGIN -->3.0.9<!-- VERSION_END -->
 
 
 ## Course materials
@@ -47,7 +47,7 @@ Have a look about **[How to get and install](https://fidle.cnrs.fr/installation)
 ## Jupyter notebooks
 
 <!-- TOC_BEGIN -->
-<!-- Automatically generated on : 03/03/24 14:46:51 -->
+<!-- Automatically generated on : 03/03/24 20:38:37 -->
 
 ### Linear and logistic regression
 - **[LINR1](LinearReg/01-Linear-Regression.ipynb)** - [Linear regression with direct resolution](LinearReg/01-Linear-Regression.ipynb)  
@@ -134,27 +134,27 @@ Using a Tranformer to perform a sentiment analysis (IMDB) - Jean Zay version
 Using a Tranformer to perform a sentiment analysis (IMDB) - Colab version
 
 ### Unsupervised learning with an autoencoder neural network (AE), using Keras3
-- **[AE1](AE.Keras3/01-Prepare-MNIST-dataset.ipynb)** - [Prepare a noisy MNIST dataset](AE.Keras3/01-Prepare-MNIST-dataset.ipynb)  
+- **[K3AE1](AE.Keras3/01-Prepare-MNIST-dataset.ipynb)** - [Prepare a noisy MNIST dataset](AE.Keras3/01-Prepare-MNIST-dataset.ipynb)  
 Episode 1: Preparation of a noisy MNIST dataset
-- **[AE2](AE.Keras3/02-AE-with-MNIST.ipynb)** - [Building and training an AE denoiser model](AE.Keras3/02-AE-with-MNIST.ipynb)  
+- **[K3AE2](AE.Keras3/02-AE-with-MNIST.ipynb)** - [Building and training an AE denoiser model](AE.Keras3/02-AE-with-MNIST.ipynb)  
 Episode 1 : Construction of a denoising autoencoder and training of it with a noisy MNIST dataset.
-- **[AE3](AE.Keras3/03-AE-with-MNIST-post.ipynb)** - [Playing with our denoiser model](AE.Keras3/03-AE-with-MNIST-post.ipynb)  
+- **[K3AE3](AE.Keras3/03-AE-with-MNIST-post.ipynb)** - [Playing with our denoiser model](AE.Keras3/03-AE-with-MNIST-post.ipynb)  
 Episode 2 : Using the previously trained autoencoder to denoise data
-- **[AE4](AE.Keras3/04-ExtAE-with-MNIST.ipynb)** - [Denoiser and classifier model](AE.Keras3/04-ExtAE-with-MNIST.ipynb)  
+- **[K3AE4](AE.Keras3/04-ExtAE-with-MNIST.ipynb)** - [Denoiser and classifier model](AE.Keras3/04-ExtAE-with-MNIST.ipynb)  
 Episode 4 : Construction of a denoiser and classifier model
-- **[AE5](AE.Keras3/05-ExtAE-with-MNIST.ipynb)** - [Advanced denoiser and classifier model](AE.Keras3/05-ExtAE-with-MNIST.ipynb)  
+- **[K3AE5](AE.Keras3/05-ExtAE-with-MNIST.ipynb)** - [Advanced denoiser and classifier model](AE.Keras3/05-ExtAE-with-MNIST.ipynb)  
 Episode 5 : Construction of an advanced denoiser and classifier model
 
 ### Generative network with Variational Autoencoder (VAE), using Keras3
-- **[VAE1](VAE.Keras3/01-VAE-with-MNIST-LossLayer.ipynb)** - [First VAE, using functional API (MNIST dataset)](VAE.Keras3/01-VAE-with-MNIST-LossLayer.ipynb)  
+- **[K3VAE1](VAE.Keras3/01-VAE-with-MNIST-LossLayer.ipynb)** - [First VAE, using functional API (MNIST dataset)](VAE.Keras3/01-VAE-with-MNIST-LossLayer.ipynb)  
 Construction and training of a VAE, using functional APPI, with a latent space of small dimension.
-- **[VAE2](VAE.Keras3/02-VAE-with-MNIST.ipynb)** - [VAE, using a custom model class  (MNIST dataset)](VAE.Keras3/02-VAE-with-MNIST.ipynb)  
+- **[K3VAE2](VAE.Keras3/02-VAE-with-MNIST.ipynb)** - [VAE, using a custom model class  (MNIST dataset)](VAE.Keras3/02-VAE-with-MNIST.ipynb)  
 Construction and training of a VAE, using model subclass, with a latent space of small dimension.
-- **[VAE3](VAE.Keras3/03-VAE-with-MNIST-post.ipynb)** - [Analysis of the VAE's latent space of MNIST dataset](VAE.Keras3/03-VAE-with-MNIST-post.ipynb)  
+- **[K3VAE3](VAE.Keras3/03-VAE-with-MNIST-post.ipynb)** - [Analysis of the VAE's latent space of MNIST dataset](VAE.Keras3/03-VAE-with-MNIST-post.ipynb)  
 Visualization and analysis of the VAE's latent space of the dataset MNIST
 
 ### Generative Adversarial Networks (GANs), using Lightning
-- **[SHEEP3](DCGAN.Lightning/01-DCGAN-PL.ipynb)** - [A DCGAN to Draw a Sheep, using Pytorch Lightning](DCGAN.Lightning/01-DCGAN-PL.ipynb)  
+- **[PLSHEEP3](DCGAN.Lightning/01-DCGAN-PL.ipynb)** - [A DCGAN to Draw a Sheep, using Pytorch Lightning](DCGAN.Lightning/01-DCGAN-PL.ipynb)  
 "Draw me a sheep", revisited with a DCGAN, using Pytorch Lightning
 
 ### Diffusion Model (DDPM) using PyTorch
