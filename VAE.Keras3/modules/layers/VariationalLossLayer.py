@@ -25,7 +25,8 @@ class VariationalLossLayer(keras.layers.Layer):
 
     def call(self, inputs):
         
-        k1,k2 = self.loss_weights
+        k1 = self.k1
+        k2 = self.k2
         
         # ---- Retrieve inputs
         #
