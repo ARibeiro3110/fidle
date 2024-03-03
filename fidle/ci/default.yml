@@ -1,6 +1,6 @@
 campain:
   version: '1.0'
-  description: Automatically generated ci profile (24/01/24 11:57:34)
+  description: Automatically generated ci profile (03/03/24 14:46:51)
   directory: ./campains/default
   existing_notebook: 'remove    # remove|skip'
   report_template: 'fidle     # fidle|default'
@@ -187,6 +187,105 @@ TRANS2:
   notebook: Transformers.PyTorch/02-distilbert_colab.ipynb
 
 #
+# ------------ AE.Keras3
+#
+AE1:
+  notebook: AE.Keras3/01-Prepare-MNIST-dataset.ipynb
+  overrides:
+    prepared_dataset: default
+    scale: default
+    progress_verbosity: default
+AE2:
+  notebook: AE.Keras3/02-AE-with-MNIST.ipynb
+  overrides:
+    prepared_dataset: default
+    dataset_seed: default
+    scale: default
+    latent_dim: default
+    train_prop: default
+    batch_size: default
+    epochs: default
+    fit_verbosity: default
+AE3:
+  notebook: AE.Keras3/03-AE-with-MNIST-post.ipynb
+  overrides:
+    prepared_dataset: default
+    dataset_seed: default
+    scale: default
+    train_prop: default
+AE4:
+  notebook: AE.Keras3/04-ExtAE-with-MNIST.ipynb
+  overrides:
+    prepared_dataset: default
+    dataset_seed: default
+    scale: default
+    train_prop: default
+    batch_size: default
+    epochs: default
+    fit_verbosity: default
+AE5:
+  notebook: AE.Keras3/05-ExtAE-with-MNIST.ipynb
+  overrides:
+    prepared_dataset: default
+    dataset_seed: default
+    scale: default
+    train_prop: default
+    batch_size: default
+    epochs: default
+    fit_verbosity: default
+
+#
+# ------------ VAE.Keras3
+#
+VAE1:
+  notebook: VAE.Keras3/01-VAE-with-MNIST-LossLayer.ipynb
+  overrides:
+    latent_dim: default
+    loss_weights: default
+    scale: default
+    seed: default
+    batch_size: default
+    epochs: default
+    fit_verbosity: default
+VAE2:
+  notebook: VAE.Keras3/02-VAE-with-MNIST.ipynb
+  overrides:
+    latent_dim: default
+    loss_weights: default
+    scale: default
+    seed: default
+    batch_size: default
+    epochs: default
+    fit_verbosity: default
+VAE3:
+  notebook: VAE.Keras3/03-VAE-with-MNIST-post.ipynb
+  overrides:
+    scale: default
+    seed: default
+    models_dir: default
+
+#
+# ------------ DCGAN.Lightning
+#
+SHEEP3:
+  notebook: DCGAN.Lightning/01-DCGAN-PL.ipynb
+  overrides:
+    latent_dim: default
+    gan_name: default
+    generator_name: default
+    discriminator_name: default
+    epochs: default
+    lr: default
+    b1: default
+    b2: default
+    batch_size: default
+    num_img: default
+    fit_verbosity: default
+    dataset_file: default
+    data_shape: default
+    scale: default
+
+#
 # ------------ DDPM.PyTorch
 #
 DDPM1:
@@ -220,3 +319,5 @@ PYTORCH1:
 TSB1:
   notebook: Misc/04-Using-Tensorboard.ipynb
   overrides: ??
+??:
+  notebook: Misc/05-RNN.ipynb
