@@ -2,7 +2,7 @@ campain:
   version:            '1.0'
   description:         Notebook test on CPU, default settings.
   directory:          ./campains/cpu-default
-  existing_notebook:  'remove'    # remove|skip
+  existing_notebook:  'skip'      # remove|skip
   report_template:    'fidle'     # fidle|default
   timeout:            6000
 
@@ -192,6 +192,138 @@ K3LADYB1:
     predict_len: default
     batch_size: default
     epochs: default
+
+#
+# ------------ AE.Keras3
+#
+K3AE1:
+  notebook: AE.Keras3/01-Prepare-MNIST-dataset.ipynb
+  overrides:
+    prepared_dataset: default
+    scale: 0.1
+    progress_verbosity: default
+
+K3AE2:
+  notebook: AE.Keras3/02-AE-with-MNIST.ipynb
+  after: K3AE1
+  overrides:
+    prepared_dataset: default
+    dataset_seed: default
+    scale: 1
+    latent_dim: default
+    train_prop: default
+    batch_size: default
+    epochs: 4
+    fit_verbosity: default
+
+K3AE3:
+  notebook: AE.Keras3/03-AE-with-MNIST-post.ipynb
+  after: K3AE2
+  overrides:
+    prepared_dataset: default
+    dataset_seed: default
+    scale: 1
+    train_prop: default
+    
+K3AE4:
+  notebook: AE.Keras3/04-ExtAE-with-MNIST.ipynb
+  after: K3AE1
+  overrides:
+    prepared_dataset: default
+    dataset_seed: default
+    scale: 1
+    train_prop: default
+    batch_size: default
+    epochs: 4
+    fit_verbosity: default
+
+K3AE5:
+  notebook: AE.Keras3/05-ExtAE-with-MNIST.ipynb
+  after: K3AE1
+  overrides:
+    prepared_dataset: default
+    dataset_seed: default
+    scale: 1
+    train_prop: default
+    batch_size: default
+    epochs: 4
+    fit_verbosity: default
+
+#
+# ------------ VAE.Keras3
+#
+K3VAE1:
+  notebook: VAE.Keras3/01-VAE-with-MNIST-LossLayer.ipynb
+  overrides:
+    latent_dim: default
+    loss_weights: default
+    scale: 0.1
+    seed: default
+    batch_size: default
+    epochs: 4
+    fit_verbosity: default
+
+K3VAE2:
+  notebook: VAE.Keras3/02-VAE-with-MNIST.ipynb
+  overrides:
+    latent_dim: default
+    loss_weights: default
+    scale: 0.1
+    seed: default
+    batch_size: default
+    epochs: 4
+    fit_verbosity: default
+
+K3VAE3:
+  notebook: VAE.Keras3/03-VAE-with-MNIST-post.ipynb
+  after: K3VAE2
+  overrides:
+    scale: 0.1
+    seed: default
+    models_dir: default
+
+#
+# ------------ DCGAN.Lightning
+#
+PLSHEEP3:
+  notebook: DCGAN.Lightning/01-DCGAN-PL.ipynb
+  overrides:
+    latent_dim: default
+    gan_name: GAN
+    generator_name: default
+    discriminator_name: default
+    epochs: 4
+    lr: default
+    b1: default
+    b2: default
+    batch_size: default
+    num_img: default
+    fit_verbosity: default
+    dataset_file: default
+    data_shape: default
+    scale: 0.001
+    num_workers: default
+
+PLSHEEP3:
+  notebook: DCGAN.Lightning/01-DCGAN-PL.ipynb
+  overrides:
+    latent_dim: default
+    gan_name: WGANGP
+    generator_name: default
+    discriminator_name: default
+    epochs: 4
+    lr: default
+    b1: default
+    b2: default
+    batch_size: default
+    num_img: default
+    fit_verbosity: default
+    dataset_file: default
+    data_shape: default
+    scale: 0.001
+    num_workers: default
+
+
 
 #
 # ------------ Misc
