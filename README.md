@@ -32,7 +32,7 @@ For more information, see **https://fidle.cnrs.fr** :
 For more information, you can contact us at :  
 [<img width="200px" style="vertical-align:middle" src="fidle/img/00-Mail_contact.svg"></img>](#top)
 
-Current Version : <!-- VERSION_BEGIN -->3.0.5<!-- VERSION_END -->
+Current Version : <!-- VERSION_BEGIN -->3.0.9<!-- VERSION_END -->
 
 
 ## Course materials
@@ -47,7 +47,7 @@ Have a look about **[How to get and install](https://fidle.cnrs.fr/installation)
 ## Jupyter notebooks
 
 <!-- TOC_BEGIN -->
-<!-- Automatically generated on : 24/01/24 11:57:34 -->
+<!-- Automatically generated on : 03/03/24 20:38:37 -->
 
 ### Linear and logistic regression
 - **[LINR1](LinearReg/01-Linear-Regression.ipynb)** - [Linear regression with direct resolution](LinearReg/01-Linear-Regression.ipynb)  
@@ -133,6 +133,30 @@ Using a Tranformer to perform a sentiment analysis (IMDB) - Jean Zay version
 - **[TRANS2](Transformers.PyTorch/02-distilbert_colab.ipynb)** - [IMDB, Sentiment analysis with Transformers ](Transformers.PyTorch/02-distilbert_colab.ipynb)  
 Using a Tranformer to perform a sentiment analysis (IMDB) - Colab version
 
+### Unsupervised learning with an autoencoder neural network (AE), using Keras3
+- **[K3AE1](AE.Keras3/01-Prepare-MNIST-dataset.ipynb)** - [Prepare a noisy MNIST dataset](AE.Keras3/01-Prepare-MNIST-dataset.ipynb)  
+Episode 1: Preparation of a noisy MNIST dataset
+- **[K3AE2](AE.Keras3/02-AE-with-MNIST.ipynb)** - [Building and training an AE denoiser model](AE.Keras3/02-AE-with-MNIST.ipynb)  
+Episode 1 : Construction of a denoising autoencoder and training of it with a noisy MNIST dataset.
+- **[K3AE3](AE.Keras3/03-AE-with-MNIST-post.ipynb)** - [Playing with our denoiser model](AE.Keras3/03-AE-with-MNIST-post.ipynb)  
+Episode 2 : Using the previously trained autoencoder to denoise data
+- **[K3AE4](AE.Keras3/04-ExtAE-with-MNIST.ipynb)** - [Denoiser and classifier model](AE.Keras3/04-ExtAE-with-MNIST.ipynb)  
+Episode 4 : Construction of a denoiser and classifier model
+- **[K3AE5](AE.Keras3/05-ExtAE-with-MNIST.ipynb)** - [Advanced denoiser and classifier model](AE.Keras3/05-ExtAE-with-MNIST.ipynb)  
+Episode 5 : Construction of an advanced denoiser and classifier model
+
+### Generative network with Variational Autoencoder (VAE), using Keras3
+- **[K3VAE1](VAE.Keras3/01-VAE-with-MNIST-LossLayer.ipynb)** - [First VAE, using functional API (MNIST dataset)](VAE.Keras3/01-VAE-with-MNIST-LossLayer.ipynb)  
+Construction and training of a VAE, using functional APPI, with a latent space of small dimension.
+- **[K3VAE2](VAE.Keras3/02-VAE-with-MNIST.ipynb)** - [VAE, using a custom model class  (MNIST dataset)](VAE.Keras3/02-VAE-with-MNIST.ipynb)  
+Construction and training of a VAE, using model subclass, with a latent space of small dimension.
+- **[K3VAE3](VAE.Keras3/03-VAE-with-MNIST-post.ipynb)** - [Analysis of the VAE's latent space of MNIST dataset](VAE.Keras3/03-VAE-with-MNIST-post.ipynb)  
+Visualization and analysis of the VAE's latent space of the dataset MNIST
+
+### Generative Adversarial Networks (GANs), using Lightning
+- **[PLSHEEP3](DCGAN.Lightning/01-DCGAN-PL.ipynb)** - [A DCGAN to Draw a Sheep, using Pytorch Lightning](DCGAN.Lightning/01-DCGAN-PL.ipynb)  
+"Draw me a sheep", revisited with a DCGAN, using Pytorch Lightning
+
 ### Diffusion Model (DDPM) using PyTorch
 - **[DDPM1](DDPM.PyTorch/01-ddpm.ipynb)** - [Fashion MNIST Generation with DDPM](DDPM.PyTorch/01-ddpm.ipynb)  
 Diffusion Model example, to generate Fashion MNIST images.
@@ -160,6 +184,8 @@ pandas is another essential tool for the Scientific Python.
 PyTorch est l'un des principaux framework utilisé dans le Deep Learning
 - **[TSB1](Misc/04-Using-Tensorboard.ipynb)** - [Tensorboard with/from Jupyter ](Misc/04-Using-Tensorboard.ipynb)  
 4 ways to use Tensorboard from the Jupyter environment
+- **[??](Misc/05-RNN.ipynb)** - [??](Misc/05-RNN.ipynb)  
+??
 <!-- TOC_END -->
 
 ## Installation

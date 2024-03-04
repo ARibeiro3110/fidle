@@ -13,7 +13,7 @@
 #
 # This file describes the notebooks used by the Fidle training.
 
-version:                  3.0.5
+version:                  3.0.9
 content:                  notebooks
 name:                     Notebooks Fidle
 description:              All notebooks used by the Fidle training
@@ -37,10 +37,9 @@ toc:
   Embedding.Keras3:       Sentiment analysis with word embedding, using Keras3/PyTorch
   RNN.Keras3:             Time series with Recurrent Neural Network (RNN), using Keras3/PyTorch
   Transformers.PyTorch:   Sentiment analysis with transformer, using PyTorch
-#  AE.Keras2:              Unsupervised learning with an autoencoder neural network (AE), using Keras2 (obsolete)
-#  VAE.Keras2:             Generative network with Variational Autoencoder (VAE), using Keras2 (obsolete)
-#  VAE.Lightning:          Generative network with Variational Autoencoder (VAE), using PyTorch Lightning
-#  DCGAN.Lightning:        Generative Adversarial Networks (GANs), using Lightning
+  AE.Keras3:              Unsupervised learning with an autoencoder neural network (AE), using Keras3
+  VAE.Keras3:             Generative network with Variational Autoencoder (VAE), using Keras3
+  DCGAN.Lightning:        Generative Adversarial Networks (GANs), using Lightning
   DDPM.PyTorch:           Diffusion Model (DDPM) using PyTorch
   Optimization.PyTorch:   Training optimization, using PyTorch
   DRL.PyTorch:            Deep Reinforcement Learning (DRL), using PyTorch
