@@ -32,14 +32,14 @@ For more information, see **https://fidle.cnrs.fr** :
 For more information, you can contact us at :  
 [<img width="200px" style="vertical-align:middle" src="fidle/img/00-Mail_contact.svg"></img>](#top)
 
-Current Version : <!-- VERSION_BEGIN -->3.0.9<!-- VERSION_END -->
+Current Version : <!-- VERSION_BEGIN -->3.0.10<!-- VERSION_END -->
 
 
 ## Course materials
 
-| | | | |
+| Courses | Notebooks | Datasets | Videos |
 |:--:|:--:|:--:|:--:|
-| **[<img width="50px" src="fidle/img/00-Fidle-pdf.svg"></img><br>Course slides](https://fidle.cnrs.fr/supports)**<br>The course in pdf format<br>| **[<img width="50px" src="fidle/img/00-Notebooks.svg"></img><br>Notebooks](https://fidle.cnrs.fr/notebooks)**<br> &nbsp;&nbsp;&nbsp;&nbsp;Get a Zip or clone this repository &nbsp;&nbsp;&nbsp;&nbsp;<br>| **[<img width="50px" src="fidle/img/00-Datasets-tar.svg"></img><br>Datasets](https://fidle.cnrs.fr/datasets-fidle.tar)**<br>All the needed datasets<br>|**[<img width="50px" src="fidle/img/00-Videos.svg"></img><br>Videos](https://fidle.cnrs.fr/youtube)**<br>&nbsp;&nbsp;&nbsp;&nbsp;Our Youtube channel&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
+| [<img width="50px" src="fidle/img/00-Fidle-pdf.svg"></img><br>**Course slides**](https://fidle.cnrs.fr/supports)<br>The course in pdf format<br>| [<img width="50px" src="fidle/img/00-Notebooks.svg"></img><br>**Notebooks**](https://fidle.cnrs.fr/notebooks)<br> &nbsp;&nbsp;&nbsp;&nbsp;Get a Zip or clone this repository &nbsp;&nbsp;&nbsp;&nbsp;<br>| [<img width="50px" src="fidle/img/00-Datasets-tar.svg"></img><br>**Datasets**](https://fidle.cnrs.fr/datasets-fidle.tar)<br>All the needed datasets<br>|[<img width="50px" src="fidle/img/00-Videos.svg"></img><br>**Videos**](https://fidle.cnrs.fr/youtube)<br>&nbsp;&nbsp;&nbsp;&nbsp;Our Youtube channel&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
 
 Have a look about **[How to get and install](https://fidle.cnrs.fr/installation)** these notebooks and datasets.
 
@@ -47,7 +47,7 @@ Have a look about **[How to get and install](https://fidle.cnrs.fr/installation)
 ## Jupyter notebooks
 
 <!-- TOC_BEGIN -->
-<!-- Automatically generated on : 03/03/24 20:38:37 -->
+<!-- Automatically generated on : 20/03/24 21:58:23 -->
 
 ### Linear and logistic regression
 - **[LINR1](LinearReg/01-Linear-Regression.ipynb)** - [Linear regression with direct resolution](LinearReg/01-Linear-Regression.ipynb)  
@@ -185,6 +185,8 @@ PyTorch est l'un des principaux framework utilisé dans le Deep Learning
 - **[TSB1](Misc/04-Using-Tensorboard.ipynb)** - [Tensorboard with/from Jupyter ](Misc/04-Using-Tensorboard.ipynb)  
 4 ways to use Tensorboard from the Jupyter environment
 - **[??](Misc/05-RNN.ipynb)** - [??](Misc/05-RNN.ipynb)  
+??
+- **[??](Misc/06-Gradients.ipynb)** - [??](Misc/06-Gradients.ipynb)  
 ??
 <!-- TOC_END -->
 
