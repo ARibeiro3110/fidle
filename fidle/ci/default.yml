@@ -1,6 +1,6 @@
 campain:
   version: '1.0'
-  description: Automatically generated ci profile (03/03/24 20:38:37)
+  description: Automatically generated ci profile (20/03/24 21:58:23)
   directory: ./campains/default
   existing_notebook: 'remove    # remove|skip'
   report_template: 'fidle     # fidle|default'
@@ -321,4 +321,4 @@ TSB1:
   notebook: Misc/04-Using-Tensorboard.ipynb
   overrides: ??
 ??:
-  notebook: Misc/05-RNN.ipynb
+  notebook: Misc/06-Gradients.ipynb
