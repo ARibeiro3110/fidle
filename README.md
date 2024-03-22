@@ -32,7 +32,7 @@ For more information, see **https://fidle.cnrs.fr** :
 For more information, you can contact us at :  
 [<img width="200px" style="vertical-align:middle" src="fidle/img/00-Mail_contact.svg"></img>](#top)
 
-Current Version : <!-- VERSION_BEGIN -->3.0.10<!-- VERSION_END -->
+Current Version : <!-- VERSION_BEGIN -->3.0.11<!-- VERSION_END -->
 
 
 ## Course materials
@@ -47,7 +47,7 @@ Have a look about **[How to get and install](https://fidle.cnrs.fr/installation)
 ## Jupyter notebooks
 
 <!-- TOC_BEGIN -->
-<!-- Automatically generated on : 20/03/24 21:58:23 -->
+<!-- Automatically generated on : 22/03/24 18:43:13 -->
 
 ### Linear and logistic regression
 - **[LINR1](LinearReg/01-Linear-Regression.ipynb)** - [Linear regression with direct resolution](LinearReg/01-Linear-Regression.ipynb)  
@@ -133,6 +133,8 @@ Using a Tranformer to perform a sentiment analysis (IMDB) - Jean Zay version
 - **[TRANS2](Transformers.PyTorch/02-distilbert_colab.ipynb)** - [IMDB, Sentiment analysis with Transformers ](Transformers.PyTorch/02-distilbert_colab.ipynb)  
 Using a Tranformer to perform a sentiment analysis (IMDB) - Colab version
 
+### Graph Neural Networks
+
 ### Unsupervised learning with an autoencoder neural network (AE), using Keras3
 - **[K3AE1](AE.Keras3/01-Prepare-MNIST-dataset.ipynb)** - [Prepare a noisy MNIST dataset](AE.Keras3/01-Prepare-MNIST-dataset.ipynb)  
 Episode 1: Preparation of a noisy MNIST dataset
@@ -184,10 +186,12 @@ pandas is another essential tool for the Scientific Python.
 PyTorch est l'un des principaux framework utilisé dans le Deep Learning
 - **[TSB1](Misc/04-Using-Tensorboard.ipynb)** - [Tensorboard with/from Jupyter ](Misc/04-Using-Tensorboard.ipynb)  
 4 ways to use Tensorboard from the Jupyter environment
-- **[??](Misc/05-RNN.ipynb)** - [??](Misc/05-RNN.ipynb)  
-??
-- **[??](Misc/06-Gradients.ipynb)** - [??](Misc/06-Gradients.ipynb)  
-??
+- **[K3LSTM1](Misc/05-RNN.ipynb)** - [Basic Keras LSTM Layer](Misc/05-RNN.ipynb)  
+A small example of an LSTM layer in Keras
+- **[PGRAD1](Misc/06-Gradients.ipynb)** - [Gradient illustration with PyTorch](Misc/06-Gradients.ipynb)  
+Exemple de calcul d'un gradient avec PyTorch
+- **[FID1](Misc/99-Fid-Example.ipynb)** - [Exemple de notebook Fidle ](Misc/99-Fid-Example.ipynb)  
+Un simple exemple de notebook Fidle
 <!-- TOC_END -->
 
 ## Installation
