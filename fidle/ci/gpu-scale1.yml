@@ -346,3 +346,10 @@ ACTF1:
 
 PANDAS1:
   notebook: Misc/02-Using-pandas.ipynb
+
+FID1:
+  notebook: Misc/07-Fid-Example.ipynb
+  overrides:
+    scale: 1
+    x: 345
+    batch_size: default

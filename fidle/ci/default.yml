@@ -1,6 +1,6 @@
 campain:
   version: '1.0'
-  description: Automatically generated ci profile (20/03/24 21:58:23)
+  description: Automatically generated ci profile (22/03/24 18:43:13)
   directory: ./campains/default
   existing_notebook: 'remove    # remove|skip'
   report_template: 'fidle     # fidle|default'
@@ -187,6 +187,11 @@ TRANS2:
   notebook: Transformers.PyTorch/02-distilbert_colab.ipynb
 
 #
+# ------------ GNN.PyTorch
+#
+{}
+
+#
 # ------------ AE.Keras3
 #
 K3AE1:
@@ -320,5 +325,13 @@ PYTORCH1:
 TSB1:
   notebook: Misc/04-Using-Tensorboard.ipynb
   overrides: ??
-??:
+K3LSTM1:
+  notebook: Misc/05-RNN.ipynb
+PGRAD1:
   notebook: Misc/06-Gradients.ipynb
+FID1:
+  notebook: Misc/99-Fid-Example.ipynb
+  overrides:
+    scale: default
+    x: default
+    batch_size: default
